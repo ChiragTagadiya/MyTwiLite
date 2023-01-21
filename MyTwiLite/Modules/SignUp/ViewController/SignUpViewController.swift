@@ -11,6 +11,7 @@ import Firebase
 
 class SignUpViewController: MyTwiLiteViewController {
 
+    //MARK: - Variables & Outlets
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var textFieldFirstName: UITextField!
     @IBOutlet weak var textFieldLastName: UITextField!
@@ -29,6 +30,7 @@ class SignUpViewController: MyTwiLiteViewController {
         self.configureLayout()
     }
 
+    //MARK: - Configure initial view layout
     private func configureLayout() {
         self.imageViewProfile.setCornerRadius()
     }
@@ -38,6 +40,7 @@ class SignUpViewController: MyTwiLiteViewController {
         self.router.route(to: .logIn, from: self, parameters: nil)
     }
     
+    //MARK: - Navigate to home action
     private func navigateToHome() {
         self.router.route(to: .dashboard, from: self, parameters: nil)
     }
@@ -50,12 +53,32 @@ class SignUpViewController: MyTwiLiteViewController {
         self.present(picker, animated: true)
     }
 
-    //MARK: - Sign up action
+    //MARK: - On sign-up button action
     @IBAction func signeUpPressed(_ sender: UIButton) {
         // validate all the fields
+        if imageViewProfile.image == nil {
+            showAlert(message: "Please select a profile picture")
+            return
+        } else if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
+            showAlert(message: "Please enter valid first name")
+            return
+        } else if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
+            showAlert(message: "Please enter valid last name")
+            return
+        } else if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
+            showAlert(message: "Please enter valid last name")
+            return
+        } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
+            showAlert(message: "Invalid Password, it must contains one uppercase one lowercase one number and 8 characters long")
+            return
+        } else if textFieldConfirmPassword.text != textFieldPassword.text {
+            showAlert(message: "Password and confirm passwords are different")
+            return
+        }
+    
         if let firstName = textFieldFirstName.text, let lastName = textFieldLastName.text, let email = textFieldEmail.text, let password = textFieldPassword.text, let profileImageData = imageViewProfile.image?.jpegData(compressionQuality: 0.6) {
             if textFieldPassword.text != textFieldConfirmPassword.text {
-                self.showAlert(message: "Password and confirm passwod are different.")
+                self.showAlert(message: "Password and confirm password are different.")
                 return
             }
             
@@ -63,8 +86,7 @@ class SignUpViewController: MyTwiLiteViewController {
 
             viewModel.createUser(user) { [weak self] result, error in
                 if let error = error {
-                    let errorMessage = error.localizedDescription
-                    self?.showAlert(message: errorMessage)
+                    self?.showAlert(message: error.localizedDescription)
                 } else {
                     self?.navigateToHome()
                 }
@@ -74,7 +96,7 @@ class SignUpViewController: MyTwiLiteViewController {
         }
     }
     
-    //MARK: - Login action
+    //MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         navigateToLogin()
     }    

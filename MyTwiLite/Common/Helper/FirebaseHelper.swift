@@ -22,21 +22,12 @@ class FirebaseHelper {
     func createUser(user: UserDetail, callBack: @escaping FirebaseCallBackType) {
         Auth.auth().createUser(withEmail: user.email, password: user.password) { (result, error) in
             if let uid = result?.user.uid {
-//                self.addUserInformaion(uid: uid, user: user) { userInformationError in
-//                    if let userInformationError = userInformationError {
-//                        callBack(result, userInformationError)
-//                    } else {
-//                        callBack(result, error)
-//                    }
-//                }
-                
                 self.uploadProfilePicture(uid: uid, imageData: user.profileImageData) { imagePath, uploadProfilePictureError in
                     if let error = error {
                         print("error while uploading a profile picture: ", error)
                         print("error description: ", error.localizedDescription)
                         callBack(nil, uploadProfilePictureError)
                     } else {
-//                        callBack(nil)
                         if let imagePath = imagePath {
                             self.addUserInformaion(uid: uid, profilePicturePath: imagePath, user: user) { userInformationError in
                                 if let userInformationError = userInformationError {
@@ -88,7 +79,7 @@ class FirebaseHelper {
         let storageReference = Storage.storage().reference()
         let filePath = "profiles/\(uid).jpg"
         let fileReference = storageReference.child(filePath)
-        let uploadImageTask = fileReference.putData(imageData) { storageMetaData, error in
+        let _ = fileReference.putData(imageData) { storageMetaData, error in
             if let error = error {
                 print("error while uploading a profile picture: ", error)
                 print("error description: ", error.localizedDescription)

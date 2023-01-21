@@ -1,5 +1,5 @@
 //
-//  SignUpViewModel.swift
+//  LogInViewModel.swift
 //  MyTwiLite
 //
 //  Created by DC on 21/01/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SignUpViewModel {
+class LogInViewModel {
     
     //MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
@@ -20,13 +20,13 @@ class SignUpViewModel {
             return utils.isValidEmail(text)
 
         case .password:
-            return utils.isValidPassword(text)
+            return utils.isValidLogInPassword(text)
         }
     }
     
-    //MARK: - Create a new user
-    func createUser(_ userDetail: UserDetail, callBack: @escaping FirebaseCallBackType) {
-        FirebaseHelper.instance.createUser(user: userDetail) { (result, error) in
+    //MARK: - Sign in with user email and password
+    func signinUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
+        FirebaseHelper.instance.logInUser(email: email, password: password){ (result, error) in
             callBack(result, error)
         }
     }
