@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */; };
 		331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C5297C122D008BE9B7 /* LogInViewController.swift */; };
 		331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C7297C127A008BE9B7 /* LogInRouter.swift */; };
 		331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CA297C135A008BE9B7 /* LaunchRouter.swift */; };
 		331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755CC297C1405008BE9B7 /* LogIn.storyboard */; };
 		331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */; };
+		331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */; };
+		331755DA297C1DC8008BE9B7 /* AddTimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */; };
+		331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */; };
+		331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755DE297C2229008BE9B7 /* FirebaseHelper.swift */; };
+		331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E2297C22C4008BE9B7 /* UserDetail.swift */; };
+		331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E9297C2522008BE9B7 /* DashboardViewController.swift */; };
+		331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */; };
+		331755F0297C2777008BE9B7 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */; };
+		331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */; };
+		331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */; };
+		3358E580297C36E2007ABCA6 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */; };
+		3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E581297C3E64007ABCA6 /* UIString+Extension.swift */; };
+		3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */; };
+		3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */; };
+		3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E587297C484E007ABCA6 /* SignUpViewModel.swift */; };
+		3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E589297C498F007ABCA6 /* AppConstant.swift */; };
+		3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */; };
 		337F6B9B2979557800E6DBCC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6B9A2979557800E6DBCC /* Router.swift */; };
-		337F6BA3297958B200E6DBCC /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */; };
+		337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */; };
 		337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA52979592600E6DBCC /* AppStoryboard.swift */; };
 		337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BA92979611200E6DBCC /* Launch.storyboard */; };
 		337F6BB1297973AF00E6DBCC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BB0297973AF00E6DBCC /* SignUp.storyboard */; };
@@ -24,18 +42,33 @@
 		338B86232977EE84005A9DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86212977EE84005A9DA0 /* Main.storyboard */; };
 		338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338B86242977EE86005A9DA0 /* Assets.xcassets */; };
 		338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */; };
-		D5A574FB7053C62F2F2841C1 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79A7141C313DA10B3187C05 /* Pods_MyTwiLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B82B3EE5C48CA3D08206185 /* Pods-MyTwiLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.release.xcconfig"; sourceTree = "<group>"; };
 		331755C5297C122D008BE9B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		331755C7297C127A008BE9B7 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
 		331755CA297C135A008BE9B7 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		331755CC297C1405008BE9B7 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteViewController.swift; sourceTree = "<group>"; };
+		331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTimeLine.storyboard; sourceTree = "<group>"; };
+		331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		331755DE297C2229008BE9B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		331755E2297C22C4008BE9B7 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		331755E9297C2522008BE9B7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+DataSource.swift"; sourceTree = "<group>"; };
+		331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeLineViewController.swift; sourceTree = "<group>"; };
+		331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTimeLineViewController+DataSource.swift"; sourceTree = "<group>"; };
+		3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		3358E581297C3E64007ABCA6 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
+		3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteStrings.swift; sourceTree = "<group>"; };
+		3358E587297C484E007ABCA6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		3358E589297C498F007ABCA6 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		337F6B9A2979557800E6DBCC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		337F6BA52979592600E6DBCC /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		337F6BA92979611200E6DBCC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		337F6BB0297973AF00E6DBCC /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -48,8 +81,9 @@
 		338B86242977EE86005A9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338B86272977EE86005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338B86292977EE86005A9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E783C06A7C8065AB3336CF12 /* Pods-MyTwiLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.debug.xcconfig"; sourceTree = "<group>"; };
-		F79A7141C313DA10B3187C05 /* Pods_MyTwiLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.release.xcconfig"; sourceTree = "<group>"; };
+		894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A574FB7053C62F2F2841C1 /* Pods_MyTwiLite.framework in Frameworks */,
+				278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +101,7 @@
 		331755C0297C11F8008BE9B7 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				331755ED297C2655008BE9B7 /* View */,
 				331755C4297C1214008BE9B7 /* ViewController */,
 				331755C3297C120D008BE9B7 /* ViewModel */,
 				331755C2297C1209008BE9B7 /* Model */,
@@ -86,6 +121,7 @@
 		331755C2297C1209008BE9B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,14 +152,128 @@
 		331755CE297C15BA008BE9B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */,
+				331755E1297C22B5008BE9B7 /* Model */,
+				331755E0297C2278008BE9B7 /* ViewController */,
+				331755DD297C2218008BE9B7 /* Helper */,
+				337F6BA42979590C00E6DBCC /* Enum */,
+				337F6BA02979586C00E6DBCC /* Extension */,
+				3358E589297C498F007ABCA6 /* AppConstant.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		331755DD297C2218008BE9B7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				331755DE297C2229008BE9B7 /* FirebaseHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		331755E0297C2278008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755E1297C22B5008BE9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				331755E2297C22C4008BE9B7 /* UserDetail.swift */,
+				3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331755E4297C24B8008BE9B7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				331755EE297C265D008BE9B7 /* View */,
+				331755E8297C2509008BE9B7 /* Router */,
+				331755E7297C2502008BE9B7 /* Model */,
+				331755E6297C24FC008BE9B7 /* ViewModel */,
+				331755E5297C24F2008BE9B7 /* ViewController */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		331755E5297C24F2008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755E9297C2522008BE9B7 /* DashboardViewController.swift */,
+				331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755E6297C24FC008BE9B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331755E7297C2502008BE9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331755E8297C2509008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755ED297C2655008BE9B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		331755EE297C265D008BE9B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		331755F1297C27E7008BE9B7 /* AddTimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				331755F2297C27F0008BE9B7 /* ViewController */,
+			);
+			path = AddTimeLine;
+			sourceTree = "<group>";
+		};
+		331755F2297C27F0008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */,
+				331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3358E57E297C36CB007ABCA6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		337F6B8F2979512700E6DBCC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				331755F1297C27E7008BE9B7 /* AddTimeLine */,
+				331755E4297C24B8008BE9B7 /* Dashboard */,
 				331755C0297C11F8008BE9B7 /* LogIn */,
 				337F6BAD2979719900E6DBCC /* Launch */,
 				337F6B922979517D00E6DBCC /* SignUp */,
@@ -143,6 +293,7 @@
 		337F6B922979517D00E6DBCC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				3358E57E297C36CB007ABCA6 /* Router */,
 				337F6B96297951BD00E6DBCC /* Model */,
 				337F6B95297951A900E6DBCC /* ViewController */,
 				337F6B942979519E00E6DBCC /* ViewModel */,
@@ -161,6 +312,7 @@
 		337F6B942979519E00E6DBCC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3358E587297C484E007ABCA6 /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +348,8 @@
 				331755CC297C1405008BE9B7 /* LogIn.storyboard */,
 				337F6BA92979611200E6DBCC /* Launch.storyboard */,
 				338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */,
+				331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */,
+				331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -203,17 +357,11 @@
 		337F6BA02979586C00E6DBCC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				337F6BA12979587400E6DBCC /* UIViewController */,
+				337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */,
+				3358E581297C3E64007ABCA6 /* UIString+Extension.swift */,
+				3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		337F6BA12979587400E6DBCC /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */,
-			);
-			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		337F6BA42979590C00E6DBCC /* Enum */ = {
@@ -247,7 +395,7 @@
 				338B861A2977EE84005A9DA0 /* MyTwiLite */,
 				338B86192977EE84005A9DA0 /* Products */,
 				6ACC4360C32C51A922658520 /* Pods */,
-				FBE8B496D016A5728439D2D3 /* Frameworks */,
+				6E2DCB89DDC0E4E2DF428FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,13 +411,12 @@
 			isa = PBXGroup;
 			children = (
 				331755CE297C15BA008BE9B7 /* Common */,
-				337F6BA42979590C00E6DBCC /* Enum */,
-				337F6BA02979586C00E6DBCC /* Extension */,
 				337F6B9E297957C000E6DBCC /* Storyboard */,
 				337F6B982979529B00E6DBCC /* Router */,
 				337F6B8F2979512700E6DBCC /* Modules */,
 				337F6B912979515B00E6DBCC /* AppDelegates */,
 				338B86242977EE86005A9DA0 /* Assets.xcassets */,
+				331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */,
 				338B86292977EE86005A9DA0 /* Info.plist */,
 			);
 			path = MyTwiLite;
@@ -278,16 +425,16 @@
 		6ACC4360C32C51A922658520 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E783C06A7C8065AB3336CF12 /* Pods-MyTwiLite.debug.xcconfig */,
-				1B82B3EE5C48CA3D08206185 /* Pods-MyTwiLite.release.xcconfig */,
+				E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */,
+				39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FBE8B496D016A5728439D2D3 /* Frameworks */ = {
+		6E2DCB89DDC0E4E2DF428FD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F79A7141C313DA10B3187C05 /* Pods_MyTwiLite.framework */,
+				894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -299,10 +446,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 338B862C2977EE86005A9DA0 /* Build configuration list for PBXNativeTarget "MyTwiLite" */;
 			buildPhases = (
-				A93E24DB25BE420181DA15CF /* [CP] Check Pods Manifest.lock */,
+				FF67FC3D93D790D0663FAA66 /* [CP] Check Pods Manifest.lock */,
 				338B86142977EE84005A9DA0 /* Sources */,
 				338B86152977EE84005A9DA0 /* Frameworks */,
 				338B86162977EE84005A9DA0 /* Resources */,
+				A2A7F0F4E44C5895B60D501C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,7 +500,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */,
+				331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */,
+				331755DA297C1DC8008BE9B7 /* AddTimeLine.storyboard in Resources */,
 				338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */,
+				331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */,
 				331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */,
 				338B86232977EE84005A9DA0 /* Main.storyboard in Resources */,
 				337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */,
@@ -363,7 +514,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A93E24DB25BE420181DA15CF /* [CP] Check Pods Manifest.lock */ = {
+		A2A7F0F4E44C5895B60D501C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF67FC3D93D790D0663FAA66 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,17 +560,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331755F0297C2777008BE9B7 /* TimeLineTableViewCell.swift in Sources */,
+				331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */,
+				331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */,
 				337F6B9B2979557800E6DBCC /* Router.swift in Sources */,
 				337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */,
+				331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */,
+				3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */,
+				3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */,
 				338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */,
 				338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */,
+				3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */,
+				331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */,
+				3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */,
 				331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */,
+				3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */,
+				331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */,
+				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
 				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
 				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,
+				331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */,
 				331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */,
-				337F6BA3297958B200E6DBCC /* UIViewController + Extension.swift in Sources */,
+				337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */,
 				331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */,
 				338B861E2977EE84005A9DA0 /* SceneDelegate.swift in Sources */,
+				3358E580297C36E2007ABCA6 /* SignUpRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +726,7 @@
 		};
 		338B862D2977EE86005A9DA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E783C06A7C8065AB3336CF12 /* Pods-MyTwiLite.debug.xcconfig */;
+			baseConfigurationReference = E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,7 +758,7 @@
 		};
 		338B862E2977EE86005A9DA0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B82B3EE5C48CA3D08206185 /* Pods-MyTwiLite.release.xcconfig */;
+			baseConfigurationReference = 39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

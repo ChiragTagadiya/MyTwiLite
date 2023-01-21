@@ -11,21 +11,22 @@ import UIKit
 class LaunchRouter: Router {
     
     enum Destination {
-        case login
+        case logIn
         case signUp
         case dashboard
     }
     
     func route(to destination: Destination, from context: UIViewController, parameters: Any?) {
         switch destination {
-        case .login:
-            let loginVC = LoginViewController()
-            context.navigationController?.pushViewController(loginVC, animated: true)
+        case .logIn:
+            let loginVC = LoginViewController.initiateFrom(appStoryboard: .logIn)
+            context.navigationController?.pushViewController(loginVC, animated: false)
         case .dashboard:
-            break
+            let dashboardVC = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
+            context.navigationController?.pushViewController(dashboardVC, animated: false)
         case .signUp:
-            let signUpVC = SignUpViewController()
-            context.navigationController?.pushViewController(signUpVC, animated: true)
+            let signUpVC = SignUpViewController.initiateFrom(appStoryboard: .signUp)
+            context.navigationController?.pushViewController(signUpVC, animated: false)
         }
     }
     

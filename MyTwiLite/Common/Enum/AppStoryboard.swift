@@ -12,9 +12,11 @@ enum AppStoryboard: String {
     case launch
     case signUp
     case logIn
+    case dashboard
     
     var instance: UIStoryboard {
-        return UIStoryboard(name: self.rawValue.capitalized, bundle: Bundle.main)
+        let capitalizedString = self.rawValue.capitalizedFirstLetter
+        return UIStoryboard(name: capitalizedString, bundle: Bundle.main)
     }
     
     func viewController<T: UIViewController>(viewControllerClass: T.Type) -> T {

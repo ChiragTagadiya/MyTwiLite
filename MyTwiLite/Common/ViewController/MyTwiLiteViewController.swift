@@ -18,4 +18,11 @@ class MyTwiLiteViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
     }
+    
+    func showAlert(message: String) {
+        let alertViewController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertViewController.addAction(okAction)
+        self.present(alertViewController, animated: true)
+    }
 }

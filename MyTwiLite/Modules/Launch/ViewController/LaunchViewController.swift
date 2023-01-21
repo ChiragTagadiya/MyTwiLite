@@ -17,7 +17,7 @@ class LaunchViewController: MyTwiLiteViewController {
         self.title = "Launch Screen"
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
             // TODO:  - manage redirection based on login status
-            self.router.route(to: .signUp, from: self, parameters: nil)
+            self.router.route(to: .logIn, from: self, parameters: nil)
         }
     }
 
