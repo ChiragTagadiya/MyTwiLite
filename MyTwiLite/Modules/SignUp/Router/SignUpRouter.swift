@@ -19,11 +19,11 @@ class SignUpRouter: Router {
     func route(to destination: Destination, from context: UIViewController, parameters: Any?) {
         switch destination {
         case .logIn:
-            let loginVC = LoginViewController.initiateFrom(appStoryboard: .logIn)
-            context.navigationController?.pushViewController(loginVC, animated: true)
+            let loginViewController = LoginViewController.initiateFrom(appStoryboard: .logIn)
+            context.navigationController?.pushViewController(loginViewController, animated: true)
         case .dashboard:
-            let dashboardVC = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
-            context.navigationController?.pushViewController(dashboardVC, animated: true)
+            let dashboardViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
+            context.navigationController?.pushViewController(dashboardViewController, animated: true)
         case .forgotPassword:
             break
         }

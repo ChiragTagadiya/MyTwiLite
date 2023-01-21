@@ -19,14 +19,14 @@ class LaunchRouter: Router {
     func route(to destination: Destination, from context: UIViewController, parameters: Any?) {
         switch destination {
         case .logIn:
-            let loginVC = LoginViewController.initiateFrom(appStoryboard: .logIn)
-            context.navigationController?.pushViewController(loginVC, animated: false)
+            let loginViewController = LoginViewController.initiateFrom(appStoryboard: .logIn)
+            context.navigationController?.pushViewController(loginViewController, animated: false)
         case .dashboard:
-            let dashboardVC = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
-            context.navigationController?.pushViewController(dashboardVC, animated: false)
+            let dashboardViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
+            context.navigationController?.pushViewController(dashboardViewController, animated: false)
         case .signUp:
-            let signUpVC = SignUpViewController.initiateFrom(appStoryboard: .signUp)
-            context.navigationController?.pushViewController(signUpVC, animated: false)
+            let signUpViewController = SignUpViewController.initiateFrom(appStoryboard: .signUp)
+            context.navigationController?.pushViewController(signUpViewController, animated: false)
         }
     }
     

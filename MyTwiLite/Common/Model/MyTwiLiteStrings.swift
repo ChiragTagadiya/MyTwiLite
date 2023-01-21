@@ -10,4 +10,3 @@ import Foundation
 struct MyTwiLiteStrings {
     static let signUp = "SignUp"
 }
-

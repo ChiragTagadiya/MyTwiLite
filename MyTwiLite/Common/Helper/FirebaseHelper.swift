@@ -13,12 +13,12 @@ import FirebaseStorage
 class FirebaseHelper {
     static let instance = FirebaseHelper()
     
-    //MARK: - fetch current user
+    // MARK: - fetch current user
     func currentUser() -> User? {
         return Auth.auth().currentUser
     }
     
-    //MARK: - SignUp user
+    // MARK: - SignUp user
     func createUser(user: UserDetail, callBack: @escaping FirebaseCallBackType) {
         Auth.auth().createUser(withEmail: user.email, password: user.password) { (result, error) in
             if let uid = result?.user.uid {
@@ -47,14 +47,14 @@ class FirebaseHelper {
         }
     }
     
-    //MARK: - LogIn user
+    // MARK: - LogIn user
     func logInUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             callBack(result, error)
         }
     }
     
-    //MARK: - Add user information to firestore
+    // MARK: - Add user information to firestore
     func addUserInformaion(uid: String, profilePicturePath: String, user: UserDetail, callBack: @escaping (Error?) -> Void) {
         let fireStoreDatabase = Firestore.firestore()
         let userInformation = [
@@ -74,22 +74,20 @@ class FirebaseHelper {
         }
     }
     
-    //MARK: - Upload a user profile picture
+    // MARK: - Upload a user profile picture
     func uploadProfilePicture(uid: String, imageData: Data, callBack: @escaping (String?, Error?) -> Void) {
         let storageReference = Storage.storage().reference()
         let filePath = "profiles/\(uid).jpg"
         let fileReference = storageReference.child(filePath)
-        let _ = fileReference.putData(imageData) { storageMetaData, error in
+        _ = fileReference.putData(imageData) { storageMetaData, error in
             if let error = error {
                 print("error while uploading a profile picture: ", error)
                 print("error description: ", error.localizedDescription)
                 callBack(nil, error)
             }
-            if let _ = storageMetaData {
-                print("storageMetaData:", storageMetaData)
+            if storageMetaData != nil {
                 callBack(filePath, nil)
             }
         }
     }
 }
-

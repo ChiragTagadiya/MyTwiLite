@@ -11,7 +11,7 @@ import Firebase
 
 class SignUpViewController: MyTwiLiteViewController {
 
-    //MARK: - Variables & Outlets
+    // MARK: - Variables & Outlets
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var textFieldFirstName: UITextField!
     @IBOutlet weak var textFieldLastName: UITextField!
@@ -30,22 +30,22 @@ class SignUpViewController: MyTwiLiteViewController {
         self.configureLayout()
     }
 
-    //MARK: - Configure initial view layout
+    // MARK: - Configure initial view layout
     private func configureLayout() {
         self.imageViewProfile.setCornerRadius()
     }
     
-    //MARK: - Navigate to login action
+    // MARK: - Navigate to login action
     private func navigateToLogin() {
         self.router.route(to: .logIn, from: self, parameters: nil)
     }
     
-    //MARK: - Navigate to home action
+    // MARK: - Navigate to home action
     private func navigateToHome() {
         self.router.route(to: .dashboard, from: self, parameters: nil)
     }
 
-    //MARK: - Profile picture picker action
+    // MARK: - Profile picture picker action
     @IBAction func selectProfilePressed(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
@@ -53,7 +53,7 @@ class SignUpViewController: MyTwiLiteViewController {
         self.present(picker, animated: true)
     }
 
-    //MARK: - On sign-up button action
+    // MARK: - On sign-up button action
     @IBAction func signeUpPressed(_ sender: UIButton) {
         // validate all the fields
         if imageViewProfile.image == nil {
@@ -76,15 +76,18 @@ class SignUpViewController: MyTwiLiteViewController {
             return
         }
     
-        if let firstName = textFieldFirstName.text, let lastName = textFieldLastName.text, let email = textFieldEmail.text, let password = textFieldPassword.text, let profileImageData = imageViewProfile.image?.jpegData(compressionQuality: 0.6) {
+        if let firstName = textFieldFirstName.text, let lastName = textFieldLastName.text,
+           let email = textFieldEmail.text, let password = textFieldPassword.text,
+           let profileImageData = imageViewProfile.image?.jpegData(compressionQuality: 0.6) {
             if textFieldPassword.text != textFieldConfirmPassword.text {
                 self.showAlert(message: "Password and confirm password are different.")
                 return
             }
             
-            let user = UserDetail(firstName: firstName, lastName: lastName, email: email, password: password, profileImageData: profileImageData)
+            let user = UserDetail(firstName: firstName, lastName: lastName,
+                                  email: email, password: password, profileImageData: profileImageData)
 
-            viewModel.createUser(user) { [weak self] result, error in
+            viewModel.createUser(user) { [weak self] _, error in
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
                 } else {
@@ -96,15 +99,16 @@ class SignUpViewController: MyTwiLiteViewController {
         }
     }
     
-    //MARK: - On log-in button action
+    // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         navigateToLogin()
     }    
 }
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    //MARK: - Image picker delegates
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    // MARK: - Image picker delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
         self.imageViewProfile.image = image
         dismiss(animated: true)

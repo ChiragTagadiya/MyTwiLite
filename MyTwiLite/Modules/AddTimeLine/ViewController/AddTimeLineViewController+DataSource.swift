@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 extension AddTimeLineViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    //MARK: - Image picker delegates
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    // MARK: - Image picker delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
         self.imageViewTimeline.image = image
         dismiss(animated: true)

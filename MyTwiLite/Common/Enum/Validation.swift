@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: - Validation enum to validate require SignIn and LogIn fields
+// MARK: - Validation enum to validate require SignIn and LogIn fields
 enum Validation {
     case normalText
     case email

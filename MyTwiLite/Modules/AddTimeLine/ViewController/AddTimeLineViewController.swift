@@ -9,7 +9,7 @@ import UIKit
 
 class AddTimeLineViewController: MyTwiLiteViewController {
 
-    //MARK: - Outlets & Variables
+    // MARK: - Outlets & Variables
     @IBOutlet weak var textFieldTimeline: UITextField!
     @IBOutlet weak var imageViewTimeline: UIImageView!
     
@@ -17,7 +17,7 @@ class AddTimeLineViewController: MyTwiLiteViewController {
         super.viewDidLoad()
     }
   
-    //MARK: - Add timeline picture action
+    // MARK: - Add timeline picture action
     @IBAction func onAddPictureAction(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
@@ -25,9 +25,8 @@ class AddTimeLineViewController: MyTwiLiteViewController {
         self.present(picker, animated: true)
     }
     
-    //MARK: - Post timeline action
+    // MARK: - Post timeline action
     @IBAction func onPostAction(_ sender: UIButton) {
     }
 
 }
-

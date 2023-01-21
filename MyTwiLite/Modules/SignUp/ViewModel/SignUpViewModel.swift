@@ -9,7 +9,7 @@ import Foundation
 
 class SignUpViewModel {
     
-    //MARK: - Validate user detail with a type
+    // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()
         switch validationType {
@@ -24,7 +24,7 @@ class SignUpViewModel {
         }
     }
     
-    //MARK: - Create a new user
+    // MARK: - Create a new user
     func createUser(_ userDetail: UserDetail, callBack: @escaping FirebaseCallBackType) {
         FirebaseHelper.instance.createUser(user: userDetail) { (result, error) in
             callBack(result, error)

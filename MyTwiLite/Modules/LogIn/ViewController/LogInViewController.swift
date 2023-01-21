@@ -10,7 +10,7 @@ import Firebase
 
 class LoginViewController: MyTwiLiteViewController {
     
-    //MARK: - Variables & Outlets
+    // MARK: - Variables & Outlets
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
@@ -23,17 +23,17 @@ class LoginViewController: MyTwiLiteViewController {
         self.shouldHideBackButton = true
     }
     
-    //MARK: - Navigate to home action
+    // MARK: - Navigate to home action
     private func navigateToHome() {
         self.router.route(to: .dashboard, from: self, parameters: nil)
     }
     
-    //MARK: - Navigate to sign-up  action
+    // MARK: - Navigate to sign-up  action
     private func navigateToSignUp() {
         self.router.route(to: .signUp, from: self, parameters: nil)
     }
     
-    //MARK: - On log-in button action
+    // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
             showAlert(message: "Please enter valid email")
@@ -43,7 +43,7 @@ class LoginViewController: MyTwiLiteViewController {
             return
         }
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
-            viewModel.signinUser(email: email, password: password) { [weak self] (result, error) in
+            viewModel.signinUser(email: email, password: password) { [weak self] (_, error) in
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
                 } else {
@@ -55,7 +55,7 @@ class LoginViewController: MyTwiLiteViewController {
         }
     }
 
-    //MARK: - On sign-up button action
+    // MARK: - On sign-up button action
     @IBAction func onSignUpButtonPressed(_ sender: UIButton) {
         self.navigateToSignUp()
     }

@@ -19,18 +19,18 @@ class DashboardViewController: MyTwiLiteViewController {
         fetchTimelines()
     }
 
-    //MARK: - configure initial layout
+    // MARK: - configure initial layout
     private func configureLayout() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Timeline", style: .plain, target: self, action: #selector(addTimeLineAction))
 
     }
     
-    //MARK: - fetch all timelines
+    // MARK: - fetch all timelines
     private func fetchTimelines() {
         
     }
     
-    //MARK: - Navigate to add timeline action
+    // MARK: - Navigate to add timeline action
     private func navigateToAddTimeline() {
 //        if let addTimelineViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddTimelineViewController") as? AddTimelineViewController {
 //            self.navigationController?.pushViewController(addTimelineViewController, animated: true)

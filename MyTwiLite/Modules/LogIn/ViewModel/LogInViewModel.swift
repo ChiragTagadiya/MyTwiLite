@@ -9,7 +9,7 @@ import Foundation
 
 class LogInViewModel {
     
-    //MARK: - Validate user detail with a type
+    // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()
         switch validationType {
@@ -24,9 +24,9 @@ class LogInViewModel {
         }
     }
     
-    //MARK: - Sign in with user email and password
+    // MARK: - Sign in with user email and password
     func signinUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
-        FirebaseHelper.instance.logInUser(email: email, password: password){ (result, error) in
+        FirebaseHelper.instance.logInUser(email: email, password: password) { (result, error) in
             callBack(result, error)
         }
     }

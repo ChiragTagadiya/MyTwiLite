@@ -15,11 +15,14 @@ class LaunchViewController: MyTwiLiteViewController {
         super.viewDidLoad()
 
         self.title = "Launch Screen"
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-            // TODO:  - manage redirection based on login status
-            self.router.route(to: .logIn, from: self, parameters: nil)
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            // redirection based on login status
+            if FirebaseHelper.instance.currentUser() != nil {
+                self.router.route(to: .dashboard, from: self, parameters: nil)
+            } else {
+                self.router.route(to: .logIn, from: self, parameters: nil)
+            }
         }
     }
 
 }
-
