@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C5297C122D008BE9B7 /* LogInViewController.swift */; };
+		331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C7297C127A008BE9B7 /* LogInRouter.swift */; };
+		331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CA297C135A008BE9B7 /* LaunchRouter.swift */; };
+		331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755CC297C1405008BE9B7 /* LogIn.storyboard */; };
+		331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */; };
+		337F6B9B2979557800E6DBCC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6B9A2979557800E6DBCC /* Router.swift */; };
+		337F6BA3297958B200E6DBCC /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */; };
+		337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA52979592600E6DBCC /* AppStoryboard.swift */; };
+		337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BA92979611200E6DBCC /* Launch.storyboard */; };
+		337F6BB1297973AF00E6DBCC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BB0297973AF00E6DBCC /* SignUp.storyboard */; };
+		337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BB2297973C400E6DBCC /* SignUpViewController.swift */; };
 		338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861B2977EE84005A9DA0 /* AppDelegate.swift */; };
 		338B861E2977EE84005A9DA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861D2977EE84005A9DA0 /* SceneDelegate.swift */; };
-		338B86202977EE84005A9DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861F2977EE84005A9DA0 /* ViewController.swift */; };
+		338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861F2977EE84005A9DA0 /* LaunchViewController.swift */; };
 		338B86232977EE84005A9DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86212977EE84005A9DA0 /* Main.storyboard */; };
 		338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338B86242977EE86005A9DA0 /* Assets.xcassets */; };
 		338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */; };
@@ -18,10 +29,21 @@
 
 /* Begin PBXFileReference section */
 		1B82B3EE5C48CA3D08206185 /* Pods-MyTwiLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.release.xcconfig"; sourceTree = "<group>"; };
+		331755C5297C122D008BE9B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		331755C7297C127A008BE9B7 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
+		331755CA297C135A008BE9B7 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
+		331755CC297C1405008BE9B7 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteViewController.swift; sourceTree = "<group>"; };
+		337F6B9A2979557800E6DBCC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		337F6BA52979592600E6DBCC /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		337F6BA92979611200E6DBCC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		337F6BB0297973AF00E6DBCC /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		337F6BB2297973C400E6DBCC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		338B86182977EE84005A9DA0 /* MyTwiLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwiLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338B861B2977EE84005A9DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338B861D2977EE84005A9DA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		338B861F2977EE84005A9DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		338B861F2977EE84005A9DA0 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		338B86222977EE84005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		338B86242977EE86005A9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338B86272977EE86005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +64,183 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331755C0297C11F8008BE9B7 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				331755C4297C1214008BE9B7 /* ViewController */,
+				331755C3297C120D008BE9B7 /* ViewModel */,
+				331755C2297C1209008BE9B7 /* Model */,
+				331755C1297C1202008BE9B7 /* Router */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		331755C1297C1202008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				331755C7297C127A008BE9B7 /* LogInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755C2297C1209008BE9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331755C3297C120D008BE9B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331755C4297C1214008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755C5297C122D008BE9B7 /* LogInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755C9297C134C008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				331755CA297C135A008BE9B7 /* LaunchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755CE297C15BA008BE9B7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		337F6B8F2979512700E6DBCC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				331755C0297C11F8008BE9B7 /* LogIn */,
+				337F6BAD2979719900E6DBCC /* Launch */,
+				337F6B922979517D00E6DBCC /* SignUp */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		337F6B912979515B00E6DBCC /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				338B861B2977EE84005A9DA0 /* AppDelegate.swift */,
+				338B861D2977EE84005A9DA0 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		337F6B922979517D00E6DBCC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				337F6B96297951BD00E6DBCC /* Model */,
+				337F6B95297951A900E6DBCC /* ViewController */,
+				337F6B942979519E00E6DBCC /* ViewModel */,
+				337F6B932979519900E6DBCC /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		337F6B932979519900E6DBCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		337F6B942979519E00E6DBCC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		337F6B95297951A900E6DBCC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BB2297973C400E6DBCC /* SignUpViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		337F6B96297951BD00E6DBCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		337F6B982979529B00E6DBCC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				337F6B9A2979557800E6DBCC /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		337F6B9E297957C000E6DBCC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				338B86212977EE84005A9DA0 /* Main.storyboard */,
+				337F6BB0297973AF00E6DBCC /* SignUp.storyboard */,
+				331755CC297C1405008BE9B7 /* LogIn.storyboard */,
+				337F6BA92979611200E6DBCC /* Launch.storyboard */,
+				338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		337F6BA02979586C00E6DBCC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BA12979587400E6DBCC /* UIViewController */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		337F6BA12979587400E6DBCC /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BA2297958B200E6DBCC /* UIViewController + Extension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		337F6BA42979590C00E6DBCC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BA52979592600E6DBCC /* AppStoryboard.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		337F6BAD2979719900E6DBCC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				331755C9297C134C008BE9B7 /* Router */,
+				337F6BAE297971C200E6DBCC /* ViewController */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		337F6BAE297971C200E6DBCC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				338B861F2977EE84005A9DA0 /* LaunchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		338B860F2977EE84005A9DA0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +262,14 @@
 		338B861A2977EE84005A9DA0 /* MyTwiLite */ = {
 			isa = PBXGroup;
 			children = (
-				338B861B2977EE84005A9DA0 /* AppDelegate.swift */,
-				338B861D2977EE84005A9DA0 /* SceneDelegate.swift */,
-				338B861F2977EE84005A9DA0 /* ViewController.swift */,
-				338B86212977EE84005A9DA0 /* Main.storyboard */,
+				331755CE297C15BA008BE9B7 /* Common */,
+				337F6BA42979590C00E6DBCC /* Enum */,
+				337F6BA02979586C00E6DBCC /* Extension */,
+				337F6B9E297957C000E6DBCC /* Storyboard */,
+				337F6B982979529B00E6DBCC /* Router */,
+				337F6B8F2979512700E6DBCC /* Modules */,
+				337F6B912979515B00E6DBCC /* AppDelegates */,
 				338B86242977EE86005A9DA0 /* Assets.xcassets */,
-				338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */,
 				338B86292977EE86005A9DA0 /* Info.plist */,
 			);
 			path = MyTwiLite;
@@ -80,7 +281,6 @@
 				E783C06A7C8065AB3336CF12 /* Pods-MyTwiLite.debug.xcconfig */,
 				1B82B3EE5C48CA3D08206185 /* Pods-MyTwiLite.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,7 +353,10 @@
 			files = (
 				338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */,
 				338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */,
+				331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */,
 				338B86232977EE84005A9DA0 /* Main.storyboard in Resources */,
+				337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */,
+				337F6BB1297973AF00E6DBCC /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338B86202977EE84005A9DA0 /* ViewController.swift in Sources */,
+				337F6B9B2979557800E6DBCC /* Router.swift in Sources */,
+				337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */,
+				338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */,
 				338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */,
+				331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */,
+				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
+				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,
+				331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */,
+				337F6BA3297958B200E6DBCC /* UIViewController + Extension.swift in Sources */,
+				331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */,
 				338B861E2977EE84005A9DA0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
