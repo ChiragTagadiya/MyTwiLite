@@ -22,7 +22,7 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
     
     func showAlert(message: String) {
         let alertViewController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: MyTwiLiteStrings.okTitle, style: .default)
         alertViewController.addAction(okAction)
         self.present(alertViewController, animated: true)
     }

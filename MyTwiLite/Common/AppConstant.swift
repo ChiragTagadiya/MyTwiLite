@@ -8,4 +8,5 @@
 import Foundation
 import Firebase
 
+// Firebase callback type
 typealias FirebaseCallBackType = (AuthDataResult?, Error?) -> Void

@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 
 class LoginViewController: MyTwiLiteViewController {
-    
     // MARK: - Variables & Outlets
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -19,7 +18,7 @@ class LoginViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Login"
+        self.title = MyTwiLiteStrings.logIn
         self.shouldHideBackButton = true
     }
     
@@ -36,10 +35,10 @@ class LoginViewController: MyTwiLiteViewController {
     // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: "Please enter valid email")
+            showAlert(message: MyTwiLiteStrings.validEmail)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: "Please enter valid password")
+            showAlert(message: MyTwiLiteStrings.validPassword)
             return
         }
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
@@ -52,8 +51,6 @@ class LoginViewController: MyTwiLiteViewController {
                     self?.navigateToHome()
                 }
             }
-        } else {
-            print("Please enter email or password")
         }
     }
 

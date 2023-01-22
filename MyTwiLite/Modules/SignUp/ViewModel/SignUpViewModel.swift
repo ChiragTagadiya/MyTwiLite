@@ -8,7 +8,6 @@
 import Foundation
 
 class SignUpViewModel {
-    
     // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()

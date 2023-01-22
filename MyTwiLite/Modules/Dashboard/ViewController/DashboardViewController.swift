@@ -8,13 +8,13 @@
 import UIKit
 
 class DashboardViewController: MyTwiLiteViewController {
-
+    // MARK: - Variables & Outlets
     @IBOutlet weak var tableViewTimeline: UITableView!
     let arrayTimeline = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Timelines"
+        self.title = MyTwiLiteStrings.timelines
         self.shouldHideBackButton = true
         configureLayout()
         fetchTimelines()
@@ -22,7 +22,8 @@ class DashboardViewController: MyTwiLiteViewController {
 
     // MARK: - configure initial layout
     private func configureLayout() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Timeline", style: .plain, target: self, action: #selector(addTimeLineAction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: MyTwiLiteStrings.addTimeline,
+                                                            style: .plain, target: self, action: #selector(addTimeLineAction))
 
     }
     

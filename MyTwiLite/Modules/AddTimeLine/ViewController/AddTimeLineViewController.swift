@@ -8,7 +8,6 @@
 import UIKit
 
 class AddTimeLineViewController: MyTwiLiteViewController {
-
     // MARK: - Outlets & Variables
     @IBOutlet weak var textFieldTimeline: UITextField!
     @IBOutlet weak var imageViewTimeline: UIImageView!

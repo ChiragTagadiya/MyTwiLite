@@ -8,7 +8,7 @@
 import UIKit
 
 class TimeLineTableViewCell: UITableViewCell {
-
+    // MARK: - Outlets & Variables
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var labelTimelineText: UILabel!
     @IBOutlet weak var imageViewTimeline: UIImageView!

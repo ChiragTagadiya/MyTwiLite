@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 class LaunchViewController: MyTwiLiteViewController {
+    // MARK: - Variables & Outlets
     var router = LaunchRouter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Launch Screen"
+        self.title = MyTwiLiteStrings.launchScreen
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             // redirection based on login status
             if FirebaseHelper.instance.currentUser() != nil {

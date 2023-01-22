@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class SignUpViewController: MyTwiLiteViewController {
-
     // MARK: - Variables & Outlets
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var textFieldFirstName: UITextField!
@@ -37,6 +36,7 @@ class SignUpViewController: MyTwiLiteViewController {
     
     // MARK: - Navigate to login action
     private func navigateToLogin() {
+        self.view.endEditing(true)
         self.router.route(to: .logIn, from: self, parameters: nil)
     }
     
@@ -47,6 +47,7 @@ class SignUpViewController: MyTwiLiteViewController {
 
     // MARK: - Profile picture picker action
     @IBAction func selectProfilePressed(_ sender: UIButton) {
+        self.view.endEditing(true)
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
@@ -56,34 +57,30 @@ class SignUpViewController: MyTwiLiteViewController {
     // MARK: - On sign-up button action
     @IBAction func signeUpPressed(_ sender: UIButton) {
         // validate all the fields
+        self.view.endEditing(true)
         if imageViewProfile.image == nil {
-            showAlert(message: "Please select a profile picture")
+            showAlert(message: MyTwiLiteStrings.selectProfilePic)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
-            showAlert(message: "Please enter valid first name")
+            showAlert(message: MyTwiLiteStrings.validFirstName)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
-            showAlert(message: "Please enter valid last name")
+            showAlert(message: MyTwiLiteStrings.validLastName)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: "Please enter valid email")
+            showAlert(message: MyTwiLiteStrings.validEmail)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: "Invalid Password, it must contains one uppercase one lowercase one number and 8 characters long")
+            showAlert(message: MyTwiLiteStrings.validPassword)
             return
         } else if textFieldConfirmPassword.text != textFieldPassword.text {
-            showAlert(message: "Password and confirm passwords are different")
+            showAlert(message: MyTwiLiteStrings.validConfirmPassword)
             return
         }
     
         if let firstName = textFieldFirstName.text, let lastName = textFieldLastName.text,
            let email = textFieldEmail.text, let password = textFieldPassword.text,
            let profileImageData = imageViewProfile.image?.jpegData(compressionQuality: 0.6) {
-            if textFieldPassword.text != textFieldConfirmPassword.text {
-                self.showAlert(message: "Password and confirm password are different.")
-                return
-            }
-            
             let user = UserDetail(firstName: firstName, lastName: lastName,
                                   email: email, password: password, profileImageData: profileImageData)
 
@@ -96,8 +93,6 @@ class SignUpViewController: MyTwiLiteViewController {
                     self?.navigateToHome()
                 }
             }
-        } else {
-            print("Please enter valid and required details")
         }
     }
     

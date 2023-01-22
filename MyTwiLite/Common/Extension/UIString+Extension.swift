@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension String {
+    // MARK: - Function to set first letter capital
     var capitalizedFirstLetter: String {
         self.prefix(1).uppercased() + self.dropFirst()
     }
