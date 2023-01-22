@@ -12,4 +12,7 @@ target 'MyTwiLite' do
   pod 'Firebase/Database', '~> 9.6.0'
   pod 'Firebase/Firestore', '~> 9.6.0'
   pod 'Firebase/Storage', '~> 9.6.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.0'
+  pod 'NVActivityIndicatorView', '~> 4.8.0'
+  
 end

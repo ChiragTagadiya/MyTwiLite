@@ -43,7 +43,9 @@ class LoginViewController: MyTwiLiteViewController {
             return
         }
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
+            self.showLoader()
             viewModel.signinUser(email: email, password: password) { [weak self] (_, error) in
+                self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
                 } else {

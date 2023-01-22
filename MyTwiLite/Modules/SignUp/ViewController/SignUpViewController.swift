@@ -66,7 +66,7 @@ class SignUpViewController: MyTwiLiteViewController {
             showAlert(message: "Please enter valid last name")
             return
         } else if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: "Please enter valid last name")
+            showAlert(message: "Please enter valid email")
             return
         } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
             showAlert(message: "Invalid Password, it must contains one uppercase one lowercase one number and 8 characters long")
@@ -87,7 +87,9 @@ class SignUpViewController: MyTwiLiteViewController {
             let user = UserDetail(firstName: firstName, lastName: lastName,
                                   email: email, password: password, profileImageData: profileImageData)
 
+            self.showLoader()
             viewModel.createUser(user) { [weak self] _, error in
+                self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
                 } else {
