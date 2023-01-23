@@ -33,7 +33,7 @@ struct Utils {
     
     // MARK: - Validate a password
     func isValidPassword(_ password: String?) -> Bool {
-        // check for empty email and whitespaces
+        // check for password and whitespaces
         if let password = password, password.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
@@ -44,10 +44,25 @@ struct Utils {
     
     // MARK: - Validate a login password
     func isValidLogInPassword(_ password: String?) -> Bool {
-        // check for empty email and whitespaces
+        // check for password and whitespaces
         if let password = password, password.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
         return true
+    }
+    
+    // MARK: - Validate image
+    func isValidImage(_ imageData: Data?) -> Bool {
+        // check for valid image data
+        if imageData == nil {
+            return false
+        }
+        return true
+    }
+
+    // MARK: - Current date timestamp
+    func currentTimestamp() -> String {
+        let date = Date().timeIntervalSince1970
+        return "\(date)"
     }
 }

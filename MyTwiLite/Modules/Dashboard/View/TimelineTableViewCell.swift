@@ -1,5 +1,5 @@
 //
-//  TimeLineTableViewCell.swift
+//  TimelineTableViewCell.swift
 //  MyTwiLite
 //
 //  Created by DC on 21/01/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimeLineTableViewCell: UITableViewCell {
+class TimelineTableViewCell: UITableViewCell {
     // MARK: - Outlets & Variables
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var labelTimelineText: UILabel!

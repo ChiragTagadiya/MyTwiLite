@@ -14,13 +14,13 @@
 		331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755CC297C1405008BE9B7 /* LogIn.storyboard */; };
 		331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */; };
 		331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */; };
-		331755DA297C1DC8008BE9B7 /* AddTimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */; };
+		331755DA297C1DC8008BE9B7 /* AddTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */; };
 		331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */; };
 		331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755DE297C2229008BE9B7 /* FirebaseHelper.swift */; };
 		331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E2297C22C4008BE9B7 /* UserDetail.swift */; };
 		331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E9297C2522008BE9B7 /* DashboardViewController.swift */; };
 		331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */; };
-		331755F0297C2777008BE9B7 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */; };
+		331755F0297C2777008BE9B7 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */; };
 		331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */; };
 		331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */; };
 		333BDFDE297C664B00F70872 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333BDFDD297C664B00F70872 /* Validation.swift */; };
@@ -32,6 +32,9 @@
 		3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E587297C484E007ABCA6 /* SignUpViewModel.swift */; };
 		3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E589297C498F007ABCA6 /* AppConstant.swift */; };
 		3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */; };
+		3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362520C297DB6780024CE9E /* DashboardRouter.swift */; };
+		33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625212297DC5150024CE9E /* AddTimelineViewModel.swift */; };
+		33625215297DC5C80024CE9E /* AddTimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625214297DC5C80024CE9E /* AddTimelineModel.swift */; };
 		337F6B9B2979557800E6DBCC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6B9A2979557800E6DBCC /* Router.swift */; };
 		337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */; };
 		337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA52979592600E6DBCC /* AppStoryboard.swift */; };
@@ -53,13 +56,13 @@
 		331755CC297C1405008BE9B7 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteViewController.swift; sourceTree = "<group>"; };
 		331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTimeLine.storyboard; sourceTree = "<group>"; };
+		331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTimeline.storyboard; sourceTree = "<group>"; };
 		331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		331755DE297C2229008BE9B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		331755E2297C22C4008BE9B7 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		331755E9297C2522008BE9B7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+DataSource.swift"; sourceTree = "<group>"; };
-		331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeLineViewController.swift; sourceTree = "<group>"; };
 		331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTimeLineViewController+DataSource.swift"; sourceTree = "<group>"; };
 		333BDFDD297C664B00F70872 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -71,6 +74,9 @@
 		3358E587297C484E007ABCA6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3358E589297C498F007ABCA6 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		3362520C297DB6780024CE9E /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		33625212297DC5150024CE9E /* AddTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineViewModel.swift; sourceTree = "<group>"; };
+		33625214297DC5C80024CE9E /* AddTimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineModel.swift; sourceTree = "<group>"; };
 		337F6B9A2979557800E6DBCC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		337F6BA52979592600E6DBCC /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 		331755E8297C2509008BE9B7 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				3362520C297DB6780024CE9E /* DashboardRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -244,17 +251,21 @@
 		331755EE297C265D008BE9B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				331755EF297C2777008BE9B7 /* TimeLineTableViewCell.swift */,
+				331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		331755F1297C27E7008BE9B7 /* AddTimeLine */ = {
+		331755F1297C27E7008BE9B7 /* AddTimeline */ = {
 			isa = PBXGroup;
 			children = (
+				33625211297DB8C20024CE9E /* Router */,
+				33625210297DB8B80024CE9E /* ViewModel */,
+				3362520F297DB8B00024CE9E /* View */,
+				3362520E297DB8A90024CE9E /* Model */,
 				331755F2297C27F0008BE9B7 /* ViewController */,
 			);
-			path = AddTimeLine;
+			path = AddTimeline;
 			sourceTree = "<group>";
 		};
 		331755F2297C27F0008BE9B7 /* ViewController */ = {
@@ -274,10 +285,40 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		3362520E297DB8A90024CE9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33625214297DC5C80024CE9E /* AddTimelineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3362520F297DB8B00024CE9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33625210297DB8B80024CE9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				33625212297DC5150024CE9E /* AddTimelineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		33625211297DB8C20024CE9E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		337F6B8F2979512700E6DBCC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				331755F1297C27E7008BE9B7 /* AddTimeLine */,
+				331755F1297C27E7008BE9B7 /* AddTimeline */,
 				331755E4297C24B8008BE9B7 /* Dashboard */,
 				331755C0297C11F8008BE9B7 /* LogIn */,
 				337F6BAD2979719900E6DBCC /* Launch */,
@@ -354,7 +395,7 @@
 				337F6BA92979611200E6DBCC /* Launch.storyboard */,
 				338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */,
 				331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */,
-				331755D9297C1DC8008BE9B7 /* AddTimeLine.storyboard */,
+				331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -508,7 +549,7 @@
 			files = (
 				338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */,
 				331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */,
-				331755DA297C1DC8008BE9B7 /* AddTimeLine.storyboard in Resources */,
+				331755DA297C1DC8008BE9B7 /* AddTimeline.storyboard in Resources */,
 				338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */,
 				331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */,
 				331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */,
@@ -584,7 +625,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				331755F0297C2777008BE9B7 /* TimeLineTableViewCell.swift in Sources */,
+				33625215297DC5C80024CE9E /* AddTimelineModel.swift in Sources */,
+				331755F0297C2777008BE9B7 /* TimelineTableViewCell.swift in Sources */,
 				331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */,
 				333BDFE0297C69F000F70872 /* Utils.swift in Sources */,
 				331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */,
@@ -594,6 +636,7 @@
 				3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */,
 				3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */,
 				338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */,
+				33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */,
 				338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */,
 				3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */,
 				331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */,
@@ -601,6 +644,7 @@
 				331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */,
 				3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */,
 				331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */,
+				3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */,
 				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
 				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
 				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,

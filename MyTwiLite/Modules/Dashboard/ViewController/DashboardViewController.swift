@@ -10,7 +10,9 @@ import UIKit
 class DashboardViewController: MyTwiLiteViewController {
     // MARK: - Variables & Outlets
     @IBOutlet weak var tableViewTimeline: UITableView!
+
     let arrayTimeline = [String]()
+    var router = DashboardRouter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +36,7 @@ class DashboardViewController: MyTwiLiteViewController {
     
     // MARK: - Navigate to add timeline action
     private func navigateToAddTimeline() {
-//        if let addTimelineViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddTimelineViewController") as? AddTimelineViewController {
-//            self.navigationController?.pushViewController(addTimelineViewController, animated: true)
-//        }
+        router.route(to: .addTimeline, from: self, parameters: nil)
     }
 
     @objc func addTimeLineAction() {

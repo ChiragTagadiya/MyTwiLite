@@ -17,7 +17,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell =
                 tableView.dequeueReusableCell(withIdentifier: MyTwiLiteStrings.timelineTableViewCell, for: indexPath)
-                as? TimeLineTableViewCell else {
+                as? TimelineTableViewCell else {
             return UITableViewCell()
         }
         return cell

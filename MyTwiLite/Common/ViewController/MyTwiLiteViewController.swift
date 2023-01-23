@@ -20,6 +20,7 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
         self.view.backgroundColor = .white
     }
     
+    // MARK: - Show alert
     func showAlert(message: String) {
         let alertViewController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: MyTwiLiteStrings.okTitle, style: .default)
@@ -27,11 +28,22 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
         self.present(alertViewController, animated: true)
     }
     
+    // MARK: - Show custom alert to handle multiple actions
+    func showCustomAlert(message: String, okCallback: @escaping ((UIAlertAction) -> Void)) {
+        let alertViewController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let noAction = UIAlertAction(title: MyTwiLiteStrings.noTitle, style: .cancel)
+        let yesAction = UIAlertAction(title: MyTwiLiteStrings.yesTitle, style: .destructive, handler: okCallback)
+        alertViewController.addAction(noAction)
+        alertViewController.addAction(yesAction)
+        
+        self.present(alertViewController, animated: true)
+    }
+    
     // MARK: - Show/ Hide loader
     func showLoader(_ message: String = "", _ color: UIColor = .darkGray, textColor: UIColor = .white) {
         let size = CGSize(width: 40, height: 40)
         startAnimating(size, message: message, type: .lineSpinFadeLoader, color: color,
-                       backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0), textColor: textColor)
+                       backgroundColor: .lightGray.withAlphaComponent(0.3), textColor: textColor)
     }
     
     func hideLoader() {
