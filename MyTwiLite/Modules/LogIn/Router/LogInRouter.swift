@@ -22,8 +22,10 @@ class LogInRouter: Router {
             let signUpViewController = SignUpViewController.initiateFrom(appStoryboard: .signUp)
             context.navigationController?.pushViewController(signUpViewController, animated: true)
         case .dashboard:
-            let dashboardViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
-            context.navigationController?.pushViewController(dashboardViewController, animated: true)
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                let tabBarController = MyTwiLiteTabBar().initiateTabBar()
+                sceneDelegate.window?.rootViewController = tabBarController
+            }
         case .forgotPassword:
             break
         }

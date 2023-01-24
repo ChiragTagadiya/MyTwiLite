@@ -25,6 +25,8 @@ struct MyTwiLiteStrings {
     static let validTimeline = "Please enter atleast a valid text or select a picture to post a timeline."
     static let timelineTextPlaceholder = "Add timeline..."
     static let addPicture = "Add Picture"
+    static let myTimeline = "My Timeline"
+    static let profile = "Profile"
 }
 
 struct MyTwiLiteKeys {
@@ -42,4 +44,7 @@ struct MyTwiLiteKeys {
     static let timelinesKey = "timelines"
     static let normalDateFormat = "h:mm a, d MMM, yyyy"
     static let timelineTableViewCell = "TimelineTableViewCell"
+    static let dashBoardIcon = "DashboardIcon"
+    static let myTimelineIcon = "MyTimeline"
+    static let profileIcon = "ProfileIcon"
 }

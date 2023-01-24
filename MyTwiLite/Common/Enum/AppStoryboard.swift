@@ -13,7 +13,9 @@ enum AppStoryboard: String {
     case signUp
     case logIn
     case dashboard
+    case myTimeline
     case addTimeline
+    case profile
     
     var instance: UIStoryboard {
         let capitalizedString = self.rawValue.capitalizedFirstLetter

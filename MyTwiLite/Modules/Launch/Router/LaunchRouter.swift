@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class LaunchRouter: Router {
-    
+
     enum Destination {
         case logIn
         case signUp
@@ -22,8 +22,10 @@ class LaunchRouter: Router {
             let loginViewController = LoginViewController.initiateFrom(appStoryboard: .logIn)
             context.navigationController?.pushViewController(loginViewController, animated: false)
         case .dashboard:
-            let dashboardViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
-            context.navigationController?.pushViewController(dashboardViewController, animated: false)
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                let tabBarController = MyTwiLiteTabBar().initiateTabBar()
+                sceneDelegate.window?.rootViewController = tabBarController
+            }
         case .signUp:
             let signUpViewController = SignUpViewController.initiateFrom(appStoryboard: .signUp)
             context.navigationController?.pushViewController(signUpViewController, animated: false)
