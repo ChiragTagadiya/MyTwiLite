@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Tableview Datasource & Delegate
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayTimeline.count
+        return arrayTimelines.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -20,6 +20,8 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
                 as? TimelineTableViewCell else {
             return UITableViewCell()
         }
+        let timeline = arrayTimelines[indexPath.row]
+        cell.labelTimelineText.text = timeline?.text
         return cell
     }
 }

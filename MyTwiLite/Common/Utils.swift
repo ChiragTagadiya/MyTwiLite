@@ -65,4 +65,16 @@ struct Utils {
         let date = Date().timeIntervalSince1970
         return "\(date)"
     }
+    
+    // MARK: - Convert timestamp string to date string
+    func convertTimespampToDate(timestamp: String?) -> String {
+        if let timestamp = timestamp, let unixTime = Double(timestamp) {
+            let date = Date(timeIntervalSince1970: unixTime)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = MyTwiLiteKeys.normalDateFormat
+            let stringDate = dateFormatter.string(from: date)
+            return stringDate
+        }
+        return ""
+    }
 }

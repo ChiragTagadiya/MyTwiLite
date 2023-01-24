@@ -10,3 +10,4 @@ import Firebase
 
 // Firebase callback type
 typealias FirebaseCallBackType = (AuthDataResult?, Error?) -> Void
+typealias CollectionCallBackType =  (QuerySnapshot?, Error?) -> Void

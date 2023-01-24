@@ -146,4 +146,12 @@ class FirebaseHelper {
             }
         }
     }
+    
+    // MARK: - Fetch timelines
+    func fetchTimelines(callback: @escaping CollectionCallBackType) {
+        let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelineCollection)
+        timelineCollection.getDocuments { snapshot, error in
+            callback(snapshot, error)
+        }
+    }
 }

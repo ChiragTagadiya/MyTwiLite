@@ -29,6 +29,7 @@ struct MyTwiLiteStrings {
 }
 
 struct MyTwiLiteKeys {
+    static let timelineCollection = "timelines"
     static let profilePath = "profiles/"
     static let timelinePath = "timelines/"
     static let jpgExtension = "jpg"
@@ -41,4 +42,5 @@ struct MyTwiLiteKeys {
     static let createdDateKey = "created_date"
     static let usersKey = "users"
     static let timelinesKey = "timelines"
+    static let normalDateFormat = "h:mm a, d MMM, yyyy"
 }

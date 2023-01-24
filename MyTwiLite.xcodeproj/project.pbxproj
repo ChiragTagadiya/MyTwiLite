@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */; };
+		3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C785297EB2F900F09661 /* DashboardViewModel.swift */; };
+		3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C789297EB7FB00F09661 /* DashboardModel.swift */; };
 		331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C5297C122D008BE9B7 /* LogInViewController.swift */; };
 		331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C7297C127A008BE9B7 /* LogInRouter.swift */; };
 		331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CA297C135A008BE9B7 /* LaunchRouter.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3306C785297EB2F900F09661 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		3306C789297EB7FB00F09661 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		331755C5297C122D008BE9B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		331755C7297C127A008BE9B7 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
 		331755CA297C135A008BE9B7 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		331755E6297C24FC008BE9B7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3306C785297EB2F900F09661 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		331755E7297C2502008BE9B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3306C789297EB7FB00F09661 /* DashboardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -633,11 +639,13 @@
 				337F6B9B2979557800E6DBCC /* Router.swift in Sources */,
 				337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */,
 				331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */,
+				3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */,
 				3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */,
 				3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */,
 				338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */,
 				33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */,
 				338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */,
+				3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */,
 				3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */,
 				331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */,
 				3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */,

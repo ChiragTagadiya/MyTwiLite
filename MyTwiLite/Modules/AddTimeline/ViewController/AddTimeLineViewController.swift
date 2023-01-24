@@ -45,13 +45,14 @@ class AddTimelineViewController: MyTwiLiteViewController {
         
         if let uid = FirebaseHelper.instance.currentUser()?.uid {
             self.showLoader()
-            viewModel.postTimeline(uid, timelineText: textFieldTimeline.text, timlineImageData: timelineImageData) { result in
-                self.hideLoader()
+            viewModel.postTimeline(uid, timelineText: textFieldTimeline.text,
+                                   timlineImageData: timelineImageData) { [weak self] result in
+                self?.hideLoader()
                 switch result {
                 case .success:
-                    self.dismiss(animated: true)
+                    self?.dismiss(animated: true)
                 case .failure(let error):
-                    self.showAlert(message: error.localizedDescription)
+                    self?.showAlert(message: error.localizedDescription)
                 }
             }
         }
