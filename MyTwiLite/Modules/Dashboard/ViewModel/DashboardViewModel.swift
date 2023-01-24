@@ -8,8 +8,15 @@
 import Foundation
 
 class DashboardViewModel {
+    // MARK: - Download image url
+    func downloadImageUrl(imagePath: String, callback: @escaping (Result<URL, Error>) -> Void) {
+        FirebaseHelper.instance.downloadImageUrl(imagePath: imagePath) { result in
+            callback(result)
+        }
+    }
+    
     // MARK: - Fetch timelines
-    func fetchTimelines(callBack: @escaping (Result<[TimelinModel?], Error>) -> Void) {
+    func fetchTimelines(callBack: @escaping (Result<[TimelinModel], Error>) -> Void) {
         FirebaseHelper.instance.fetchTimelines { snapshot, error in
             if let error = error {
                 callBack(.failure(error))

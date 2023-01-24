@@ -14,5 +14,6 @@ target 'MyTwiLite' do
   pod 'Firebase/Storage', '~> 9.6.0'
   pod 'IQKeyboardManagerSwift', '~> 6.5.0'
   pod 'NVActivityIndicatorView', '~> 4.8.0'
+  pod 'SDWebImage', '~> 5.13.3'
   
 end

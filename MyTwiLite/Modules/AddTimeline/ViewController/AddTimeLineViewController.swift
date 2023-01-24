@@ -10,6 +10,7 @@ import UIKit
 class AddTimelineViewController: MyTwiLiteViewController {
     // MARK: - Outlets & Variables
     @IBOutlet weak var textFieldTimeline: UITextView!
+    @IBOutlet weak var buttonAddPicture: UIButton!
     @IBOutlet weak var vewImageTimeline: UIView!
     @IBOutlet weak var imageViewTimeline: UIImageView!
     
@@ -18,7 +19,13 @@ class AddTimelineViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLayout()
+    }
+    
+    // MARK: - Configure initial layout
+    private func configureLayout() {
         textFieldTimeline.text = MyTwiLiteStrings.timelineTextPlaceholder
+        buttonAddPicture.setTitle(MyTwiLiteStrings.addPicture, for: .normal)
         textFieldTimeline.textColor = UIColor.lightGray
     }
     

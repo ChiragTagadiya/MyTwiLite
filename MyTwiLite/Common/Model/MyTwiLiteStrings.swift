@@ -21,15 +21,13 @@ struct MyTwiLiteStrings {
     static let yesTitle = "Yes"
     static let noTitle = "No"
     static let timelines = "Timelines"
-    static let addTimeline =  "Add Timeline"
-    static let timelineTableViewCell = "TimelineTableViewCell"
     static let removeTimelineImageMessage = "Are you sure to remove a timeline picture ?"
     static let validTimeline = "Please enter atleast a valid text or select a picture to post a timeline."
     static let timelineTextPlaceholder = "Add timeline..."
+    static let addPicture = "Add Picture"
 }
 
 struct MyTwiLiteKeys {
-    static let timelineCollection = "timelines"
     static let profilePath = "profiles/"
     static let timelinePath = "timelines/"
     static let jpgExtension = "jpg"
@@ -43,4 +41,5 @@ struct MyTwiLiteKeys {
     static let usersKey = "users"
     static let timelinesKey = "timelines"
     static let normalDateFormat = "h:mm a, d MMM, yyyy"
+    static let timelineTableViewCell = "TimelineTableViewCell"
 }

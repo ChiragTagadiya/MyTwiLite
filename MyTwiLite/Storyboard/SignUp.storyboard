@@ -82,7 +82,7 @@
                                                     <constraint firstAttribute="width" constant="125" id="dv3-fd-aj0"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Select Profile"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Add Picture"/>
                                                 <connections>
                                                     <action selector="selectProfilePressed:" destination="kNh-p3-3kt" eventType="touchUpInside" id="yJK-ms-eDq"/>
                                                 </connections>
@@ -138,6 +138,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Yi-AQ-m0M"/>
                     <connections>
+                        <outlet property="buttonAddPicture" destination="3ve-0g-mEL" id="Ym0-cV-3DM"/>
                         <outlet property="imageViewProfile" destination="Xc6-h8-ZAs" id="Snh-fk-xcf"/>
                         <outlet property="textFieldConfirmPassword" destination="cce-08-d3k" id="FcZ-xa-MiM"/>
                         <outlet property="textFieldEmail" destination="VYw-8m-Ztg" id="2oH-Yb-FBa"/>

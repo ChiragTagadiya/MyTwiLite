@@ -12,6 +12,7 @@ import Firebase
 class SignUpViewController: MyTwiLiteViewController {
     // MARK: - Variables & Outlets
     @IBOutlet weak var imageViewProfile: UIImageView!
+    @IBOutlet weak var buttonAddPicture: UIButton!
     @IBOutlet weak var textFieldFirstName: UITextField!
     @IBOutlet weak var textFieldLastName: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -23,15 +24,15 @@ class SignUpViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = MyTwiLiteStrings.signUp
-        self.shouldHideBackButton = true
         self.configureLayout()
     }
 
     // MARK: - Configure initial view layout
     private func configureLayout() {
+        self.title = MyTwiLiteStrings.signUp
+        self.shouldHideBackButton = true
         self.imageViewProfile.setCornerRadius()
+        buttonAddPicture.setTitle(MyTwiLiteStrings.addPicture, for: .normal)
     }
     
     // MARK: - Navigate to login action

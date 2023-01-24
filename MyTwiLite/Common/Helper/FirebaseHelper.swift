@@ -149,9 +149,16 @@ class FirebaseHelper {
     
     // MARK: - Fetch timelines
     func fetchTimelines(callback: @escaping CollectionCallBackType) {
-        let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelineCollection)
+        let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelinesKey)
         timelineCollection.getDocuments { snapshot, error in
             callback(snapshot, error)
+        }
+    }
+    
+    // MARK: - Download image url
+    func downloadImageUrl(imagePath: String, callBack: @escaping (Result<URL, Error>) -> Void) {
+        Storage.storage().reference().child(imagePath).downloadURL { result in
+             callBack(result)
         }
     }
 }

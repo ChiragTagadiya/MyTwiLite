@@ -13,8 +13,11 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var labelTimelineText: UILabel!
     @IBOutlet weak var imageViewTimeline: UIImageView!
     
+    @IBOutlet weak var imageViewHeightContraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageViewHeightContraint.constant = 0
+        self.layoutIfNeeded()
         imageViewProfile.setCornerRadius()
     }
 

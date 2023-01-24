@@ -12,7 +12,7 @@ class DashboardViewController: MyTwiLiteViewController {
     @IBOutlet weak var labelNoTimeline: UILabel!
     @IBOutlet weak var tableViewTimeline: UITableView!
 
-    var arrayTimelines = [TimelinModel?]()
+    var arrayTimelines = [TimelinModel]()
     var router = DashboardRouter()
     var viewModel = DashboardViewModel()
     
@@ -20,16 +20,18 @@ class DashboardViewController: MyTwiLiteViewController {
         super.viewDidLoad()
         self.title = MyTwiLiteStrings.timelines
         self.shouldHideBackButton = true
-        configureLayout()
-        fetchTimelines()
+        self.configureLayout()
+        self.fetchTimelines()
     }
 
     // MARK: - Configure initial layout
     private func configureLayout() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: MyTwiLiteStrings.addTimeline,
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .add,
                                                             style: .plain, target: self, action: #selector(addTimeLineAction))
+        self.tableViewTimeline.tableFooterView = UIView()
         self.manageTableView(isHidden: true)
-        self.tableViewTimeline.estimatedRowHeight = UITableView.automaticDimension
+        self.labelNoTimeline.isHidden = true
+        self.tableViewTimeline.estimatedRowHeight = 66
         self.tableViewTimeline.rowHeight = UITableView.automaticDimension
     }
     
