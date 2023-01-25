@@ -9,7 +9,9 @@ import Foundation
 
 class DashboardViewModel {
     // MARK: - Variables
+    let navigationTitle = MyTwiLiteStrings.timelines
     var arrayTimelines = [TimelineModel]()
+
 
     // MARK: - Download image url
     func downloadImageUrl(imagePath: String, callback: @escaping (Result<URL, Error>) -> Void) {

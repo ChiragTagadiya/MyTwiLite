@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */; };
 		33018550298137F200C9C5E9 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301854F298137F200C9C5E9 /* LaunchViewModel.swift */; };
+		330185522981526600C9C5E9 /* MyTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330185512981526600C9C5E9 /* MyTimelineViewModel.swift */; };
+		330185542981540E00C9C5E9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330185532981540E00C9C5E9 /* ProfileViewModel.swift */; };
 		3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C785297EB2F900F09661 /* DashboardViewModel.swift */; };
 		3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C789297EB7FB00F09661 /* DashboardModel.swift */; };
 		331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C5297C122D008BE9B7 /* LogInViewController.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		3301854F298137F200C9C5E9 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		330185512981526600C9C5E9 /* MyTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimelineViewModel.swift; sourceTree = "<group>"; };
+		330185532981540E00C9C5E9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3306C785297EB2F900F09661 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		3306C789297EB7FB00F09661 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		331755C5297C122D008BE9B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 		3363B159298022E900657E06 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				330185512981526600C9C5E9 /* MyTimelineViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 		3363B15D2980230200657E06 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				330185532981540E00C9C5E9 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -783,10 +789,12 @@
 				3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */,
 				331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */,
 				3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */,
+				330185542981540E00C9C5E9 /* ProfileViewModel.swift in Sources */,
 				331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */,
 				3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */,
 				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
 				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
+				330185522981526600C9C5E9 /* MyTimelineViewModel.swift in Sources */,
 				3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */,
 				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,
 				331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */,

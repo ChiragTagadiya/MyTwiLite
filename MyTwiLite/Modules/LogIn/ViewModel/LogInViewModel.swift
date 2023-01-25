@@ -8,6 +8,11 @@
 import Foundation
 
 class LogInViewModel {
+    // MARK: - Variables
+    let navigationTitle = MyTwiLiteStrings.logIn
+    let validEmailTitle = MyTwiLiteStrings.validEmail
+    let validPasswordTitle = MyTwiLiteStrings.validPassword
+
     // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()

@@ -8,7 +8,7 @@
 import UIKit
 
 class AddTimelineViewController: MyTwiLiteViewController {
-    // MARK: - Outlets & Variables
+    // MARK: - Variables & Outlets
     @IBOutlet weak var textFieldTimeline: UITextView!
     @IBOutlet weak var buttonAddPicture: UIButton!
     @IBOutlet weak var vewImageTimeline: UIView!
@@ -24,8 +24,8 @@ class AddTimelineViewController: MyTwiLiteViewController {
     
     // MARK: - Configure initial layout
     private func configureLayout() {
-        textFieldTimeline.text = MyTwiLiteStrings.timelineTextPlaceholder
-        buttonAddPicture.setTitle(MyTwiLiteStrings.addPicture, for: .normal)
+        textFieldTimeline.text = viewModel.timelinePlaceholderTitle
+        buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
         textFieldTimeline.textColor = UIColor.lightGray
     }
     
@@ -46,7 +46,7 @@ class AddTimelineViewController: MyTwiLiteViewController {
             timelineImageData = imageData
         }
         if !viewModel.isTimelineValid(isTextPlaceholder: isTextPlaceholder, text: textFieldTimeline.text, imageData: timelineImageData) {
-            showAlert(message: MyTwiLiteStrings.validTimeline)
+            showAlert(message: viewModel.validTimelineTitle)
             return
         }
         
@@ -69,7 +69,7 @@ class AddTimelineViewController: MyTwiLiteViewController {
     // MARK: - Remove picture action
     @IBAction func onRemovePictureAction(_ sender: UIButton) {
         self.view.endEditing(true)
-        self.showCustomAlert(message: MyTwiLiteStrings.removeTimelineImageMessage) { [weak self] _ in
+        self.showCustomAlert(message: viewModel.removeTimelineImageTitle) { [weak self] _ in
             self?.imageViewTimeline.image = nil
             self?.vewImageTimeline.isHidden = true
         }

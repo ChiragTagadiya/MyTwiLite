@@ -32,7 +32,7 @@ extension AddTimelineViewController: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             isTextPlaceholder = true
-            textView.text = MyTwiLiteStrings.timelineTextPlaceholder
+            textView.text = viewModel.timelinePlaceholderTitle
             textView.textColor = UIColor.lightGray
         }
     }

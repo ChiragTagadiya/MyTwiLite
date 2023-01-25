@@ -16,7 +16,12 @@ class LaunchViewController: MyTwiLiteViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = MyTwiLiteStrings.launchScreen
+        self.title = viewModel.navigationTitle
+        self.manageLaunchRouter()
+    }
+
+    // MARK: - Handle launch router based on login status
+    func manageLaunchRouter() {
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             // redirection based on login status
             if self.viewModel.isUserLogin() {
@@ -26,5 +31,4 @@ class LaunchViewController: MyTwiLiteViewController {
             }
         }
     }
-
 }

@@ -8,6 +8,16 @@
 import Foundation
 
 class SignUpViewModel {
+    // MARK: - Variables
+    let navigationTitle = MyTwiLiteStrings.signUp
+    let addPictureTitle = MyTwiLiteStrings.addPicture
+    let selectProfilePicTitle = MyTwiLiteStrings.selectProfilePic
+    let validFirstNameTitle = MyTwiLiteStrings.validFirstName
+    let validLastNameTitle = MyTwiLiteStrings.validLastName
+    let validEmailTitle = MyTwiLiteStrings.validEmail
+    let validPasswordTitle = MyTwiLiteStrings.validPassword
+    let validConfirmPasswordTitle = MyTwiLiteStrings.validConfirmPassword
+
     // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()

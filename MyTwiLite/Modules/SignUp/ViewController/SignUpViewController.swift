@@ -29,10 +29,10 @@ class SignUpViewController: MyTwiLiteViewController {
 
     // MARK: - Configure initial view layout
     private func configureLayout() {
-        self.title = MyTwiLiteStrings.signUp
+        self.title = viewModel.navigationTitle
         self.shouldHideBackButton = true
         self.imageViewProfile.setCornerRadius()
-        buttonAddPicture.setTitle(MyTwiLiteStrings.addPicture, for: .normal)
+        buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
     }
     
     // MARK: - Navigate to login action
@@ -60,22 +60,22 @@ class SignUpViewController: MyTwiLiteViewController {
         // validate all the fields
         self.view.endEditing(true)
         if imageViewProfile.image == nil {
-            showAlert(message: MyTwiLiteStrings.selectProfilePic)
+            showAlert(message: viewModel.selectProfilePicTitle)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
-            showAlert(message: MyTwiLiteStrings.validFirstName)
+            showAlert(message: viewModel.validFirstNameTitle)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
-            showAlert(message: MyTwiLiteStrings.validLastName)
+            showAlert(message: viewModel.validLastNameTitle)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: MyTwiLiteStrings.validEmail)
+            showAlert(message: viewModel.validEmailTitle)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: MyTwiLiteStrings.validPassword)
+            showAlert(message: viewModel.validPasswordTitle)
             return
         } else if textFieldConfirmPassword.text != textFieldPassword.text {
-            showAlert(message: MyTwiLiteStrings.validConfirmPassword)
+            showAlert(message: viewModel.validConfirmPasswordTitle)
             return
         }
     

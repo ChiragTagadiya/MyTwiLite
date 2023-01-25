@@ -18,7 +18,7 @@ class LoginViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = MyTwiLiteStrings.logIn
+        self.title = viewModel.navigationTitle
         self.shouldHideBackButton = true
     }
     
@@ -35,10 +35,10 @@ class LoginViewController: MyTwiLiteViewController {
     // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: MyTwiLiteStrings.validEmail)
+            showAlert(message: viewModel.validEmailTitle)
             return
         } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: MyTwiLiteStrings.validPassword)
+            showAlert(message: viewModel.validPasswordTitle)
             return
         }
         if let email = textFieldEmail.text, let password = textFieldPassword.text {

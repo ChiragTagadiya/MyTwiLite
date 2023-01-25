@@ -17,7 +17,7 @@ class DashboardViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = MyTwiLiteStrings.timelines
+        self.title = viewModel.navigationTitle
         self.shouldHideBackButton = true
         self.configureLayout()
         self.fetchTimelines()

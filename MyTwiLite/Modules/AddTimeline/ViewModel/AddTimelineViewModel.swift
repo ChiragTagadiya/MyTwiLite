@@ -8,6 +8,12 @@
 import Foundation
 
 class AddTimelineViewModel {
+    // MARK: - Variables
+    let timelinePlaceholderTitle = MyTwiLiteStrings.timelineTextPlaceholder
+    let addPictureTitle = MyTwiLiteStrings.addPicture
+    let validTimelineTitle = MyTwiLiteStrings.validTimeline
+    let removeTimelineImageTitle = MyTwiLiteStrings.removeTimelineImageMessage
+
     // MARK: - Validate user detail with a type
     func isTimelineValid(isTextPlaceholder: Bool, text: String?, imageData: Data?) -> Bool {
         let utils = Utils()
