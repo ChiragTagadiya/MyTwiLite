@@ -18,7 +18,8 @@ class MyTwiLiteTabBar {
                                               image: UIImage(named: MyTwiLiteKeys.dashBoardIcon), tag: 0)
         dashboardNavigationController.tabBarItem = dashbordTabBarItem
         
-        let myTimelineViewController = MyTimelineViewController.initiateFrom(appStoryboard: .myTimeline)
+        let myTimelineViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
+        myTimelineViewController.viewModel.isMyTimline = true
         let myTimelineNavigationController = UINavigationController(rootViewController: myTimelineViewController)
         let myTimeLineTabBarItem = UITabBarItem(title: MyTwiLiteStrings.myTimeline,
                                                 image: UIImage(named: MyTwiLiteKeys.myTimelineIcon), tag: 1)

@@ -23,7 +23,7 @@ extension AddTimelineViewController: UITextViewDelegate {
     // MARK: - Text view delegates
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
-            isTextPlaceholder = false
+            viewModel.setTimelinePlaceholderStatus(false)
             textView.text = nil
             textView.textColor = UIColor.black
         }
@@ -31,7 +31,7 @@ extension AddTimelineViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            isTextPlaceholder = true
+            viewModel.setTimelinePlaceholderStatus(true)
             textView.text = viewModel.timelinePlaceholderTitle
             textView.textColor = UIColor.lightGray
         }

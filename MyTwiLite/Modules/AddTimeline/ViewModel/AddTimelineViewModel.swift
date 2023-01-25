@@ -13,11 +13,17 @@ class AddTimelineViewModel {
     let addPictureTitle = MyTwiLiteStrings.addPicture
     let validTimelineTitle = MyTwiLiteStrings.validTimeline
     let removeTimelineImageTitle = MyTwiLiteStrings.removeTimelineImageMessage
+    var isTextPlaceholder = true
+    
+    // MARK: - Set timeline text placeholder status
+    func setTimelinePlaceholderStatus(_ isTextPlaceholder: Bool) {
+        self.isTextPlaceholder = isTextPlaceholder
+    }
 
     // MARK: - Validate user detail with a type
-    func isTimelineValid(isTextPlaceholder: Bool, text: String?, imageData: Data?) -> Bool {
+    func isTimelineValid(text: String?, imageData: Data?) -> Bool {
         let utils = Utils()
-        if (!isTextPlaceholder && utils.isValidText(text)) || utils.isValidImage(imageData) {
+        if (!self.isTextPlaceholder && utils.isValidText(text)) || utils.isValidImage(imageData) {
             return true
         }
         return false

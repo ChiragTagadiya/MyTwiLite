@@ -28,6 +28,7 @@ struct MyTwiLiteStrings {
     static let addPicture = "Add Picture"
     static let myTimeline = "My Timeline"
     static let profile = "Profile"
+    static let removeTimeline = "Are you sure to delete this timeline ?"
 }
 
 // MARK: - Keys to use inside the app
@@ -41,6 +42,7 @@ struct MyTwiLiteKeys {
     static let profileImagePathKey = "profile_image_path"
     static let timelineTextKey = "timeline_text"
     static let timelineImagePathKey = "timeline_image_path"
+    static let timelineImageNameKey = "timeline_image_name"
     static let createdDateKey = "created_date"
     static let usersKey = "users"
     static let timelinesKey = "timelines"

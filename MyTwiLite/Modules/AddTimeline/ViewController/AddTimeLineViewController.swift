@@ -15,7 +15,6 @@ class AddTimelineViewController: MyTwiLiteViewController {
     @IBOutlet weak var imageViewTimeline: UIImageView!
     
     let viewModel = AddTimelineViewModel()
-    var isTextPlaceholder = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +44,14 @@ class AddTimelineViewController: MyTwiLiteViewController {
         if let imageData = imageViewTimeline.image?.jpegData(compressionQuality: 0.6) {
             timelineImageData = imageData
         }
-        if !viewModel.isTimelineValid(isTextPlaceholder: isTextPlaceholder, text: textFieldTimeline.text, imageData: timelineImageData) {
+        if !viewModel.isTimelineValid(text: textFieldTimeline.text, imageData: timelineImageData) {
             showAlert(message: viewModel.validTimelineTitle)
             return
         }
         
         if let uid = FirebaseHelper.instance.currentUser()?.uid {
             self.showLoader()
-            let timelineText = !isTextPlaceholder ? textFieldTimeline.text : nil
+            let timelineText = !(viewModel.isTextPlaceholder) ? textFieldTimeline.text : nil
             viewModel.postTimeline(uid, timelineText: timelineText,
                                    timlineImageData: timelineImageData) { [weak self] result in
                 self?.hideLoader()

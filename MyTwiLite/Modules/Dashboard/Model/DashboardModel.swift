@@ -9,9 +9,11 @@ import Foundation
 
 // MARK: - Timeline structure
 struct TimelineModel {
+    var documentId: String
     var uid: String?
     var text: String?
     var imageName: String?
+    var imagePath: String?
     var profileName: String?
     var createdDateString: String?
     var createdDate: Date
