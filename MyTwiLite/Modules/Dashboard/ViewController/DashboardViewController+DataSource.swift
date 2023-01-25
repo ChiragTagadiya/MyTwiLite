@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import SDWebImage
+import Kingfisher
 
 // MARK: - Tableview Datasource & Delegate
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
@@ -28,35 +28,19 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
             cell.separatorInset.left = cell.bounds.size.width
         }
         
-        if let uid = timeline.uid, !(uid.isEmpty) {
+        if let profilePath = timeline.profileName, !(profilePath.isEmpty) {
             // TODO: - change the placeholder image
             let profilePlaceholderImage = UIImage()
-            cell.imageViewProfile.image = profilePlaceholderImage
-            let profileImagePath = "\(MyTwiLiteKeys.profilePath)\(uid).\(MyTwiLiteKeys.jpgExtension)"
-            
-            viewModel.downloadImageUrl(imagePath: profileImagePath) { result in
-                switch result {
-                case .success(let url):
-                    cell.imageViewProfile.sd_setImage(with: url, placeholderImage: profilePlaceholderImage)
-                case .failure(let error):
-                    debugPrint("error while download profile image url: ", error.localizedDescription)
-                }
-            }
+            let profileUrl = URL(string: profilePath)
+            cell.imageViewProfile.kf.setImage(with: profileUrl, placeholder: profilePlaceholderImage)
         }
         
         if let imagePath = timeline.imageName, !(imagePath.isEmpty) {
             // TODO: - change the placeholder image
             let timelinePlaceholderImage = UIImage()
-            cell.imageViewTimeline.image = timelinePlaceholderImage
             cell.imageViewHeightContraint.constant = 128
-            viewModel.downloadImageUrl(imagePath: imagePath) { result in
-                switch result {
-                case .success(let url):
-                    cell.imageViewTimeline.sd_setImage(with: url, placeholderImage: timelinePlaceholderImage)
-                case .failure(let error):
-                    debugPrint("error while download timeline image url: ", error.localizedDescription)
-                }
-            }
+            let timelineUrl = URL(string: imagePath)
+            cell.imageViewTimeline.kf.setImage(with: timelineUrl, placeholder: timelinePlaceholderImage)
         } else {
             cell.imageViewHeightContraint.constant = 0
         }

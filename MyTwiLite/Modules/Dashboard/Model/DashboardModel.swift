@@ -11,5 +11,6 @@ struct TimelinModel {
     var uid: String?
     var text: String?
     var imageName: String?
+    var profileName: String?
     var createdDate: String?
 }

@@ -29,10 +29,12 @@ class DashboardViewModel {
                         timelineModel.uid = timelineData[MyTwiLiteKeys.uidKey] as? String
                         timelineModel.text = timelineData[MyTwiLiteKeys.timelineTextKey] as? String
                         timelineModel.imageName = timelineData[MyTwiLiteKeys.timelineImagePathKey] as? String
+                        timelineModel.profileName = timelineData[MyTwiLiteKeys.profileImagePathKey] as? String
                         let createdDate = timelineData[MyTwiLiteKeys.createdDateKey] as? String
                         timelineModel.createdDate = Utils().convertTimespampToDate(timestamp: createdDate)
                         timelines.append(timelineModel)
                     }
+                    // TODO: - sort timelines by created_date
                 }
                 callBack(.success(timelines))
             }

@@ -23,7 +23,7 @@ class FirebaseHelper {
         Auth.auth().createUser(withEmail: user.email, password: user.password) { (result, error) in
             if let uid = result?.user.uid {
                 self.uploadProfilePicture(path: MyTwiLiteKeys.profilePath, uid: uid,
-                                          imageData: user.profileImageData) { imagePath, uploadProfilePictureError in
+                                          imageData: user.profileImageData, currentTimestemp: nil) { imagePath, uploadProfilePictureError in
                     if uploadProfilePictureError != nil {
                         callBack(nil, uploadProfilePictureError)
                     } else {
@@ -69,9 +69,12 @@ class FirebaseHelper {
     
     // MARK: - Upload a user profile picture
     func uploadProfilePicture(path: String, uid: String, imageData: Data,
-                              currentTimestemp: String = "", callBack: @escaping (String?, Error?) -> Void) {
+                              currentTimestemp: String?, callBack: @escaping (String?, Error?) -> Void) {
         let storageReference = Storage.storage().reference()
-        let filePath = "\(path)\(uid)_\(currentTimestemp).\(MyTwiLiteKeys.jpgExtension)"
+        var filePath = "\(path)\(uid).\(MyTwiLiteKeys.jpgExtension)"
+        if let currentTimestemp = currentTimestemp {
+            filePath = "\(path)\(uid)_\(currentTimestemp).\(MyTwiLiteKeys.jpgExtension)"
+        }
         let fileReference = storageReference.child(filePath)
         _ = fileReference.putData(imageData) { storageMetaData, error in
             if error != nil {
@@ -86,13 +89,15 @@ class FirebaseHelper {
     // MARK: - Add timeline information to firestore
     func addTimelineInformaion(timeline: AddTimeline,
                                text: String, timelinePicturePath: String,
+                               profileUrl: String,
                                callBack: @escaping (Error?) -> Void) {
         let fireStoreDatabase = Firestore.firestore()
         let timelineInformation = [
             MyTwiLiteKeys.uidKey: timeline.uid,
             MyTwiLiteKeys.timelineTextKey: text,
             MyTwiLiteKeys.timelineImagePathKey: timelinePicturePath,
-            MyTwiLiteKeys.createdDateKey: timeline.createdDate
+            MyTwiLiteKeys.createdDateKey: timeline.createdDate,
+            MyTwiLiteKeys.profileImagePathKey: profileUrl
         ]
         fireStoreDatabase.collection(MyTwiLiteKeys.timelinesKey).addDocument(data: timelineInformation) { error in
             callBack(error)
@@ -100,10 +105,10 @@ class FirebaseHelper {
     }
 
     // MARK: - Post a timeline
-    func postTimeline(timeline: AddTimeline, callBack: @escaping (Error?) -> Void) {
+    func postTimeline(timeline: AddTimeline, profileUrl: String, callBack: @escaping (Error?) -> Void) {
         // post timeline text
         if let timelineText = timeline.text, timeline.imageData == nil {
-            self.addTimelineInformaion(timeline: timeline, text: timelineText, timelinePicturePath: "") {  timelineError in
+            self.addTimelineInformaion(timeline: timeline, text: timelineText, timelinePicturePath: "", profileUrl: profileUrl) {  timelineError in
                 callBack(timelineError)
             }
             return
@@ -117,11 +122,17 @@ class FirebaseHelper {
                     callBack(uploadProfilePictureError)
                 } else {
                     if let imagePath = imagePath {
-                        self.addTimelineInformaion(timeline: timeline, text: "", timelinePicturePath: imagePath) {  timelineError in
-                            callBack(timelineError)
+                        self.downloadImageUrl(imagePath: imagePath) { result in
+                            switch result {
+                            case .success(let url):
+                                self.addTimelineInformaion(timeline: timeline, text: "",
+                                                           timelinePicturePath: url.absoluteString, profileUrl: profileUrl) { timelineError in
+                                    callBack(timelineError)
+                                }
+                            case .failure(let downloadUrlPathError):
+                                callBack(downloadUrlPathError)
+                            }
                         }
-                    } else {
-                        callBack(uploadProfilePictureError)
                     }
                 }
             }
@@ -136,11 +147,19 @@ class FirebaseHelper {
                     callBack(uploadProfilePictureError)
                 } else {
                     if let imagePath = imagePath {
-                        self.addTimelineInformaion(timeline: timeline, text: timelineText, timelinePicturePath: imagePath) {  timelineError in
-                            callBack(timelineError)
+                        self.downloadImageUrl(imagePath: imagePath) { result in
+                            switch result {
+                            case .success(let url):
+                                self.addTimelineInformaion(
+                                    timeline: timeline,
+                                    text: timelineText, timelinePicturePath: url.absoluteString,
+                                    profileUrl: profileUrl) { timelineError in
+                                    callBack(timelineError)
+                                }
+                            case .failure(let downloadUrlPathError):
+                                callBack(downloadUrlPathError)
+                            }
                         }
-                    } else {
-                        callBack(uploadProfilePictureError)
                     }
                 }
             }

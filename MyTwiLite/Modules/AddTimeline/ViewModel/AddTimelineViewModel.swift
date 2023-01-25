@@ -9,9 +9,9 @@ import Foundation
 
 class AddTimelineViewModel {
     // MARK: - Validate user detail with a type
-    func isTimelineValid(text: String?, imageData: Data?) -> Bool {
+    func isTimelineValid(isTextPlaceholder: Bool, text: String?, imageData: Data?) -> Bool {
         let utils = Utils()
-        if utils.isValidText(text) || utils.isValidImage(imageData) {
+        if (!isTextPlaceholder && utils.isValidText(text)) || utils.isValidImage(imageData) {
             return true
         }
         return false
@@ -23,11 +23,22 @@ class AddTimelineViewModel {
         let currentTimestamp = Utils().currentTimestamp()
         let timeline = AddTimeline(uid: uid, text: timelineText,
                                    imageData: timlineImageData, createdDate: currentTimestamp)
-        FirebaseHelper.instance.postTimeline(timeline: timeline) { error in
-            if let error = error {
-                callBack(.failure(error))
-            } else {
-                callBack(.success(0))
+        
+        let profileImagePath = "\(MyTwiLiteKeys.profilePath)\(uid).\(MyTwiLiteKeys.jpgExtension)"
+        FirebaseHelper.instance.downloadImageUrl(imagePath: profileImagePath) { result in
+            switch result {
+            case .success(let profileUrl):
+                FirebaseHelper.instance.postTimeline(timeline: timeline,
+                                                     profileUrl: profileUrl.absoluteString) { error in
+                    if let error = error {
+                        callBack(.failure(error))
+                    } else {
+                        callBack(.success(0))
+                    }
+                }
+            case .failure(let profileUrlError):
+                debugPrint(profileUrlError.localizedDescription)
+                callBack(.failure(profileUrlError))
             }
         }
     }
