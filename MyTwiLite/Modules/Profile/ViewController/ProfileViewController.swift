@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = MyTwiLiteStrings.myTimeline
+        self.title = MyTwiLiteStrings.profile
     }
 
     /*

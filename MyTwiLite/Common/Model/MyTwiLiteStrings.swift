@@ -47,4 +47,7 @@ struct MyTwiLiteKeys {
     static let dashBoardIcon = "DashboardIcon"
     static let myTimelineIcon = "MyTimeline"
     static let profileIcon = "ProfileIcon"
+    static let profilePlaceholder = "ProfilePlaceholder"
+    static let timelinePlaceholder = "TimelinePlaceholder"
+    static let isLoginKey = "isLogin"
 }

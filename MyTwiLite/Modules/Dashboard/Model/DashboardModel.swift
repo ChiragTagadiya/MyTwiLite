@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct TimelinModel {
+struct TimelineModel {
     var uid: String?
     var text: String?
     var imageName: String?
     var profileName: String?
-    var createdDate: String?
+    var createdDateString: String?
+    var createdDate: Date
 }

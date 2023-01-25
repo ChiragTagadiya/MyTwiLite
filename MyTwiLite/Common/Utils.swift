@@ -66,8 +66,22 @@ struct Utils {
         return "\(date)"
     }
     
+    // MARK: - Convert timestamp string to date
+    func convertTimespampToDate(timestamp: String?) -> Date {
+        if let timestamp = timestamp, let unixTime = Double(timestamp) {
+            let date = Date(timeIntervalSince1970: unixTime)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = MyTwiLiteKeys.normalDateFormat
+            let stringDate = dateFormatter.string(from: date)
+            if let formattedDate = dateFormatter.date(from: stringDate) {
+                return formattedDate
+            }
+        }
+        return Date()
+    }
+    
     // MARK: - Convert timestamp string to date string
-    func convertTimespampToDate(timestamp: String?) -> String {
+    func convertTimespampToDateString(timestamp: String?) -> String {
         if let timestamp = timestamp, let unixTime = Double(timestamp) {
             let date = Date(timeIntervalSince1970: unixTime)
             let dateFormatter = DateFormatter()
@@ -76,5 +90,18 @@ struct Utils {
             return stringDate
         }
         return ""
+    }
+    
+    // MARK: - set value to userdefault
+    func setLoginStatus(isLogin: Bool) {
+        UserDefaults.standard.setValue(isLogin, forKey: MyTwiLiteKeys.isLoginKey)
+    }
+    
+    // MARK: - get value to userdefault
+    func getLoginStatus() -> Bool {
+        if let value =  UserDefaults.standard.value(forKey: MyTwiLiteKeys.isLoginKey) as? Bool {
+            return value
+        }
+        return false
     }
 }

@@ -12,7 +12,6 @@ class DashboardViewController: MyTwiLiteViewController {
     @IBOutlet weak var labelNoTimeline: UILabel!
     @IBOutlet weak var tableViewTimeline: UITableView!
 
-    var arrayTimelines = [TimelinModel]()
     var router = DashboardRouter()
     var viewModel = DashboardViewModel()
     
@@ -46,14 +45,13 @@ class DashboardViewController: MyTwiLiteViewController {
         self.showLoader()
         viewModel.fetchTimelines {[weak self] result in
             switch result {
-            case .success(let timelines):
-                self?.arrayTimelines = timelines
             case .failure(let error):
                 self?.showAlert(message: error.localizedDescription)
+            default:
+                break
             }
             
-            if let timelinesData = self?.arrayTimelines, !(timelinesData.isEmpty) {
-                self?.arrayTimelines = timelinesData
+            if let timelinesData = self?.viewModel.arrayTimelines, !(timelinesData.isEmpty) {
                 self?.manageTableView(isHidden: false)
                 self?.tableViewTimeline.reloadData()
             } else {

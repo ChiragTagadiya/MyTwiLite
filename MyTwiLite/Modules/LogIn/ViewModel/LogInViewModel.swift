@@ -12,14 +12,14 @@ class LogInViewModel {
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()
         switch validationType {
-        case .normalText:
-            return  utils.isValidText(text)
-
         case .email:
             return utils.isValidEmail(text)
 
         case .password:
             return utils.isValidLogInPassword(text)
+
+        default:
+            return false
         }
     }
     
