@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - App level router protocol
 protocol Router {
     associatedtype Destination
     func route(to destination: Destination, from context: UIViewController, parameters: Any?)

@@ -403,13 +403,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3363B15B298022F700657E06 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		3363B15C298022FE00657E06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,7 +428,6 @@
 		3363B15F2980231000657E06 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				3363B15B298022F700657E06 /* View */,
 			);
 			path = Router;
 			sourceTree = "<group>";

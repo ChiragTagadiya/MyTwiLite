@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Timeline structure
 struct TimelineModel {
     var uid: String?
     var text: String?

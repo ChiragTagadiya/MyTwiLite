@@ -13,6 +13,7 @@ class DashboardRouter: Router {
         case addTimeline
     }
     
+    // MARK: - Handle routing
     func route(to destination: Destination, from context: UIViewController, parameters: Any?) {
         switch destination {
         case .addTimeline:

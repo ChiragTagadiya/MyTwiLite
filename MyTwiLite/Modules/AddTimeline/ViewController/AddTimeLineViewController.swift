@@ -66,11 +66,12 @@ class AddTimelineViewController: MyTwiLiteViewController {
         }
     }
 
+    // MARK: - Remove picture action
     @IBAction func onRemovePictureAction(_ sender: UIButton) {
         self.view.endEditing(true)
-        self.showCustomAlert(message: MyTwiLiteStrings.removeTimelineImageMessage) { _ in
-            self.imageViewTimeline.image = nil
-            self.vewImageTimeline.isHidden = true
+        self.showCustomAlert(message: MyTwiLiteStrings.removeTimelineImageMessage) { [weak self] _ in
+            self?.imageViewTimeline.image = nil
+            self?.vewImageTimeline.isHidden = true
         }
     }
 }

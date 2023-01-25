@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Texts to present on screen
 struct MyTwiLiteStrings {
     static let launchScreen = "Launch Screen"
     static let signUp = "Sign Up"
@@ -23,12 +24,13 @@ struct MyTwiLiteStrings {
     static let timelines = "Timelines"
     static let removeTimelineImageMessage = "Are you sure to remove a timeline picture ?"
     static let validTimeline = "Please enter atleast a valid text or select a picture to post a timeline."
-    static let timelineTextPlaceholder = "Add timeline..."
+    static let timelineTextPlaceholder = "Add Timeline..."
     static let addPicture = "Add Picture"
     static let myTimeline = "My Timeline"
     static let profile = "Profile"
 }
 
+// MARK: - Keys to use inside the app
 struct MyTwiLiteKeys {
     static let profilePath = "profiles/"
     static let timelinePath = "timelines/"

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - User signup structure
 struct UserDetail {
     var firstName: String
     var lastName: String

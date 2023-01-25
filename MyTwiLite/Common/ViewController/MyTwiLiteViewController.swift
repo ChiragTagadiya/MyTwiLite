@@ -9,6 +9,7 @@ import UIKit
 import NVActivityIndicatorView
 
 class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
+    // MARK: - Hide/ Show navigation back buttone
     var shouldHideBackButton: Bool = false {
         didSet {
             self.navigationItem.hidesBackButton = shouldHideBackButton
@@ -39,13 +40,14 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
         self.present(alertViewController, animated: true)
     }
     
-    // MARK: - Show/ Hide loader
+    // MARK: - Show loader
     func showLoader(_ message: String = "", _ color: UIColor = .darkGray, textColor: UIColor = .white) {
         let size = CGSize(width: 40, height: 40)
         startAnimating(size, message: message, type: .lineSpinFadeLoader, color: color,
                        backgroundColor: .lightGray.withAlphaComponent(0.3), textColor: textColor)
     }
     
+    // MARK: - Hide loader
     func hideLoader() {
         stopAnimating()
     }

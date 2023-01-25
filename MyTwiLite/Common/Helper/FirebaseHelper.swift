@@ -20,15 +20,15 @@ class FirebaseHelper {
     
     // MARK: - SignUp user
     func createUser(user: UserDetail, callBack: @escaping FirebaseCallBackType) {
-        Auth.auth().createUser(withEmail: user.email, password: user.password) { (result, error) in
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] (result, error) in
             if let uid = result?.user.uid {
-                self.uploadProfilePicture(path: MyTwiLiteKeys.profilePath, uid: uid,
+                self?.uploadProfilePicture(path: MyTwiLiteKeys.profilePath, uid: uid,
                                           imageData: user.profileImageData, currentTimestemp: nil) { imagePath, uploadProfilePictureError in
                     if uploadProfilePictureError != nil {
                         callBack(nil, uploadProfilePictureError)
                     } else {
                         if let imagePath = imagePath {
-                            self.addUserInformaion(uid: uid, profilePicturePath: imagePath, user: user) { userInformationError in
+                            self?.addUserInformaion(uid: uid, profilePicturePath: imagePath, user: user) { userInformationError in
                                 if let userInformationError = userInformationError {
                                     callBack(nil, userInformationError)
                                 } else {
@@ -119,16 +119,18 @@ class FirebaseHelper {
         
         // post timeline picture
         if let imageData = timeline.imageData, timeline.text == nil {
-            self.uploadProfilePicture(path: MyTwiLiteKeys.timelinePath, uid: timeline.uid,
-                                      imageData: imageData, currentTimestemp: timeline.createdDate) { imagePath, uploadProfilePictureError in
+            self.uploadProfilePicture(path: MyTwiLiteKeys.timelinePath,
+                                      uid: timeline.uid,
+                                      imageData: imageData,
+                                      currentTimestemp: timeline.createdDate) { [weak self] imagePath, uploadProfilePictureError in
                 if uploadProfilePictureError != nil {
                     callBack(uploadProfilePictureError)
                 } else {
                     if let imagePath = imagePath {
-                        self.downloadImageUrl(imagePath: imagePath) { result in
+                        self?.downloadImageUrl(imagePath: imagePath) { [weak self] result in
                             switch result {
                             case .success(let url):
-                                self.addTimelineInformaion(timeline: timeline, text: "",
+                                self?.addTimelineInformaion(timeline: timeline, text: "",
                                                            timelinePicturePath: url.absoluteString, profileUrl: profileUrl) { timelineError in
                                     callBack(timelineError)
                                 }
@@ -144,16 +146,18 @@ class FirebaseHelper {
 
         // post timeline text and picture
         if let timelineText = timeline.text, let imageData = timeline.imageData {
-            self.uploadProfilePicture(path: MyTwiLiteKeys.timelinePath, uid: timeline.uid,
-                                      imageData: imageData, currentTimestemp: timeline.createdDate) { imagePath, uploadProfilePictureError in
+            self.uploadProfilePicture(path: MyTwiLiteKeys.timelinePath,
+                                      uid: timeline.uid,
+                                      imageData: imageData,
+                                      currentTimestemp: timeline.createdDate) { [weak self] imagePath, uploadProfilePictureError in
                 if uploadProfilePictureError != nil {
                     callBack(uploadProfilePictureError)
                 } else {
                     if let imagePath = imagePath {
-                        self.downloadImageUrl(imagePath: imagePath) { result in
+                        self?.downloadImageUrl(imagePath: imagePath) { [weak self] result in
                             switch result {
                             case .success(let url):
-                                self.addTimelineInformaion(
+                                self?.addTimelineInformaion(
                                     timeline: timeline,
                                     text: timelineText, timelinePicturePath: url.absoluteString,
                                     profileUrl: profileUrl) { timelineError in
