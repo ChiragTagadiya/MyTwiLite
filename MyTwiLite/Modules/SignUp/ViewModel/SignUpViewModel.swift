@@ -19,7 +19,7 @@ class SignUpViewModel {
     let validConfirmPasswordTitle = MyTwiLiteStrings.validConfirmPassword
 
     // MARK: - Validate user detail with a type
-    func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
+    public func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()
         switch validationType {
         case .normalText:
@@ -34,7 +34,7 @@ class SignUpViewModel {
     }
     
     // MARK: - Create a new user
-    func createUser(_ userDetail: UserDetail, callBack: @escaping FirebaseCallBackType) {
+    public func createUser(_ userDetail: UserDetail, callBack: @escaping FirebaseCallBackType) {
         FirebaseHelper.instance.createUser(user: userDetail) { (result, error) in
             callBack(result, error)
         }

@@ -30,6 +30,7 @@
 		331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */; };
 		333BDFDE297C664B00F70872 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333BDFDD297C664B00F70872 /* Validation.swift */; };
 		333BDFE0297C69F000F70872 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333BDFDF297C69F000F70872 /* Utils.swift */; };
+		33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */; };
 		3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */; };
 		3353AF0D298041380034360F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0C298041380034360F /* ProfileViewController.swift */; };
 		3353AF0F2980417E0034360F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353AF0E2980417E0034360F /* Profile.storyboard */; };
@@ -57,7 +58,19 @@
 		338B86232977EE84005A9DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86212977EE84005A9DA0 /* Main.storyboard */; };
 		338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338B86242977EE86005A9DA0 /* Assets.xcassets */; };
 		338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */; };
+		33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */; };
+		AE449FDDF9B06CA32A817F9F /* Pods_MyTwiLiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33BD6CE3298187F9001443AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338B86102977EE84005A9DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338B86172977EE84005A9DA0;
+			remoteInfo = MyTwiLite;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3301854F298137F200C9C5E9 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -82,6 +95,7 @@
 		331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTimeLineViewController+DataSource.swift"; sourceTree = "<group>"; };
 		333BDFDD297C664B00F70872 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		333BDFDF297C69F000F70872 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteLogInTests.swift; sourceTree = "<group>"; };
 		3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTabBar.swift; sourceTree = "<group>"; };
 		3353AF0C298041380034360F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3353AF0E2980417E0034360F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -111,9 +125,16 @@
 		338B86242977EE86005A9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338B86272977EE86005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338B86292977EE86005A9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTwiLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteSignUpTests.swift; sourceTree = "<group>"; };
 		39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.release.xcconfig"; sourceTree = "<group>"; };
+		550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLiteTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70BD8CF7951B9A269DB5AF0 /* Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite-MyTwiLiteTests/Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLiteTests.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF8268C74ABC931744B1D242 /* Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite-MyTwiLiteTests/Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.debug.xcconfig"; sourceTree = "<group>"; };
+		EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +143,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33BD6CDC298187F9001443AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE449FDDF9B06CA32A817F9F /* Pods_MyTwiLiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				338B861A2977EE84005A9DA0 /* MyTwiLite */,
+				33BD6CE0298187F9001443AF /* MyTwiLiteTests */,
 				338B86192977EE84005A9DA0 /* Products */,
 				6ACC4360C32C51A922658520 /* Pods */,
 				6E2DCB89DDC0E4E2DF428FD6 /* Frameworks */,
@@ -592,6 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				338B86182977EE84005A9DA0 /* MyTwiLite.app */,
+				33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -611,11 +642,24 @@
 			path = MyTwiLite;
 			sourceTree = "<group>";
 		};
+		33BD6CE0298187F9001443AF /* MyTwiLiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */,
+				33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */,
+			);
+			path = MyTwiLiteTests;
+			sourceTree = "<group>";
+		};
 		6ACC4360C32C51A922658520 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */,
 				39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */,
+				CF8268C74ABC931744B1D242 /* Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig */,
+				B70BD8CF7951B9A269DB5AF0 /* Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig */,
+				550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */,
+				CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -624,6 +668,7 @@
 			isa = PBXGroup;
 			children = (
 				894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */,
+				EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -651,6 +696,26 @@
 			productReference = 338B86182977EE84005A9DA0 /* MyTwiLite.app */;
 			productType = "com.apple.product-type.application";
 		};
+		33BD6CDE298187F9001443AF /* MyTwiLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33BD6CE7298187F9001443AF /* Build configuration list for PBXNativeTarget "MyTwiLiteTests" */;
+			buildPhases = (
+				3C63330F1A982E6200F54E34 /* [CP] Check Pods Manifest.lock */,
+				33BD6CDB298187F9001443AF /* Sources */,
+				33BD6CDC298187F9001443AF /* Frameworks */,
+				33BD6CDD298187F9001443AF /* Resources */,
+				8A588D3B926657D8639CF11A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33BD6CE4298187F9001443AF /* PBXTargetDependency */,
+			);
+			name = MyTwiLiteTests;
+			productName = MyTwiLiteTests;
+			productReference = 33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -663,6 +728,10 @@
 				TargetAttributes = {
 					338B86172977EE84005A9DA0 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					33BD6CDE298187F9001443AF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 338B86172977EE84005A9DA0;
 					};
 				};
 			};
@@ -680,6 +749,7 @@
 			projectRoot = "";
 			targets = (
 				338B86172977EE84005A9DA0 /* MyTwiLite */,
+				33BD6CDE298187F9001443AF /* MyTwiLiteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -703,6 +773,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33BD6CDD298187F9001443AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -722,6 +799,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		3C63330F1A982E6200F54E34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTwiLiteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A588D3B926657D8639CF11A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A2A7F0F4E44C5895B60D501C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -810,7 +926,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33BD6CDB298187F9001443AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */,
+				33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33BD6CE4298187F9001443AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338B86172977EE84005A9DA0 /* MyTwiLite */;
+			targetProxy = 33BD6CE3298187F9001443AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		338B86212977EE84005A9DA0 /* Main.storyboard */ = {
@@ -1012,6 +1145,44 @@
 			};
 			name = Release;
 		};
+		33BD6CE5298187F9001443AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTwiLite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTwiLite";
+			};
+			name = Debug;
+		};
+		33BD6CE6298187F9001443AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTwiLite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTwiLite";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1029,6 +1200,15 @@
 			buildConfigurations = (
 				338B862D2977EE86005A9DA0 /* Debug */,
 				338B862E2977EE86005A9DA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33BD6CE7298187F9001443AF /* Build configuration list for PBXNativeTarget "MyTwiLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33BD6CE5298187F9001443AF /* Debug */,
+				33BD6CE6298187F9001443AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
