@@ -8,12 +8,21 @@
 import Foundation
 import Firebase
 
+protocol DeleteTimelineProtocol {
+    func onDeleteTimeline()
+}
+
 class DashboardViewModel {
     // MARK: - Variables
     var isMyTimline = false
-    let navigationTitle = MyTwiLiteStrings.timelines
     let removeTimelineTitle = MyTwiLiteStrings.removeTimeline
     var arrayTimelines = [TimelineModel]()
+    var deleteTimelineDelegate: DeleteTimelineProtocol?
+    
+    // MARK: - Get navigation title
+    func navigationTitle() -> String {
+        return self.isMyTimline ? MyTwiLiteStrings.myTimeline : MyTwiLiteStrings.timelines
+    }
     
     // MARK: - Prepare timeline data
     func prepareTimelineData(snapshot: QuerySnapshot?, callBack: @escaping (Result<Int, Error>) -> Void) {
@@ -71,8 +80,7 @@ class DashboardViewModel {
     }
     
     // MARK: - Delete timeline
-    func deleteTimeline(timeline: TimelineModel) {
-//        FirebaseHelper.instance.deleteImage(timeline: timeline, callBack: <#T##((Error?) -> Void)?##((Error?) -> Void)?##(Error?) -> Void#>)
-        FirebaseHelper.instance.deleteTimelineInformation()
+    func deleteTimeline(timeline: TimelineModel, callBack: @escaping ((Error?) -> Void)) {
+        FirebaseHelper.instance.deleteTimeline(timeline: timeline, callBack: callBack)
     }
 }

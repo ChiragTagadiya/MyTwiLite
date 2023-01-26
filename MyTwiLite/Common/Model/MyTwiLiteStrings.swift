@@ -54,4 +54,5 @@ struct MyTwiLiteKeys {
     static let profilePlaceholder = "ProfilePlaceholder"
     static let timelinePlaceholder = "TimelinePlaceholder"
     static let isLoginKey = "isLogin"
+    static let onAddTimelineKey = "onAddTimeline"
 }

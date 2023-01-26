@@ -12,17 +12,42 @@ class DashboardViewController: MyTwiLiteViewController {
     @IBOutlet weak var labelNoTimeline: UILabel!
     @IBOutlet weak var tableViewTimeline: UITableView!
 
+    let refreshControl = UIRefreshControl()
     var router = DashboardRouter()
     var viewModel = DashboardViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.navigationTitle
+        self.title = viewModel.navigationTitle()
         self.shouldHideBackButton = true
         self.configureLayout()
         self.fetchTimelines()
+        self.setNotificationObserver()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.removeNotificationObserver()
+    }
+    
+    // MARK: - Set add timeline notification observer
+    func setNotificationObserver() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onAddTimeline),
+                                               name: Notification.Name(MyTwiLiteKeys.onAddTimelineKey),
+                                               object: nil)
+    }
+    
+    // MARK: - Remove add timeline notification observer
+    func removeNotificationObserver() {
+        NotificationCenter.default.removeObserver(Notification.Name(MyTwiLiteKeys.onAddTimelineKey))
     }
 
+    // MARK: - On add timeline notification receiver
+    @objc func onAddTimeline() {
+        self.fetchTimelines()
+    }
+    
     // MARK: - Configure initial layout
     private func configureLayout() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .add,
@@ -32,6 +57,13 @@ class DashboardViewController: MyTwiLiteViewController {
         self.labelNoTimeline.isHidden = true
         self.tableViewTimeline.estimatedRowHeight = 66
         self.tableViewTimeline.rowHeight = UITableView.automaticDimension
+        refreshControl.addTarget(self, action: #selector(self.pnPullToRefreshAction(_:)), for: .valueChanged)
+        self.tableViewTimeline.addSubview(refreshControl)
+    }
+    
+    // MARK: - On pull to refresh action
+    @objc func pnPullToRefreshAction(_ sender: AnyObject) {
+        self.fetchTimelines()
     }
     
     // MARK: - Manageview tableview and no data label
@@ -41,9 +73,10 @@ class DashboardViewController: MyTwiLiteViewController {
     }
     
     // MARK: - Fetch all timelines
-    private func fetchTimelines() {
+    func fetchTimelines() {
         self.showLoader()
         viewModel.fetchTimelines {[weak self] result in
+            self?.refreshControl.endRefreshing()
             switch result {
             case .failure(let error):
                 self?.showAlert(message: error.localizedDescription)

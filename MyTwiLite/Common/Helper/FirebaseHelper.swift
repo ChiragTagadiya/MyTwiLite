@@ -209,42 +209,33 @@ class FirebaseHelper {
         }
     }
     
+    // MARK: - Delete timeline image
+    func deleteTimelineImage(imageName: String, callBack: @escaping ((Error?) -> Void)) {
+        Storage.storage().reference().child(imageName).delete(completion: callBack)
+    }
+    
     // MARK: - Delete timeline infomation
-    func deleteTimelineInformation() {
-//        fireStoreDatabase.collection(MyTwiLiteKeys.timelinesKey).addDocument(data: timelineInformation) { error in
-//            callBack(error)
-//        }
-        let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelinesKey).document("2MlXQCsITSDJn5V86dom").delete() { error in
-            print("error while delete timeline: ", error)
-        }
-
-//        timelineCollection.getDocuments { snapshot, error in
-//            callback(snapshot, error)
-//        }
-        
+    func deleteTimelineInformation(documentId: String, callBack: @escaping ((Error?) -> Void)) {
+        Firestore.firestore().collection(MyTwiLiteKeys.timelinesKey).document(documentId).delete(completion: callBack)
     }
     
     // MARK: - Delete timeline image
-    func deleteImage(timeline: TimelineModel, callBack: ((Error?) -> Void)?) {
-//        let imageName = timeline.imageName
-//        Storage.storage().reference().child(imageName).delete(completion: callBack)
-        
-        // delete timeline text
-        
-        if let text = timeline.text, let imageName = timeline.imageName, !imageName.isEmpty {
-            
-        }
-        
-        // delete timeline picture
-        if let imageName = timeline.imageName, !imageName.isEmpty,
-           (!(timeline.text?.count ?? 0 > 0) || timeline.text == nil) {
-            Storage.storage().reference().child(imageName).delete(completion: callBack)
-        }
-
-        // delet timeline text and picture
+    func deleteTimeline(timeline: TimelineModel, callBack: @escaping ((Error?) -> Void)) {
+        // delete timeline information
         if let timelineText = timeline.text, !timelineText.isEmpty,
-           let imageName = timeline.imageName, !imageName.isEmpty {
-            
+           let imageName = timeline.imageName, imageName.isEmpty {
+            deleteTimelineInformation(documentId: timeline.documentId, callBack: callBack)
+        }
+        
+        // delete timeline image and information
+        if let imageName = timeline.imageName, !imageName.isEmpty {
+            self.deleteTimelineInformation(documentId: timeline.documentId) { [weak self] error in
+                if let error = error {
+                    callBack(error)
+                } else {
+                    self?.deleteTimelineImage(imageName: imageName, callBack: callBack)
+                }
+            }
         }
     }
 }

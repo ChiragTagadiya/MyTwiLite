@@ -46,6 +46,7 @@ class AddTimelineViewModel {
                         callBack(.failure(error))
                     } else {
                         callBack(.success(0))
+                        NotificationCenter.default.post(name: Notification.Name(MyTwiLiteKeys.onAddTimelineKey), object: nil)
                     }
                 }
             case .failure(let profileUrlError):
