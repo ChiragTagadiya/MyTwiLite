@@ -11,9 +11,11 @@ class AddTimelineViewController: MyTwiLiteViewController {
     // MARK: - Variables & Outlets
     @IBOutlet weak var textFieldTimeline: UITextView!
     @IBOutlet weak var buttonAddPicture: UIButton!
+    @IBOutlet weak var buttonPost: MyTwiLiteButton!
     @IBOutlet weak var vewImageTimeline: UIView!
     @IBOutlet weak var imageViewTimeline: UIImageView!
-    
+    @IBOutlet weak var constraintImageViewHeight: NSLayoutConstraint!
+
     let viewModel = AddTimelineViewModel()
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class AddTimelineViewController: MyTwiLiteViewController {
         textFieldTimeline.text = viewModel.timelinePlaceholderTitle
         buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
         textFieldTimeline.textColor = UIColor.lightGray
+        self.buttonPost.setFilledLayout()
+        self.constraintImageViewHeight.constant = 0
     }
     
     // MARK: - Add timeline picture action
@@ -71,6 +75,13 @@ class AddTimelineViewController: MyTwiLiteViewController {
         self.showCustomAlert(message: viewModel.removeTimelineImageTitle) { [weak self] _ in
             self?.imageViewTimeline.image = nil
             self?.vewImageTimeline.isHidden = true
+            self?.constraintImageViewHeight.constant = 0
         }
     }
+    
+    // MARK: - On back action
+    @IBAction func onBackAction(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }

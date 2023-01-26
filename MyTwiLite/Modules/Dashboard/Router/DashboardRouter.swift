@@ -18,6 +18,7 @@ class DashboardRouter: Router {
         switch destination {
         case .addTimeline:
             let addTimelineViewController = AddTimelineViewController.initiateFrom(appStoryboard: .addTimeline)
+            addTimelineViewController.modalPresentationStyle = .fullScreen
             context.navigationController?.present(addTimelineViewController, animated: true)
         }
     }

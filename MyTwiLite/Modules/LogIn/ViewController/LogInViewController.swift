@@ -10,16 +10,26 @@ import Firebase
 
 class LoginViewController: MyTwiLiteViewController {
     // MARK: - Variables & Outlets
-    @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
     
+    @IBOutlet weak var labelLogin: UILabel!
+    @IBOutlet weak var textFieldEmail: MyTwiLiteTextField!
+    @IBOutlet weak var textFieldPassword: MyTwiLiteTextField!
+    @IBOutlet weak var buttonLogin: MyTwiLiteButton!
+
     var router = LogInRouter()
     var viewModel = LogInViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.navigationTitle
+        self.configureLayout()
+    }
+    
+    // MARK: - Configure initial view layout
+    private func configureLayout() {
         self.shouldHideBackButton = true
+        self.labelLogin.text = viewModel.navigationTitle
+        self.labelLogin.textColor = Colors.green
+        self.buttonLogin.setFilledLayout()
     }
     
     // MARK: - Navigate to home action
@@ -36,12 +46,18 @@ class LoginViewController: MyTwiLiteViewController {
     @IBAction func logInPressed(_ sender: UIButton) {
         self.view.endEditing(true)
         if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: viewModel.validEmailTitle)
-            return
-        } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: viewModel.validPasswordTitle)
+            self.viewModel.isValid = false
+            self.textFieldEmail.errorMessage = viewModel.validEmailTitle
+        }
+        if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
+            self.viewModel.isValid = false
+            self.textFieldPassword.errorMessage = viewModel.validPasswordTitle
+        }
+        
+        if !self.viewModel.isValid {
             return
         }
+        
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
             self.showLoader()
             viewModel.signinUser(email: email, password: password) { [weak self] (_, error) in
@@ -54,7 +70,12 @@ class LoginViewController: MyTwiLiteViewController {
             }
         }
     }
-
+    
+    // MARK: - On password hide/ show action
+    @IBAction func onVisiblePasswordPressed(_ sender: UIButton) {
+        self.textFieldPassword.isSecureTextEntry = !self.textFieldPassword.isSecureTextEntry
+    }
+    
     // MARK: - On sign-up button action
     @IBAction func onSignUpButtonPressed(_ sender: UIButton) {
         self.view.endEditing(true)

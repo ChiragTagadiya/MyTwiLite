@@ -10,6 +10,7 @@ import Foundation
 // MARK: - Texts to present on screen
 struct MyTwiLiteStrings {
     static let launchScreen = "Launch Screen"
+    static let signUp = "Sign Up"
     static let validFirstName = "INVALID FIRST NAME"
     static let validLastName = "INVALID LAST NAME"
     static let validEmail = "INVALID EMAIL"
@@ -53,6 +54,5 @@ struct MyTwiLiteKeys {
     static let timelinePlaceholder = "TimelinePlaceholder"
     static let isLoginKey = "isLogin"
     static let onAddTimelineKey = "onAddTimeline"
-    static let plusIconKey = "PlusIcon"
-    static let editIconKey = "EditIcon"
+    static let editIconKey = "square.and.pencil"
 }

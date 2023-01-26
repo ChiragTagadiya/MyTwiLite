@@ -87,12 +87,7 @@ struct Utils {
             let formatter = RelativeDateTimeFormatter()
             formatter.unitsStyle = .full
             let relativeDate = formatter.localizedString(for: createdDate, relativeTo: Date.now)
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = MyTwiLiteKeys.normalDateFormat
-            let stringDate = dateFormatter.string(from: createdDate)
-            
-            return "\(relativeDate) - \(stringDate)"
+            return relativeDate
         }
         return ""
     }

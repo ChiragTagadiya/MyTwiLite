@@ -9,12 +9,12 @@ import Foundation
 
 class SignUpViewModel {
     // MARK: - Variables
+    let navigationTitle = MyTwiLiteStrings.signUp
     let validFirstNameTitle = MyTwiLiteStrings.validFirstName
     let validLastNameTitle = MyTwiLiteStrings.validLastName
     let validEmailTitle = MyTwiLiteStrings.validEmail
     let validPasswordTitle = MyTwiLiteStrings.validPassword
     let validConfirmPasswordTitle = MyTwiLiteStrings.validConfirmPassword
-    let plusIconTitle = MyTwiLiteKeys.plusIconKey
     let editIconTitle = MyTwiLiteKeys.editIconKey
     var isValid = true
 

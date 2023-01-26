@@ -13,6 +13,7 @@ extension AddTimelineViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
+        self.constraintImageViewHeight.constant = 250
         self.imageViewTimeline.image = image
         self.vewImageTimeline.isHidden = false
         dismiss(animated: true)

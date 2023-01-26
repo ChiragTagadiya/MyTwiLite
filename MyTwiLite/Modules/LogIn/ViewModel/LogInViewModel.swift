@@ -12,6 +12,7 @@ class LogInViewModel {
     let navigationTitle = MyTwiLiteStrings.logIn
     let validEmailTitle = MyTwiLiteStrings.validEmail
     let validPasswordTitle = MyTwiLiteStrings.validPassword
+    var isValid = true
 
     // MARK: - Validate user detail with a type
     func isUserDetailValid(text: String?, validationType: Validation) -> Bool {

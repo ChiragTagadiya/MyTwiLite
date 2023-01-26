@@ -31,9 +31,11 @@ class SignUpViewController: MyTwiLiteViewController {
     // MARK: - Configure initial view layout
     private func configureLayout() {
         self.shouldHideBackButton = true
+        self.labelSignUp.text = viewModel.navigationTitle
         self.labelSignUp.textColor = Colors.green
         self.imageViewProfile.setCornerRadius()
-        self.buttonAddPicture.setImage(UIImage(named: viewModel.plusIconTitle), for: .normal)
+        self.buttonAddPicture.tintColor = Colors.white
+        self.buttonAddPicture.backgroundColor = Colors.green
         self.buttonAddPicture.setCornerRadius()
         self.buttonSignUp.setFilledLayout()
     }
@@ -106,19 +108,18 @@ class SignUpViewController: MyTwiLiteViewController {
         }
     }
     
+    // MARK: - On password hide/ show action
+    @IBAction func visiblePasswordPressed(_ sender: UIButton) {
+        self.textFieldPassword.isSecureTextEntry = !self.textFieldPassword.isSecureTextEntry
+    }
+    
+    // MARK: - On confirm password hide/ show action
+    @IBAction func visibleConfirmPasswordPressed(_ sender: UIButton) {
+        self.textFieldConfirmPassword.isSecureTextEntry = !self.textFieldConfirmPassword.isSecureTextEntry
+    }
+
     // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         navigateToLogin()
     }    
-}
-
-extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    // MARK: - Image picker delegates
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        guard let image = info[.editedImage] as? UIImage else { return }
-        self.buttonAddPicture.setImage(UIImage(named: viewModel.editIconTitle), for: .normal)
-        self.imageViewProfile.image = image
-        dismiss(animated: true)
-    }
 }
