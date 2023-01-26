@@ -17,13 +17,16 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var labelTimelineText: UILabel!
     @IBOutlet weak var imageViewTimeline: UIImageView!
     @IBOutlet weak var buttonDeleteTimeline: UIButton!
-    @IBOutlet weak var imageBGView: UIView!
-
+    @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var viewTimelineImage: UIView!
+    @IBOutlet weak var constraintStackViewTrailing: NSLayoutConstraint!
+    
     var timeline: TimelineModel!
     var timelineDelegate: TimelineProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.configureCellLayout()
         self.layoutIfNeeded()
         imageViewProfile.setCornerRadius()
     }
@@ -32,14 +35,24 @@ class TimelineTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    // MARK: - Configure cell layout
+    private func configureCellLayout() {
+        self.viewContainer.backgroundColor = .white
+        self.viewContainer.layer.cornerRadius = 10.0
+        self.viewContainer.layer.shadowColor = UIColor.gray.cgColor
+        self.viewContainer.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        self.viewContainer.layer.shadowRadius = 4.0
+        self.viewContainer.layer.shadowOpacity = 0.5
+    }
 
     // MARK: - Cofigure cell data
-    func configureData(timeline: TimelineModel, isMyTimeline: Bool, isLastCell: Bool) {
+    func configureData(timeline: TimelineModel, isMyTimeline: Bool) {
         self.timeline = timeline
         self.labelTimelineText.text = timeline.text
         self.buttonDeleteTimeline.isHidden = !isMyTimeline
         self.labelTimelineText.isHidden = true
-        self.imageBGView.isHidden = true
+        self.viewTimelineImage.isHidden = true
 
         if let profilePath = timeline.profileName, !(profilePath.isEmpty) {
             let profilePlaceholderImage = UIImage(named: MyTwiLiteKeys.profilePlaceholder)
@@ -52,14 +65,16 @@ class TimelineTableViewCell: UITableViewCell {
         }
         
         if let imagePath = timeline.imagePath, !(imagePath.isEmpty) {
-            self.imageBGView.isHidden = false
+            self.viewTimelineImage.isHidden = false
             let timelinePlaceholderImage = UIImage(named: MyTwiLiteKeys.timelinePlaceholder)
             let timelineUrl = URL(string: imagePath)
             self.imageViewTimeline.kf.setImage(with: timelineUrl, placeholder: timelinePlaceholderImage)
-        }
-        
-        if isLastCell {
-            self.separatorInset.left = self.bounds.size.width
+            
+            if isMyTimeline {
+                constraintStackViewTrailing.constant = 16
+            } else {
+                constraintStackViewTrailing.constant = 0
+            }
         }
         
         self.layoutIfNeeded()

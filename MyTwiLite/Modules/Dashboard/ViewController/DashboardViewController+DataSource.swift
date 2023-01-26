@@ -23,8 +23,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         }
         let timeline = self.viewModel.arrayTimelines[indexPath.row]
         cell.timelineDelegate = self
-        cell.configureData(timeline: timeline, isMyTimeline: viewModel.isMyTimline,
-                           isLastCell: indexPath.row == self.viewModel.arrayTimelines.count - 1)
+        cell.configureData(timeline: timeline, isMyTimeline: viewModel.isMyTimline)
         return cell
     }
 }
