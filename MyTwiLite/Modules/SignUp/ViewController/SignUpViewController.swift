@@ -7,17 +7,18 @@
 
 import Foundation
 import UIKit
-import Firebase
 
 class SignUpViewController: MyTwiLiteViewController {
     // MARK: - Variables & Outlets
+    @IBOutlet weak var labelSignUp: UILabel!
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var buttonAddPicture: UIButton!
-    @IBOutlet weak var textFieldFirstName: UITextField!
-    @IBOutlet weak var textFieldLastName: UITextField!
-    @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
-    @IBOutlet weak var textFieldConfirmPassword: UITextField!
+    @IBOutlet weak var buttonSignUp: MyTwiLiteButton!
+    @IBOutlet weak var textFieldFirstName: MyTwiLiteTextField!
+    @IBOutlet weak var textFieldLastName: MyTwiLiteTextField!
+    @IBOutlet weak var textFieldEmail: MyTwiLiteTextField!
+    @IBOutlet weak var textFieldPassword: MyTwiLiteTextField!
+    @IBOutlet weak var textFieldConfirmPassword: MyTwiLiteTextField!
 
     var router = SignUpRouter()
     let viewModel = SignUpViewModel()
@@ -29,10 +30,12 @@ class SignUpViewController: MyTwiLiteViewController {
 
     // MARK: - Configure initial view layout
     private func configureLayout() {
-        self.title = viewModel.navigationTitle
         self.shouldHideBackButton = true
+        self.labelSignUp.textColor = Colors.green
         self.imageViewProfile.setCornerRadius()
-        buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
+        self.buttonAddPicture.setImage(UIImage(named: viewModel.plusIconTitle), for: .normal)
+        self.buttonAddPicture.setCornerRadius()
+        self.buttonSignUp.setFilledLayout()
     }
     
     // MARK: - Navigate to login action
@@ -59,26 +62,32 @@ class SignUpViewController: MyTwiLiteViewController {
     @IBAction func signeUpPressed(_ sender: UIButton) {
         // validate all the fields
         self.view.endEditing(true)
-        if imageViewProfile.image == nil {
-            showAlert(message: viewModel.selectProfilePicTitle)
-            return
-        } else if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
-            showAlert(message: viewModel.validFirstNameTitle)
-            return
-        } else if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
-            showAlert(message: viewModel.validLastNameTitle)
-            return
-        } else if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
-            showAlert(message: viewModel.validEmailTitle)
-            return
-        } else if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
-            showAlert(message: viewModel.validPasswordTitle)
-            return
-        } else if textFieldConfirmPassword.text != textFieldPassword.text {
-            showAlert(message: viewModel.validConfirmPasswordTitle)
-            return
+        if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
+            self.viewModel.isValid = false
+            self.textFieldFirstName.errorMessage = viewModel.validFirstNameTitle
+        }
+        if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
+            self.viewModel.isValid = false
+            self.textFieldLastName.errorMessage = viewModel.validLastNameTitle
+        }
+        if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
+            self.viewModel.isValid = false
+            self.textFieldEmail.errorMessage = viewModel.validEmailTitle
+        }
+        if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
+            self.viewModel.isValid = false
+            self.textFieldPassword.errorMessage = viewModel.validPasswordTitle
+        }
+        if let password = textFieldConfirmPassword.text, password.isEmpty ||
+            textFieldConfirmPassword.text != textFieldPassword.text {
+            self.viewModel.isValid = false
+            self.textFieldConfirmPassword.errorMessage = viewModel.validConfirmPasswordTitle
         }
     
+        if !self.viewModel.isValid {
+            return
+        }
+        
         if let firstName = textFieldFirstName.text, let lastName = textFieldLastName.text,
            let email = textFieldEmail.text, let password = textFieldPassword.text,
            let profileImageData = imageViewProfile.image?.jpegData(compressionQuality: 0.6) {
@@ -86,7 +95,7 @@ class SignUpViewController: MyTwiLiteViewController {
                                   email: email, password: password, profileImageData: profileImageData)
 
             self.showLoader()
-            viewModel.createUser(user) { [weak self] _, error in
+            self.viewModel.createUser(user) { [weak self] _, error in
                 self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
@@ -108,6 +117,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
+        self.buttonAddPicture.setImage(UIImage(named: viewModel.editIconTitle), for: .normal)
         self.imageViewProfile.image = image
         dismiss(animated: true)
     }

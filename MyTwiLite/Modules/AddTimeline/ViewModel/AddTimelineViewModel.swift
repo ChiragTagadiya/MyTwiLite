@@ -33,7 +33,7 @@ class AddTimelineViewModel {
     func postTimeline(_ uid: String, timelineText: String?,
                       timlineImageData: Data?, callBack: @escaping (Result<Int, Error>) -> Void) {
         let currentTimestamp = Utils().currentTimestamp()
-        let timeline = AddTimeline(uid: uid, text: timelineText,
+        let timeline = AddTimeline(uid: uid, text: timelineText?.trimmingCharacters(in: .whitespacesAndNewlines),
                                    imageData: timlineImageData, createdDate: currentTimestamp)
         
         let profileImagePath = "\(MyTwiLiteKeys.profilePath)\(uid).\(MyTwiLiteKeys.jpgExtension)"

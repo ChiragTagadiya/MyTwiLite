@@ -34,6 +34,7 @@ class LoginViewController: MyTwiLiteViewController {
     
     // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
+        self.view.endEditing(true)
         if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
             showAlert(message: viewModel.validEmailTitle)
             return
@@ -56,6 +57,7 @@ class LoginViewController: MyTwiLiteViewController {
 
     // MARK: - On sign-up button action
     @IBAction func onSignUpButtonPressed(_ sender: UIButton) {
+        self.view.endEditing(true)
         self.navigateToSignUp()
     }
 }

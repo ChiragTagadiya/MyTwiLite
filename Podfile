@@ -15,6 +15,7 @@ target 'MyTwiLite' do
   pod 'IQKeyboardManagerSwift', '~> 6.5.0'
   pod 'NVActivityIndicatorView', '~> 4.8.0'
   pod 'Kingfisher', '~> 7.0'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   
   ## Pods for MyTwiLiteTests
   #

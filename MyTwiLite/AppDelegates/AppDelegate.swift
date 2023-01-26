@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
         
         return true
     }
