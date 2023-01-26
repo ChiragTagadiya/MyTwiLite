@@ -11,4 +11,6 @@ import UIKit
 struct Colors {
     static let green = UIColor.systemGreen
     static let white = UIColor.white
+    static let black = UIColor.black
+    static let darkGrey = UIColor.darkGray
 }

@@ -83,11 +83,16 @@ struct Utils {
     // MARK: - Convert timestamp string to date string
     func convertTimespampToDateString(timestamp: String?) -> String {
         if let timestamp = timestamp, let unixTime = Double(timestamp) {
-            let date = Date(timeIntervalSince1970: unixTime)
+            let createdDate = Date(timeIntervalSince1970: unixTime)
+            let formatter = RelativeDateTimeFormatter()
+            formatter.unitsStyle = .full
+            let relativeDate = formatter.localizedString(for: createdDate, relativeTo: Date.now)
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = MyTwiLiteKeys.normalDateFormat
-            let stringDate = dateFormatter.string(from: date)
-            return stringDate
+            let stringDate = dateFormatter.string(from: createdDate)
+            
+            return "\(relativeDate) - \(stringDate)"
         }
         return ""
     }

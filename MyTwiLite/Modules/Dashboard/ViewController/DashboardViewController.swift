@@ -50,8 +50,10 @@ class DashboardViewController: MyTwiLiteViewController {
     
     // MARK: - Configure initial layout
     private func configureLayout() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .add,
-                                                            style: .plain, target: self, action: #selector(addTimeLineAction))
+        let barButtonItem = UIBarButtonItem(image: .add,
+                                            style: .plain, target: self, action: #selector(addTimeLineAction))
+        barButtonItem.tintColor = Colors.green
+        navigationItem.rightBarButtonItem = barButtonItem
         self.tableViewTimeline.tableFooterView = UIView()
         self.manageTableView(isHidden: true)
         self.labelNoTimeline.isHidden = true

@@ -12,6 +12,8 @@ class MyTwiLiteTabBar {
     // MARK: - initiate tabbar
     func initiateTabBar() -> UITabBarController {
         let tabBarController = UITabBarController()
+        tabBarController.tabBar.tintColor = Colors.green
+        
         let dashboardViewController = DashboardViewController.initiateFrom(appStoryboard: .dashboard)
         let dashboardNavigationController = UINavigationController(rootViewController: dashboardViewController)
         let dashbordTabBarItem = UITabBarItem(title: MyTwiLiteStrings.timelines,

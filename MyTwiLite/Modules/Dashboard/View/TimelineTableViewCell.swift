@@ -19,6 +19,8 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var buttonDeleteTimeline: UIButton!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewTimelineImage: UIView!
+    @IBOutlet weak var viewCreatedDate: UIView!
+    @IBOutlet weak var labelCreatedDate: UILabel!
     @IBOutlet weak var constraintStackViewTrailing: NSLayoutConstraint!
     
     var timeline: TimelineModel!
@@ -38,6 +40,10 @@ class TimelineTableViewCell: UITableViewCell {
     
     // MARK: - Configure cell layout
     private func configureCellLayout() {
+        self.imageViewTimeline.setCornerRadius(20)
+        self.labelTimelineText.textColor = Colors.black
+        self.labelCreatedDate.textColor = Colors.darkGrey
+        self.viewCreatedDate.backgroundColor = Colors.green
         self.viewContainer.backgroundColor = .white
         self.viewContainer.layer.cornerRadius = 10.0
         self.viewContainer.layer.shadowColor = UIColor.gray.cgColor
@@ -50,6 +56,7 @@ class TimelineTableViewCell: UITableViewCell {
     func configureData(timeline: TimelineModel, isMyTimeline: Bool) {
         self.timeline = timeline
         self.labelTimelineText.text = timeline.text
+        self.labelCreatedDate.text = timeline.createdDateString
         self.buttonDeleteTimeline.isHidden = !isMyTimeline
         self.labelTimelineText.isHidden = true
         self.viewTimelineImage.isHidden = true
