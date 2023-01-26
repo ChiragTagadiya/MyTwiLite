@@ -22,7 +22,7 @@ class LaunchViewController: MyTwiLiteViewController {
 
     // MARK: - Handle launch router based on login status
     func manageLaunchRouter() {
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
             // redirection based on login status
             if self.viewModel.isUserLogin() {
                 self.router.route(to: .dashboard, from: self, parameters: nil)

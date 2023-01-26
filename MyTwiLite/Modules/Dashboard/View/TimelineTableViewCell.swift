@@ -17,15 +17,13 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var labelTimelineText: UILabel!
     @IBOutlet weak var imageViewTimeline: UIImageView!
     @IBOutlet weak var buttonDeleteTimeline: UIButton!
-    
-    @IBOutlet weak var imageViewHeightContraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var imageBGView: UIView!
+
     var timeline: TimelineModel!
     var timelineDelegate: TimelineProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageViewHeightContraint.constant = 0
         self.layoutIfNeeded()
         imageViewProfile.setCornerRadius()
     }
@@ -40,20 +38,24 @@ class TimelineTableViewCell: UITableViewCell {
         self.timeline = timeline
         self.labelTimelineText.text = timeline.text
         self.buttonDeleteTimeline.isHidden = !isMyTimeline
+        self.labelTimelineText.isHidden = true
+        self.imageBGView.isHidden = true
 
         if let profilePath = timeline.profileName, !(profilePath.isEmpty) {
             let profilePlaceholderImage = UIImage(named: MyTwiLiteKeys.profilePlaceholder)
             let profileUrl = URL(string: profilePath)
             self.imageViewProfile.kf.setImage(with: profileUrl, placeholder: profilePlaceholderImage)
         }
+
+        if let timelineText = timeline.text, !(timelineText.isEmpty) {
+            self.labelTimelineText.isHidden = false
+        }
         
         if let imagePath = timeline.imagePath, !(imagePath.isEmpty) {
+            self.imageBGView.isHidden = false
             let timelinePlaceholderImage = UIImage(named: MyTwiLiteKeys.timelinePlaceholder)
-            self.imageViewHeightContraint.constant = 128
             let timelineUrl = URL(string: imagePath)
             self.imageViewTimeline.kf.setImage(with: timelineUrl, placeholder: timelinePlaceholderImage)
-        } else {
-            self.imageViewHeightContraint.constant = 0
         }
         
         if isLastCell {

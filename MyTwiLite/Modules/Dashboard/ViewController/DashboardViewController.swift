@@ -55,7 +55,7 @@ class DashboardViewController: MyTwiLiteViewController {
         self.tableViewTimeline.tableFooterView = UIView()
         self.manageTableView(isHidden: true)
         self.labelNoTimeline.isHidden = true
-        self.tableViewTimeline.estimatedRowHeight = 66
+        self.tableViewTimeline.estimatedRowHeight = 80
         self.tableViewTimeline.rowHeight = UITableView.automaticDimension
         refreshControl.addTarget(self, action: #selector(self.pnPullToRefreshAction(_:)), for: .valueChanged)
         self.tableViewTimeline.addSubview(refreshControl)
