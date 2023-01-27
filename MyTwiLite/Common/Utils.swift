@@ -12,7 +12,7 @@ struct Utils {
     func isValidText(_ text: String?) -> Bool {
         if let text = text { // check for empty text
             // check for whitespaces
-            if text.trimmingCharacters(in: .whitespaces).isEmpty {
+            if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 return false
             }
             return true

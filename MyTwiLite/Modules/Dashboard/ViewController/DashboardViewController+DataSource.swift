@@ -33,7 +33,10 @@ extension DashboardViewController: TimelineProtocol {
     func deleteTimeline(timeline: TimelineModel) {
         self.showCustomAlert(message: self.viewModel.removeTimelineTitle) { [weak self] _ in
             self?.showLoader()
-            self?.viewModel.deleteTimeline(timeline: timeline) { [weak self] error in
+            self?.viewModel.deleteTimeline(timeline: timeline) { [weak self] _ in
+                self?.hideLoader()
+                self?.showAlert(message: self?.viewModel.noInternetTitle ?? "")
+            } callBack: { [weak self] error in
                 self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)

@@ -76,6 +76,11 @@ class DashboardViewController: MyTwiLiteViewController {
     
     // MARK: - Fetch all timelines
     func fetchTimelines() {
+        if !self.viewModel.connectedToNetwork() {
+            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                self.showAlert(message: self.viewModel.noInternetTitle)
+            }
+        }
         self.showLoader()
         self.viewModel.fetchTimelines {[weak self] result in
             self?.refreshControl.endRefreshing()
@@ -102,6 +107,6 @@ class DashboardViewController: MyTwiLiteViewController {
     }
 
     @objc func addTimeLineAction() {
-        navigateToAddTimeline()
+        self.navigateToAddTimeline()
     }
 }

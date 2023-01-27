@@ -16,6 +16,7 @@ class DashboardViewModel {
     // MARK: - Variables
     var isMyTimline = false
     let removeTimelineTitle = MyTwiLiteStrings.removeTimeline
+    let noInternetTitle = MyTwiLiteStrings.noInternet
     var arrayTimelines = [TimelineModel]()
     var deleteTimelineDelegate: DeleteTimelineProtocol?
     
@@ -79,7 +80,12 @@ class DashboardViewModel {
     }
     
     // MARK: - Delete timeline
-    func deleteTimeline(timeline: TimelineModel, callBack: @escaping ((Error?) -> Void)) {
-        FirebaseHelper.instance.deleteTimeline(timeline: timeline, callBack: callBack)
+    func deleteTimeline(timeline: TimelineModel, isReachable: @escaping ((Bool) -> Void), callBack: @escaping ((Error?) -> Void)) {
+        FirebaseHelper.instance.deleteTimeline(timeline: timeline, isReachable: isReachable, callBack: callBack)
+    }
+    
+    // MARK: - Cheeck network status
+    func connectedToNetwork() -> Bool {
+        return FirebaseHelper.instance.connectedToNetwork()
     }
 }

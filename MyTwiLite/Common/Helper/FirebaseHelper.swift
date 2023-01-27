@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 import FirebaseStorage
+import SystemConfiguration
 
 class FirebaseHelper {
     static let instance = FirebaseHelper()
@@ -19,7 +20,10 @@ class FirebaseHelper {
     }
     
     // MARK: - SignUp user
-    func createUser(user: UserDetail, callBack: @escaping FirebaseCallBackType) {
+    func createUser(user: UserDetail, isReachable: @escaping ((Bool) -> Void), callBack: @escaping FirebaseCallBackType) {
+        if !FirebaseHelper.instance.connectedToNetwork() {
+            isReachable(false)
+        }
         Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] (result, error) in
             if let uid = result?.user.uid {
                 self?.uploadProfilePicture(path: MyTwiLiteKeys.profilePath, uid: uid,
@@ -47,7 +51,12 @@ class FirebaseHelper {
     }
     
     // MARK: - Log in user
-    func logInUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
+    func logInUser(email: String, password: String,
+                   isReachable: @escaping ((Bool) -> Void),
+                   callBack: @escaping FirebaseCallBackType) {
+        if !FirebaseHelper.instance.connectedToNetwork() {
+            isReachable(false)
+        }
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if result != nil {
                 Utils().setLoginStatus(isLogin: true)
@@ -57,7 +66,11 @@ class FirebaseHelper {
     }
     
     // MARK: - Log out user
-    func logOut(callback: @escaping (Result<Int, Error>) -> Void) {
+    func logOut(isReachable: @escaping ((Bool) -> Void), callback: @escaping (Result<Int, Error>) -> Void) {
+        if !FirebaseHelper.instance.connectedToNetwork() {
+            isReachable(false)
+            return
+        }
         do {
             try Auth.auth().signOut()
             Utils().setLoginStatus(isLogin: false)
@@ -231,8 +244,11 @@ class FirebaseHelper {
     }
     
     // MARK: - Delete timeline image
-    func deleteTimeline(timeline: TimelineModel, callBack: @escaping ((Error?) -> Void)) {
+    func deleteTimeline(timeline: TimelineModel, isReachable: @escaping ((Bool) -> Void), callBack: @escaping ((Error?) -> Void)) {
         // delete timeline information
+        if !FirebaseHelper.instance.connectedToNetwork() {
+            isReachable(false)
+        }
         if let timelineText = timeline.text, !timelineText.isEmpty,
            let imageName = timeline.imageName, imageName.isEmpty {
             deleteTimelineInformation(documentId: timeline.documentId, callBack: callBack)
@@ -258,5 +274,19 @@ class FirebaseHelper {
                 callback(snapshot, error)
             }
         }
+    }
+    
+    // MARK: - Check internet connectivity status
+    func connectedToNetwork() -> Bool {
+        var zeroAddress = sockaddr()
+        zeroAddress.sa_len = UInt8(MemoryLayout<sockaddr>.size)
+        zeroAddress.sa_family = sa_family_t(AF_INET)
+        guard let networkReachability = SCNetworkReachabilityCreateWithAddress(nil, &zeroAddress) else { return false }
+        var flags = SCNetworkReachabilityFlags()
+        SCNetworkReachabilitySetDispatchQueue(networkReachability, DispatchQueue.global(qos: .default))
+        if SCNetworkReachabilityGetFlags(networkReachability, &flags) == false { return false }
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        return isReachable && !needsConnection
     }
 }

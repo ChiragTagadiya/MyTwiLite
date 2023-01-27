@@ -60,7 +60,10 @@ class AddTimelineViewController: MyTwiLiteViewController {
             self.showLoader()
             let timelineText = !(self.viewModel.isTextPlaceholder) ? textFieldTimeline.text : nil
             self.viewModel.postTimeline(uid, timelineText: timelineText,
-                                   timlineImageData: timelineImageData) { [weak self] result in
+                                   timlineImageData: timelineImageData) { [weak self] _ in
+                self?.hideLoader()
+                self?.showAlert(message: self?.viewModel.noInternetTitle ?? "")
+            } callBack: { [weak self] result in
                 self?.hideLoader()
                 switch result {
                 case .success:

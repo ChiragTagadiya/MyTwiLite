@@ -11,6 +11,7 @@ import Firebase
 class ProfileViewModel {
     // MARK: - Variables
     let navigationTitle = MyTwiLiteStrings.profile
+    let noInternetTitle = MyTwiLiteStrings.noInternet
     var userProfile: UserProfileModel?
     
     // MARK: - Prepare user data
@@ -51,7 +52,12 @@ class ProfileViewModel {
     }
     
     // MARK: - Log out user
-    func logOut(callback: @escaping (Result<Int, Error>) -> Void) {
-        FirebaseHelper.instance.logOut(callback: callback)
+    func logOut(isReachable: @escaping ((Bool) -> Void), callback: @escaping (Result<Int, Error>) -> Void) {
+        FirebaseHelper.instance.logOut(isReachable: isReachable, callback: callback)
+    }
+    
+    // MARK: - Cheeck network status
+    func connectedToNetwork() -> Bool {
+        return FirebaseHelper.instance.connectedToNetwork()
     }
 }

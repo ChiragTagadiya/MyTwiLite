@@ -43,7 +43,7 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
     
     // MARK: - Show loader
     func showLoader(_ message: String = "", _ color: UIColor = .darkGray, textColor: UIColor = .white) {
-        let size = CGSize(width: 40, height: 40)
+        let size = CGSize(width: 30, height: 30)
         startAnimating(size, message: message, type: .lineSpinFadeLoader, color: color,
                        backgroundColor: .lightGray.withAlphaComponent(0.3), textColor: textColor)
     }

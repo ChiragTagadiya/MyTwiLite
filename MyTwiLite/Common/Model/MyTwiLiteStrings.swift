@@ -28,6 +28,7 @@ struct MyTwiLiteStrings {
     static let myTimeline = "My Timeline"
     static let profile = "Profile"
     static let removeTimeline = "Are you sure to delete this timeline ?"
+    static let noInternet = "You are offline, connect to the internet"
 }
 
 // MARK: - Keys to use inside the app

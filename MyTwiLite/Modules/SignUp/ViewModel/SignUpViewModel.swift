@@ -16,6 +16,7 @@ class SignUpViewModel {
     let validPasswordTitle = MyTwiLiteStrings.validPassword
     let validConfirmPasswordTitle = MyTwiLiteStrings.validConfirmPassword
     let editIconTitle = MyTwiLiteKeys.editIconKey
+    let noInternetTitle = MyTwiLiteStrings.noInternet
     var isValid = true
 
     // MARK: - Validate user detail with a type
@@ -34,9 +35,9 @@ class SignUpViewModel {
     }
     
     // MARK: - Create a new user
-    public func createUser(_ userDetail: UserDetail, callBack: @escaping FirebaseCallBackType) {
-        FirebaseHelper.instance.createUser(user: userDetail) { (result, error) in
-            callBack(result, error)
-        }
+    public func createUser(_ userDetail: UserDetail,
+                           isReachable: @escaping ((Bool) -> Void),
+                           callBack: @escaping FirebaseCallBackType) {
+        FirebaseHelper.instance.createUser(user: userDetail, isReachable: isReachable, callBack: callBack)
     }
 }

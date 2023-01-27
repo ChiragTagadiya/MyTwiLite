@@ -13,6 +13,7 @@ class AddTimelineViewModel {
     let addPictureTitle = MyTwiLiteStrings.addPicture
     let validTimelineTitle = MyTwiLiteStrings.validTimeline
     let removeTimelineImageTitle = MyTwiLiteStrings.removeTimelineImageMessage
+    let noInternetTitle = MyTwiLiteStrings.noInternet
     var isTextPlaceholder = true
     
     // MARK: - Set timeline text placeholder status
@@ -30,12 +31,15 @@ class AddTimelineViewModel {
     }
     
     // MARK: - Post a timeline
-    func postTimeline(_ uid: String, timelineText: String?,
-                      timlineImageData: Data?, callBack: @escaping (Result<Int, Error>) -> Void) {
+    func postTimeline(_ uid: String, timelineText: String?, timlineImageData: Data?,
+                      isReachable: @escaping ((Bool) -> Void), callBack: @escaping (Result<Int, Error>) -> Void) {
+        if !FirebaseHelper.instance.connectedToNetwork() {
+            isReachable(false)
+        }
+
         let currentTimestamp = Utils().currentTimestamp()
         let timeline = AddTimeline(uid: uid, text: timelineText?.trimmingCharacters(in: .whitespacesAndNewlines),
                                    imageData: timlineImageData, createdDate: currentTimestamp)
-        
         let profileImagePath = "\(MyTwiLiteKeys.profilePath)\(uid).\(MyTwiLiteKeys.jpgExtension)"
         FirebaseHelper.instance.downloadImageUrl(imagePath: profileImagePath) { result in
             switch result {

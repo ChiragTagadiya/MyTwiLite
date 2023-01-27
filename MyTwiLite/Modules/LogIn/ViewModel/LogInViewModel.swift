@@ -12,6 +12,7 @@ class LogInViewModel {
     let navigationTitle = MyTwiLiteStrings.logIn
     let validEmailTitle = MyTwiLiteStrings.validEmail
     let validPasswordTitle = MyTwiLiteStrings.validPassword
+    let noInternetTitle = MyTwiLiteStrings.noInternet
     var isValid = true
 
     // MARK: - Validate user detail with a type
@@ -30,9 +31,10 @@ class LogInViewModel {
     }
     
     // MARK: - Sign in with user email and password
-    func signinUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
-        FirebaseHelper.instance.logInUser(email: email, password: password) { (result, error) in
-            callBack(result, error)
-        }
+    func signinUser(email: String, password: String,
+                    isReachable: @escaping ((Bool) -> Void),
+                    callBack: @escaping FirebaseCallBackType) {
+        FirebaseHelper.instance.logInUser(email: email, password: password,
+                                          isReachable: isReachable, callBack: callBack)
     }
 }

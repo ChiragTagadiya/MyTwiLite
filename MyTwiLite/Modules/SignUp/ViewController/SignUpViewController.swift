@@ -97,7 +97,10 @@ class SignUpViewController: MyTwiLiteViewController {
                                   email: email, password: password, profileImageData: profileImageData)
 
             self.showLoader()
-            self.viewModel.createUser(user) { [weak self] _, error in
+            self.viewModel.createUser(user) { [weak self] _ in
+                self?.hideLoader()
+                self?.showAlert(message: self?.viewModel.noInternetTitle ?? "")
+            } callBack: { [weak self] _, error in
                 self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)
@@ -105,6 +108,7 @@ class SignUpViewController: MyTwiLiteViewController {
                     self?.navigateToHome()
                 }
             }
+
         }
     }
     
