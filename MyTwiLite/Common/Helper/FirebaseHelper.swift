@@ -46,13 +46,23 @@ class FirebaseHelper {
         }
     }
     
-    // MARK: - LogIn user
+    // MARK: - Log in user
     func logInUser(email: String, password: String, callBack: @escaping FirebaseCallBackType) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if result != nil {
                 Utils().setLoginStatus(isLogin: true)
             }
             callBack(result, error)
+        }
+    }
+    
+    // MARK: - Log out user
+    func logOut(callback: @escaping (Result<Int, Error>) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            callback(.success(0))
+        } catch {
+            callback(.failure(error))
         }
     }
     

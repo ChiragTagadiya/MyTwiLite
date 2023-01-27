@@ -13,7 +13,6 @@ class LogInRouter: Router {
     enum Destination {
         case signUp
         case dashboard
-        case forgotPassword
     }
     
     // MARK: - Handle routing
@@ -27,8 +26,6 @@ class LogInRouter: Router {
                 let tabBarController = MyTwiLiteTabBar().initiateTabBar()
                 sceneDelegate.window?.rootViewController = tabBarController
             }
-        case .forgotPassword:
-            break
         }
     }
 }

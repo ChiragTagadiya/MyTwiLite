@@ -98,7 +98,7 @@ class DashboardViewController: MyTwiLiteViewController {
     
     // MARK: - Navigate to add timeline action
     private func navigateToAddTimeline() {
-        router.route(to: .addTimeline, from: self, parameters: nil)
+        self.router.route(to: .addTimeline, from: self, parameters: nil)
     }
 
     @objc func addTimeLineAction() {

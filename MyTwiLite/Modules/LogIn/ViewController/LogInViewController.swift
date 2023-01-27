@@ -19,6 +19,11 @@ class LoginViewController: MyTwiLiteViewController {
     var router = LogInRouter()
     var viewModel = LogInViewModel()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.initializeData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureLayout()
@@ -30,6 +35,15 @@ class LoginViewController: MyTwiLiteViewController {
         self.labelLogin.text = self.viewModel.navigationTitle
         self.labelLogin.textColor = Colors.green
         self.buttonLogin.setFilledLayout()
+    }
+    
+    // MARK: - Initialize data
+    private func initializeData() {
+        self.textFieldEmail.text = ""
+        self.textFieldEmail.errorMessage = ""
+        self.textFieldPassword.text = ""
+        self.textFieldPassword.errorMessage = ""
+        self.textFieldPassword.isSecureTextEntry = true
     }
     
     // MARK: - Navigate to home action

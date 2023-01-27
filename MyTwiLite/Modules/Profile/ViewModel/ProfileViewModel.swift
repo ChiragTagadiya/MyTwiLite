@@ -28,7 +28,7 @@ class ProfileViewModel {
         callBack(.success(0))
     }
     
-    // MARK: - Fetch my timelines
+    // MARK: - Fetch user information
     func fetchUserInformation(callBack: @escaping (Result<Int, Error>) -> Void) {
         if let uid = FirebaseHelper.instance.currentUser()?.uid {
             let profileImagePath = "\(MyTwiLiteKeys.profilePath)\(uid).\(MyTwiLiteKeys.jpgExtension)"
@@ -48,5 +48,10 @@ class ProfileViewModel {
                 }
             }
         }
+    }
+    
+    // MARK: - Log out user
+    func logOut(callback: @escaping (Result<Int, Error>) -> Void) {
+        FirebaseHelper.instance.logOut(callback: callback)
     }
 }

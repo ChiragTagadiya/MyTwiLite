@@ -16,6 +16,7 @@ class ProfileViewController: MyTwiLiteViewController {
     @IBOutlet weak var buttonLogOut: MyTwiLiteButton!
     @IBOutlet weak var buttonDelete: MyTwiLiteButton!
     
+    var router = ProfileRouter()
     let viewModel = ProfileViewModel()
 
     override func viewDidLoad() {
@@ -55,6 +56,17 @@ class ProfileViewController: MyTwiLiteViewController {
 
     // MARK: - Logout action
     @IBAction func onLogOutPressed(_ sender: UIButton) {
+        self.showLoader()
+        self.viewModel.logOut { [weak self] result in
+            self?.hideLoader()
+            switch result {
+            case .success(_):
+                self?.router.route(to: .logIn, from: self ?? ProfileViewController().self, parameters: nil)
+
+            case .failure(let error):
+                self?.showAlert(message: error.localizedDescription)
+            }
+        }
     }
     
     // MARK: - Delete account action
