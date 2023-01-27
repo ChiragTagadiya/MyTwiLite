@@ -44,7 +44,6 @@ class ProfileViewModel {
                         }
                     }
                 case .failure(let profileUrlError):
-                    debugPrint(profileUrlError.localizedDescription)
                     callBack(.failure(profileUrlError))
                 }
             }
