@@ -11,16 +11,16 @@ import SkyFloatingLabelTextField
 class MyTwiLiteTextField: SkyFloatingLabelTextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureLayout()
+        self.configureLayout()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configureLayout()
+        self.configureLayout()
     }
     
     // MARK: - Configure initial layout
-    func configureLayout() {
+    private func configureLayout() {
         self.titleColor = Colors.green
     }
 }

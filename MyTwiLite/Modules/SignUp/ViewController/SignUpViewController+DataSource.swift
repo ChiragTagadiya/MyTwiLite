@@ -20,7 +20,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
-        self.buttonAddPicture.setImage(UIImage(systemName: viewModel.editIconTitle,
+        self.buttonAddPicture.setImage(UIImage(systemName: self.viewModel.editIconTitle,
                                                withConfiguration: UIImage.SymbolConfiguration(scale: .small)), for: .normal)
         self.imageViewProfile.image = image
         dismiss(animated: true)

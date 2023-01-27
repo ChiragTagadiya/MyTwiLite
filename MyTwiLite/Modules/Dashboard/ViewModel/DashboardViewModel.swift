@@ -25,7 +25,7 @@ class DashboardViewModel {
     }
     
     // MARK: - Prepare timeline data
-    func prepareTimelineData(snapshot: QuerySnapshot?, callBack: @escaping (Result<Int, Error>) -> Void) {
+    private func prepareTimelineData(snapshot: QuerySnapshot?, callBack: @escaping (Result<Int, Error>) -> Void) {
         var timelines = [TimelineModel]()
         if let snapshot = snapshot {
             for document in snapshot.documents {
@@ -76,7 +76,6 @@ class DashboardViewModel {
         } else {
             self.fetchAllTimeLines(callBack: callBack)
         }
-        
     }
     
     // MARK: - Delete timeline

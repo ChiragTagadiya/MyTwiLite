@@ -23,7 +23,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         }
         let timeline = self.viewModel.arrayTimelines[indexPath.row]
         cell.timelineDelegate = self
-        cell.configureData(timeline: timeline, isMyTimeline: viewModel.isMyTimline)
+        cell.configureData(timeline: timeline, isMyTimeline: self.viewModel.isMyTimline)
         return cell
     }
 }
@@ -31,7 +31,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Delete timeline delegate
 extension DashboardViewController: TimelineProtocol {
     func deleteTimeline(timeline: TimelineModel) {
-        self.showCustomAlert(message: viewModel.removeTimelineTitle) { [weak self] _ in
+        self.showCustomAlert(message: self.viewModel.removeTimelineTitle) { [weak self] _ in
             self?.showLoader()
             self?.viewModel.deleteTimeline(timeline: timeline) { [weak self] error in
                 self?.hideLoader()

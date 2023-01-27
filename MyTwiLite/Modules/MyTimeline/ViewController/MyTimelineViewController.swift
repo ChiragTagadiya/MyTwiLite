@@ -13,6 +13,6 @@ class MyTimelineViewController: MyTwiLiteViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.navigationTitle
+        self.title = self.viewModel.navigationTitle
     }
 }

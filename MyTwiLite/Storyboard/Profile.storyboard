@@ -16,16 +16,109 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34v-9h-gGm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-sa-PCN">
+                                        <rect key="frame" x="146.66666666666666" y="24" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3gp-H3-uWw"/>
+                                            <constraint firstAttribute="width" constant="100" id="Aoh-vp-zgG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgW-Bk-Ao7" customClass="MyTwiLiteTextField" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="148" width="361" height="34"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KH-VD-wcU" customClass="MyTwiLiteTextField" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="198" width="361" height="34"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kqh-s3-rKd" customClass="MyTwiLiteTextField" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="248" width="361" height="34"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XR-G5-Lhu" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="318" width="361" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                        <connections>
+                                            <action selector="onDeletePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8sO-zD-KfR"/>
+                                            <action selector="onLogOutPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oOS-J3-h6d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUO-19-cVv" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="377" width="361" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete Account"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pgW-Bk-Ao7" firstAttribute="top" secondItem="o6f-sa-PCN" secondAttribute="bottom" constant="24" id="0lg-om-zEb"/>
+                                    <constraint firstItem="jUO-19-cVv" firstAttribute="trailing" secondItem="0XR-G5-Lhu" secondAttribute="trailing" id="2Gd-9T-dcp"/>
+                                    <constraint firstItem="5KH-VD-wcU" firstAttribute="leading" secondItem="pgW-Bk-Ao7" secondAttribute="leading" id="2sJ-gc-heQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0XR-G5-Lhu" secondAttribute="trailing" constant="16" id="2vL-0u-zzx"/>
+                                    <constraint firstItem="Kqh-s3-rKd" firstAttribute="top" secondItem="5KH-VD-wcU" secondAttribute="bottom" constant="16" id="2vl-26-06p"/>
+                                    <constraint firstAttribute="trailing" secondItem="pgW-Bk-Ao7" secondAttribute="trailing" constant="16" id="Aws-ev-czI"/>
+                                    <constraint firstItem="5KH-VD-wcU" firstAttribute="top" secondItem="pgW-Bk-Ao7" secondAttribute="bottom" constant="16" id="Eig-L3-eOP"/>
+                                    <constraint firstItem="5KH-VD-wcU" firstAttribute="trailing" secondItem="pgW-Bk-Ao7" secondAttribute="trailing" id="K0d-4Q-8Id"/>
+                                    <constraint firstItem="o6f-sa-PCN" firstAttribute="centerX" secondItem="34v-9h-gGm" secondAttribute="centerX" id="L4x-uU-GTr"/>
+                                    <constraint firstItem="jUO-19-cVv" firstAttribute="leading" secondItem="0XR-G5-Lhu" secondAttribute="leading" id="OrJ-4r-0qh"/>
+                                    <constraint firstItem="pgW-Bk-Ao7" firstAttribute="leading" secondItem="34v-9h-gGm" secondAttribute="leading" constant="16" id="QH7-vQ-3tr"/>
+                                    <constraint firstItem="0XR-G5-Lhu" firstAttribute="leading" secondItem="34v-9h-gGm" secondAttribute="leading" constant="16" id="f9W-EV-dMW"/>
+                                    <constraint firstItem="0XR-G5-Lhu" firstAttribute="top" secondItem="Kqh-s3-rKd" secondAttribute="bottom" constant="36" id="koZ-5K-EGI"/>
+                                    <constraint firstItem="Kqh-s3-rKd" firstAttribute="leading" secondItem="5KH-VD-wcU" secondAttribute="leading" id="kpf-5r-07O"/>
+                                    <constraint firstItem="Kqh-s3-rKd" firstAttribute="trailing" secondItem="5KH-VD-wcU" secondAttribute="trailing" id="oYA-21-jvd"/>
+                                    <constraint firstItem="jUO-19-cVv" firstAttribute="top" secondItem="0XR-G5-Lhu" secondAttribute="bottom" constant="24" id="tRH-KP-T1f"/>
+                                    <constraint firstItem="o6f-sa-PCN" firstAttribute="top" secondItem="34v-9h-gGm" secondAttribute="top" constant="24" id="u9R-oq-Dqc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="34v-9h-gGm" secondAttribute="bottom" id="PL5-ci-emK"/>
+                            <constraint firstItem="34v-9h-gGm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VtM-Xn-mdU"/>
+                            <constraint firstItem="34v-9h-gGm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Wr0-us-JeD"/>
+                            <constraint firstItem="34v-9h-gGm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jhD-P0-Wqn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonDelete" destination="jUO-19-cVv" id="PI7-lv-UMV"/>
+                        <outlet property="buttonLogOut" destination="0XR-G5-Lhu" id="o7Z-ZF-VAs"/>
+                        <outlet property="imageViewProfile" destination="o6f-sa-PCN" id="uKe-r7-PD6"/>
+                        <outlet property="textFieldEmail" destination="Kqh-s3-rKd" id="2tM-ze-lzi"/>
+                        <outlet property="textFieldFirstName" destination="pgW-Bk-Ao7" id="ed8-mb-xMV"/>
+                        <outlet property="textFieldLastName" destination="5KH-VD-wcU" id="HQR-4I-HYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-27"/>
+            <point key="canvasLocation" x="116.79389312977099" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="5KH-VD-wcU">
+            <size key="intrinsicContentSize" width="97" height="34"/>
+        </designable>
+        <designable name="Kqh-s3-rKd">
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+        </designable>
+        <designable name="pgW-Bk-Ao7">
+            <size key="intrinsicContentSize" width="98" height="34"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="ProfilePlaceholder" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

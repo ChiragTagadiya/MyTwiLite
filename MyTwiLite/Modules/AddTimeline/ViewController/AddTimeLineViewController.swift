@@ -22,13 +22,13 @@ class AddTimelineViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureLayout()
+        self.configureLayout()
     }
     
     // MARK: - Configure initial layout
     private func configureLayout() {
-        textFieldTimeline.text = viewModel.timelinePlaceholderTitle
-        buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
+        textFieldTimeline.text = self.viewModel.timelinePlaceholderTitle
+        buttonAddPicture.setTitle(self.viewModel.addPictureTitle, for: .normal)
         textFieldTimeline.textColor = UIColor.lightGray
         self.textFieldTimeline.setCornerRadius()
         self.buttonPost.setFilledLayout()
@@ -51,15 +51,15 @@ class AddTimelineViewController: MyTwiLiteViewController {
         if let imageData = imageViewTimeline.image?.jpegData(compressionQuality: 0.6) {
             timelineImageData = imageData
         }
-        if !viewModel.isTimelineValid(text: textFieldTimeline.text, imageData: timelineImageData) {
-            showAlert(message: viewModel.validTimelineTitle)
+        if !self.viewModel.isTimelineValid(text: textFieldTimeline.text, imageData: timelineImageData) {
+            showAlert(message: self.viewModel.validTimelineTitle)
             return
         }
         
         if let uid = FirebaseHelper.instance.currentUser()?.uid {
             self.showLoader()
-            let timelineText = !(viewModel.isTextPlaceholder) ? textFieldTimeline.text : nil
-            viewModel.postTimeline(uid, timelineText: timelineText,
+            let timelineText = !(self.viewModel.isTextPlaceholder) ? textFieldTimeline.text : nil
+            self.viewModel.postTimeline(uid, timelineText: timelineText,
                                    timlineImageData: timelineImageData) { [weak self] result in
                 self?.hideLoader()
                 switch result {
@@ -75,7 +75,7 @@ class AddTimelineViewController: MyTwiLiteViewController {
     // MARK: - Remove picture action
     @IBAction func onRemovePictureAction(_ sender: UIButton) {
         self.view.endEditing(true)
-        self.showCustomAlert(message: viewModel.removeTimelineImageTitle) { [weak self] _ in
+        self.showCustomAlert(message: self.viewModel.removeTimelineImageTitle) { [weak self] _ in
             self?.imageViewTimeline.image = nil
             self?.buttonAddPicture.isHidden = false
             self?.vewImageTimeline.isHidden = true

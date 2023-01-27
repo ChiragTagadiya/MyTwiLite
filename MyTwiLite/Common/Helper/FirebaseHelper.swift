@@ -238,4 +238,14 @@ class FirebaseHelper {
             }
         }
     }
+    
+    // MARK: - Fetch user information
+    func fetchUserInformation(callback: @escaping CollectionCallBackType) {
+        if let uid = FirebaseHelper.instance.currentUser()?.uid {
+            let usersCollection = Firestore.firestore().collection(MyTwiLiteKeys.usersKey).whereField(MyTwiLiteKeys.uidKey, isEqualTo: uid)
+            usersCollection.getDocuments { snapshot, error in
+                callback(snapshot, error)
+            }
+        }
+    }
 }

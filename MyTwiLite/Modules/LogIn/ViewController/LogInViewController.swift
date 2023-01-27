@@ -27,7 +27,7 @@ class LoginViewController: MyTwiLiteViewController {
     // MARK: - Configure initial view layout
     private func configureLayout() {
         self.shouldHideBackButton = true
-        self.labelLogin.text = viewModel.navigationTitle
+        self.labelLogin.text = self.viewModel.navigationTitle
         self.labelLogin.textColor = Colors.green
         self.buttonLogin.setFilledLayout()
     }
@@ -45,13 +45,13 @@ class LoginViewController: MyTwiLiteViewController {
     // MARK: - On log-in button action
     @IBAction func logInPressed(_ sender: UIButton) {
         self.view.endEditing(true)
-        if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
+        if !self.viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
             self.viewModel.isValid = false
-            self.textFieldEmail.errorMessage = viewModel.validEmailTitle
+            self.textFieldEmail.errorMessage = self.viewModel.validEmailTitle
         }
-        if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
+        if !self.viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
             self.viewModel.isValid = false
-            self.textFieldPassword.errorMessage = viewModel.validPasswordTitle
+            self.textFieldPassword.errorMessage = self.viewModel.validPasswordTitle
         }
         
         if !self.viewModel.isValid {
@@ -60,7 +60,7 @@ class LoginViewController: MyTwiLiteViewController {
         
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
             self.showLoader()
-            viewModel.signinUser(email: email, password: password) { [weak self] (_, error) in
+            self.viewModel.signinUser(email: email, password: password) { [weak self] (_, error) in
                 self?.hideLoader()
                 if let error = error {
                     self?.showAlert(message: error.localizedDescription)

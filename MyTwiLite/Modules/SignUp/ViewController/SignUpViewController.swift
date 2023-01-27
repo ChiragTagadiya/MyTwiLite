@@ -31,7 +31,7 @@ class SignUpViewController: MyTwiLiteViewController {
     // MARK: - Configure initial view layout
     private func configureLayout() {
         self.shouldHideBackButton = true
-        self.labelSignUp.text = viewModel.navigationTitle
+        self.labelSignUp.text = self.viewModel.navigationTitle
         self.labelSignUp.textColor = Colors.green
         self.imageViewProfile.setCornerRadius()
         self.buttonAddPicture.tintColor = Colors.white
@@ -64,26 +64,26 @@ class SignUpViewController: MyTwiLiteViewController {
     @IBAction func signeUpPressed(_ sender: UIButton) {
         // validate all the fields
         self.view.endEditing(true)
-        if !viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
+        if !self.viewModel.isUserDetailValid(text: textFieldFirstName.text, validationType: .normalText) {
             self.viewModel.isValid = false
-            self.textFieldFirstName.errorMessage = viewModel.validFirstNameTitle
+            self.textFieldFirstName.errorMessage = self.viewModel.validFirstNameTitle
         }
-        if !viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
+        if !self.viewModel.isUserDetailValid(text: textFieldLastName.text, validationType: .normalText) {
             self.viewModel.isValid = false
-            self.textFieldLastName.errorMessage = viewModel.validLastNameTitle
+            self.textFieldLastName.errorMessage = self.viewModel.validLastNameTitle
         }
-        if !viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
+        if !self.viewModel.isUserDetailValid(text: textFieldEmail.text, validationType: .email) {
             self.viewModel.isValid = false
-            self.textFieldEmail.errorMessage = viewModel.validEmailTitle
+            self.textFieldEmail.errorMessage = self.viewModel.validEmailTitle
         }
         if !viewModel.isUserDetailValid(text: textFieldPassword.text, validationType: .password) {
             self.viewModel.isValid = false
-            self.textFieldPassword.errorMessage = viewModel.validPasswordTitle
+            self.textFieldPassword.errorMessage = self.viewModel.validPasswordTitle
         }
         if let password = textFieldConfirmPassword.text, password.isEmpty ||
             textFieldConfirmPassword.text != textFieldPassword.text {
             self.viewModel.isValid = false
-            self.textFieldConfirmPassword.errorMessage = viewModel.validConfirmPasswordTitle
+            self.textFieldConfirmPassword.errorMessage = self.viewModel.validConfirmPasswordTitle
         }
     
         if !self.viewModel.isValid {

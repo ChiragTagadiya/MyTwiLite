@@ -18,8 +18,7 @@ class DashboardViewController: MyTwiLiteViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.navigationTitle()
-        self.shouldHideBackButton = true
+        self.title = self.viewModel.navigationTitle()
         self.configureLayout()
         self.fetchTimelines()
         self.setNotificationObserver()
@@ -50,6 +49,7 @@ class DashboardViewController: MyTwiLiteViewController {
     
     // MARK: - Configure initial layout
     private func configureLayout() {
+        self.shouldHideBackButton = true
         let barButtonItem = UIBarButtonItem(image: .add,
                                             style: .plain, target: self, action: #selector(addTimeLineAction))
         barButtonItem.tintColor = Colors.green
@@ -77,7 +77,7 @@ class DashboardViewController: MyTwiLiteViewController {
     // MARK: - Fetch all timelines
     func fetchTimelines() {
         self.showLoader()
-        viewModel.fetchTimelines {[weak self] result in
+        self.viewModel.fetchTimelines {[weak self] result in
             self?.refreshControl.endRefreshing()
             switch result {
             case .failure(let error):

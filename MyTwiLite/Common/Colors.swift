@@ -14,4 +14,5 @@ struct Colors {
     static let black = UIColor.black
     static let darkGray = UIColor.darkGray
     static let lightGray = UIColor.lightGray
+    static let red = UIColor.systemRed
 }
