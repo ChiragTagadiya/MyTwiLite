@@ -9,7 +9,6 @@ import Foundation
 
 // MARK: - Texts to present on screen
 struct MyTwiLiteStrings {
-    static let launchScreen = "Launch Screen"
     static let signUp = "Sign Up"
     static let validFirstName = "INVALID FIRST NAME"
     static let validLastName = "INVALID LAST NAME"

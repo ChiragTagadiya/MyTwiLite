@@ -16,7 +16,7 @@ class LaunchViewController: MyTwiLiteViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = viewModel.navigationTitle
+        self.navigationController?.navigationBar.isHidden = true
         self.manageLaunchRouter()
     }
 
