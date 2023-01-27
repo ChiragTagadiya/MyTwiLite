@@ -20,7 +20,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-di-OLd">
                                 <rect key="frame" x="16" y="121" width="361" height="120"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.044536161106943292" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="beS-PM-T9Z"/>
                                 </constraints>
@@ -32,7 +31,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycw-A2-FWP" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
-                                <rect key="frame" x="134" y="273" width="125" height="35"/>
+                                <rect key="frame" x="134" y="265" width="125" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="82n-40-BdN"/>
                                 </constraints>
@@ -43,7 +42,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52W-yw-bda">
-                                <rect key="frame" x="16" y="340" width="361" height="250"/>
+                                <rect key="frame" x="16" y="332" width="361" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-UP-se2">
                                         <rect key="frame" x="0.0" y="48" width="361" height="200"/>
@@ -92,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1re-tv-3C1" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
-                                <rect key="frame" x="16" y="614" width="361" height="34.333333333333371"/>
+                                <rect key="frame" x="16" y="606" width="361" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Post"/>
                                 <connections>
@@ -111,7 +110,7 @@
                             <constraint firstItem="bgD-8u-jEl" firstAttribute="trailing" secondItem="52W-yw-bda" secondAttribute="trailing" constant="16" id="TKi-2P-gmZ"/>
                             <constraint firstItem="bgD-8u-jEl" firstAttribute="trailing" secondItem="1re-tv-3C1" secondAttribute="trailing" constant="16" id="W8f-VX-hTv"/>
                             <constraint firstItem="1re-tv-3C1" firstAttribute="leading" secondItem="bgD-8u-jEl" secondAttribute="leading" constant="16" id="XI8-ra-REi"/>
-                            <constraint firstItem="ycw-A2-FWP" firstAttribute="top" secondItem="rCR-di-OLd" secondAttribute="bottom" constant="32" id="ay0-td-EZD"/>
+                            <constraint firstItem="ycw-A2-FWP" firstAttribute="top" secondItem="rCR-di-OLd" secondAttribute="bottom" constant="24" id="ay0-td-EZD"/>
                             <constraint firstItem="52W-yw-bda" firstAttribute="top" secondItem="ycw-A2-FWP" secondAttribute="bottom" constant="32" id="cPd-wp-SLQ"/>
                             <constraint firstItem="Hm5-nj-yaC" firstAttribute="top" secondItem="bgD-8u-jEl" secondAttribute="top" constant="16" id="jfj-XF-afb"/>
                             <constraint firstItem="rCR-di-OLd" firstAttribute="top" secondItem="Hm5-nj-yaC" secondAttribute="bottom" constant="11" id="uTh-Tr-t2Z"/>
@@ -121,6 +120,7 @@
                     <connections>
                         <outlet property="buttonAddPicture" destination="ycw-A2-FWP" id="8H6-Bp-x5y"/>
                         <outlet property="buttonPost" destination="1re-tv-3C1" id="W0y-nX-uaO"/>
+                        <outlet property="constraintAddPictureHeight" destination="ay0-td-EZD" id="dha-UY-ZTj"/>
                         <outlet property="constraintImageViewHeight" destination="ppf-C1-juQ" id="uso-ad-D8I"/>
                         <outlet property="imageViewTimeline" destination="QOB-UP-se2" id="utP-Xm-Avp"/>
                         <outlet property="textFieldTimeline" destination="rCR-di-OLd" id="eWx-I4-C1i"/>

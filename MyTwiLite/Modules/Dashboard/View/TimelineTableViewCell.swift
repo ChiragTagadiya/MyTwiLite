@@ -42,7 +42,7 @@ class TimelineTableViewCell: UITableViewCell {
     private func configureCellLayout() {
         self.imageViewTimeline.setCornerRadius(20)
         self.labelTimelineText.textColor = Colors.black
-        self.labelCreatedDate.textColor = Colors.darkGrey
+        self.labelCreatedDate.textColor = Colors.darkGray
         self.viewCreatedDate.backgroundColor = Colors.green
         self.viewContainer.backgroundColor = .white
         self.viewContainer.layer.cornerRadius = 10.0

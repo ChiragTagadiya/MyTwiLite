@@ -34,6 +34,7 @@
 		333DB5B12982AD0A002A4C67 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B02982AD0A002A4C67 /* Colors.swift */; };
 		333DB5B42982AEDC002A4C67 /* MyTwiLiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B32982AEDC002A4C67 /* MyTwiLiteButton.swift */; };
 		333DB5B62982B2BD002A4C67 /* SignUpViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */; };
+		333EDD202983A0A9001959E7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */; };
 		33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */; };
 		334CA34029831E5D00E56BAB /* LogInViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */; };
 		3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */; };
@@ -105,6 +106,7 @@
 		333DB5B02982AD0A002A4C67 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		333DB5B32982AEDC002A4C67 /* MyTwiLiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteButton.swift; sourceTree = "<group>"; };
 		333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+DataSource.swift"; sourceTree = "<group>"; };
+		333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteLogInTests.swift; sourceTree = "<group>"; };
 		334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogInViewController+DataSource.swift"; sourceTree = "<group>"; };
 		3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTabBar.swift; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 				3358E581297C3E64007ABCA6 /* UIString+Extension.swift */,
 				3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */,
 				3394599229828D98005C8614 /* UIButton+Extension.swift */,
+				333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -946,6 +949,7 @@
 				331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */,
 				3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */,
 				333DB5B12982AD0A002A4C67 /* Colors.swift in Sources */,
+				333EDD202983A0A9001959E7 /* UITextField+Extension.swift in Sources */,
 				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
 				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
 				330185522981526600C9C5E9 /* MyTimelineViewModel.swift in Sources */,

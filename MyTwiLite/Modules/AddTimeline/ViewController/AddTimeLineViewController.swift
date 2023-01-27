@@ -14,6 +14,8 @@ class AddTimelineViewController: MyTwiLiteViewController {
     @IBOutlet weak var buttonPost: MyTwiLiteButton!
     @IBOutlet weak var vewImageTimeline: UIView!
     @IBOutlet weak var imageViewTimeline: UIImageView!
+    
+    @IBOutlet weak var constraintAddPictureHeight: NSLayoutConstraint!
     @IBOutlet weak var constraintImageViewHeight: NSLayoutConstraint!
 
     let viewModel = AddTimelineViewModel()
@@ -28,6 +30,7 @@ class AddTimelineViewController: MyTwiLiteViewController {
         textFieldTimeline.text = viewModel.timelinePlaceholderTitle
         buttonAddPicture.setTitle(viewModel.addPictureTitle, for: .normal)
         textFieldTimeline.textColor = UIColor.lightGray
+        self.textFieldTimeline.setCornerRadius()
         self.buttonPost.setFilledLayout()
         self.constraintImageViewHeight.constant = 0
     }
@@ -74,7 +77,9 @@ class AddTimelineViewController: MyTwiLiteViewController {
         self.view.endEditing(true)
         self.showCustomAlert(message: viewModel.removeTimelineImageTitle) { [weak self] _ in
             self?.imageViewTimeline.image = nil
+            self?.buttonAddPicture.isHidden = false
             self?.vewImageTimeline.isHidden = true
+            self?.constraintAddPictureHeight.constant = 24
             self?.constraintImageViewHeight.constant = 0
         }
     }
