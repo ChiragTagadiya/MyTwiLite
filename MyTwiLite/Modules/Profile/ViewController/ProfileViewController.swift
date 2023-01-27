@@ -14,7 +14,6 @@ class ProfileViewController: MyTwiLiteViewController {
     @IBOutlet weak var textFieldLastName: MyTwiLiteTextField!
     @IBOutlet weak var textFieldEmail: MyTwiLiteTextField!
     @IBOutlet weak var buttonLogOut: MyTwiLiteButton!
-    @IBOutlet weak var buttonDelete: MyTwiLiteButton!
     
     var router = ProfileRouter()
     let viewModel = ProfileViewModel()
@@ -30,7 +29,6 @@ class ProfileViewController: MyTwiLiteViewController {
     private func configureLayout() {
         self.imageViewProfile.setCornerRadius()
         self.buttonLogOut.setFilledLayout()
-        self.buttonDelete.setFilledLayout(Colors.red)
     }
     
     // MARK: - Fetch user information
@@ -60,16 +58,11 @@ class ProfileViewController: MyTwiLiteViewController {
         self.viewModel.logOut { [weak self] result in
             self?.hideLoader()
             switch result {
-            case .success(_):
-                self?.router.route(to: .logIn, from: self ?? ProfileViewController().self, parameters: nil)
-
             case .failure(let error):
                 self?.showAlert(message: error.localizedDescription)
+            default:
+                self?.router.route(to: .logIn, from: self ?? ProfileViewController().self, parameters: nil)
             }
         }
-    }
-    
-    // MARK: - Delete account action
-    @IBAction func onDeletePressed(_ sender: UIButton) {
     }
 }

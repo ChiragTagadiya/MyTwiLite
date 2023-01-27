@@ -60,6 +60,7 @@ class FirebaseHelper {
     func logOut(callback: @escaping (Result<Int, Error>) -> Void) {
         do {
             try Auth.auth().signOut()
+            Utils().setLoginStatus(isLogin: false)
             callback(.success(0))
         } catch {
             callback(.failure(error))
