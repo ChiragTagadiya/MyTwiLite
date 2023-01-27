@@ -23,6 +23,7 @@ class FirebaseHelper {
     func createUser(user: UserDetail, isReachable: @escaping ((Bool) -> Void), callBack: @escaping FirebaseCallBackType) {
         if !FirebaseHelper.instance.connectedToNetwork() {
             isReachable(false)
+            return
         }
         Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] (result, error) in
             if let uid = result?.user.uid {
@@ -56,6 +57,7 @@ class FirebaseHelper {
                    callBack: @escaping FirebaseCallBackType) {
         if !FirebaseHelper.instance.connectedToNetwork() {
             isReachable(false)
+            return
         }
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if result != nil {
@@ -248,6 +250,7 @@ class FirebaseHelper {
         // delete timeline information
         if !FirebaseHelper.instance.connectedToNetwork() {
             isReachable(false)
+            return
         }
         if let timelineText = timeline.text, !timelineText.isEmpty,
            let imageName = timeline.imageName, imageName.isEmpty {

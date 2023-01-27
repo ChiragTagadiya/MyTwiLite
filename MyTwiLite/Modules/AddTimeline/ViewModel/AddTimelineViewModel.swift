@@ -35,6 +35,7 @@ class AddTimelineViewModel {
                       isReachable: @escaping ((Bool) -> Void), callBack: @escaping (Result<Int, Error>) -> Void) {
         if !FirebaseHelper.instance.connectedToNetwork() {
             isReachable(false)
+            return
         }
 
         let currentTimestamp = Utils().currentTimestamp()

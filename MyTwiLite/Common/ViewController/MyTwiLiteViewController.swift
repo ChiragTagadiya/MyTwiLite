@@ -7,6 +7,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import Toast_Swift
 
 class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
     // MARK: - Hide/ Show navigation back buttone
@@ -23,11 +24,7 @@ class MyTwiLiteViewController: UIViewController, NVActivityIndicatorViewable {
     
     // MARK: - Show alert
     func showAlert(message: String) {
-        // TODO: - Use toaster message instead
-        let alertViewController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: MyTwiLiteStrings.okTitle, style: .default)
-        alertViewController.addAction(okAction)
-        self.present(alertViewController, animated: true)
+        self.view.makeToast(message)
     }
     
     // MARK: - Show custom alert to handle multiple actions

@@ -16,6 +16,7 @@ target 'MyTwiLite' do
   pod 'NVActivityIndicatorView', '~> 4.8.0'
   pod 'Kingfisher', '~> 7.0'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'Toast-Swift', '~> 5.0.0'
   
   ## Pods for MyTwiLiteTests
   #
