@@ -34,7 +34,7 @@ final class MyTwiLiteSignUpTests: XCTestCase, SignUpUser {
         let isEmailValid = viewModel.isUserDetailValid(text: email, validationType: .email)
         let isPasswordValid = viewModel.isUserDetailValid(text: password, validationType: .password)
         let isFirstNameValid = viewModel.isUserDetailValid(text: firstName, validationType: .normalText)
-        let isLastNameValid = viewModel.isUserDetailValid(text: firstName, validationType: .normalText)
+        let isLastNameValid = viewModel.isUserDetailValid(text: lastName, validationType: .normalText)
         XCTAssertTrue(isEmailValid && isPasswordValid && isFirstNameValid && isLastNameValid)
     }
     
