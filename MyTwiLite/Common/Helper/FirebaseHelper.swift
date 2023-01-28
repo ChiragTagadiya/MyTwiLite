@@ -53,10 +53,12 @@ class FirebaseHelper {
     
     // MARK: - Log in user
     func logInUser(email: String, password: String,
-                   isReachable: @escaping ((Bool) -> Void),
+                   isReachable: ((Bool) -> Void)?,
                    callBack: @escaping FirebaseCallBackType) {
         if !FirebaseHelper.instance.connectedToNetwork() {
-            isReachable(false)
+            if let isReachable = isReachable {
+                isReachable(false)
+            }
             return
         }
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in

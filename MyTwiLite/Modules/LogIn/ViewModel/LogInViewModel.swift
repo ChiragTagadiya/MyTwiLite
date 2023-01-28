@@ -7,7 +7,11 @@
 
 import Foundation
 
-class LogInViewModel {
+protocol LogInUser {
+    func signinUser(email: String, password: String, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType)
+}
+
+class LogInViewModel: LogInUser {
     // MARK: - Variables
     let navigationTitle = MyTwiLiteStrings.logIn
     let validEmailTitle = MyTwiLiteStrings.validEmail
@@ -31,9 +35,7 @@ class LogInViewModel {
     }
     
     // MARK: - Sign in with user email and password
-    func signinUser(email: String, password: String,
-                    isReachable: @escaping ((Bool) -> Void),
-                    callBack: @escaping FirebaseCallBackType) {
+    func signinUser(email: String, password: String, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType) {
         FirebaseHelper.instance.logInUser(email: email, password: password,
                                           isReachable: isReachable, callBack: callBack)
     }

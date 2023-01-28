@@ -9,8 +9,7 @@ import XCTest
 import Firebase
 @testable import MyTwiLite
 
-final class MyTwiLiteLogInTests: XCTestCase {
-    
+final class MyTwiLiteLogInTests: XCTestCase, LogInUser {
     let viewModel = LogInViewModel()
     
     override func setUpWithError() throws {
@@ -20,33 +19,40 @@ final class MyTwiLiteLogInTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testCreateUserSuccess() throws {
-        let expectation = self.expectation(description: "Log In User API Success")
-        
-        let email = "user1@test.com"
+    
+    // MARK: - Sign in user
+    func signinUser(email: String, password: String, isReachable: ((Bool) -> Void)?, callBack: @escaping MyTwiLite.FirebaseCallBackType) {
+        self.viewModel.signinUser(email: email, password: password, isReachable: nil, callBack: callBack)
+    }
+    
+    // MARK: - Sign in user validation test case
+    func testLogInUserValidation() {
+        let email = "user12@test.com"
         let password = "Hello@123"
-       
+        let isEmailValid = viewModel.isUserDetailValid(text: email, validationType: .email)
+        let isPasswordValid = viewModel.isUserDetailValid(text: password, validationType: .password)
+        let invalidText = viewModel.isUserDetailValid(text: "", validationType: .normalText)
+        XCTAssertFalse(invalidText)
+        XCTAssertTrue(isEmailValid && isPasswordValid)
+    }
+
+    // MARK: - Sign in user test case
+    func testLogInUserSuccess() throws {
+        let expectation = self.expectation(description: "Log In User API Success")
+        let email = "user12@test.com"
+        let password = "Hello@123"
         var apiError: Error?
         var apiResponse: AuthDataResult?
         
-        viewModel.signinUser(email: email, password: password) { response, error in
+        self.signinUser(email: email, password: password, isReachable: nil) { response, error in
             apiError = error
             apiResponse = response
             expectation.fulfill()
         }
         
         waitForExpectations(timeout: 10)
-        
         XCTAssertNil(apiError)
         XCTAssertNotNil(apiResponse)
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }
