@@ -222,6 +222,21 @@ class FirebaseHelper {
         }
     }
     
+    // MARK: - Delete my timelines
+    func deleteMyTimelines(callBack: @escaping ((Error?) -> Void)) {
+        if let uid = FirebaseHelper.instance.currentUser()?.uid {
+            let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelinesKey).whereField(MyTwiLiteKeys.uidKey, isEqualTo: uid)
+            timelineCollection.getDocuments { [self] snapshot, error in
+                if let error = error {
+                    callBack(error)
+                }
+                if let documentId = snapshot?.documents.first?.documentID {
+                    self.deleteTimelineInformation(documentId: documentId, callBack: callBack)
+                }
+            }
+        }
+    }
+    
     // MARK: - Fetch timelines
     func fetchTimelines(callback: @escaping CollectionCallBackType) {
         let timelineCollection = Firestore.firestore().collection(MyTwiLiteKeys.timelinesKey)

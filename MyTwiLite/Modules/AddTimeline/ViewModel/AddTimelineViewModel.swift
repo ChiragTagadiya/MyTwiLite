@@ -7,7 +7,13 @@
 
 import Foundation
 
-class AddTimelineViewModel {
+protocol PostTimeline {
+    func postTimeline(_ uid: String, timelineText: String?, timlineImageData: Data?,
+                      isReachable: ((Bool) -> Void)?, callBack: @escaping (Result<Int, Error>) -> Void)
+    func deleteMyTimeline(callBack: @escaping (Result<Int, Error>) -> Void)
+}
+
+class AddTimelineViewModel: PostTimeline {
     // MARK: - Variables
     let timelinePlaceholderTitle = MyTwiLiteStrings.timelineTextPlaceholder
     let addPictureTitle = MyTwiLiteStrings.addPicture
@@ -32,9 +38,11 @@ class AddTimelineViewModel {
     
     // MARK: - Post a timeline
     func postTimeline(_ uid: String, timelineText: String?, timlineImageData: Data?,
-                      isReachable: @escaping ((Bool) -> Void), callBack: @escaping (Result<Int, Error>) -> Void) {
+                      isReachable: ((Bool) -> Void)?, callBack: @escaping (Result<Int, Error>) -> Void) {
         if !FirebaseHelper.instance.connectedToNetwork() {
-            isReachable(false)
+            if let isReachable = isReachable {
+                isReachable(false)
+            }
             return
         }
 
@@ -57,6 +65,16 @@ class AddTimelineViewModel {
             case .failure(let profileUrlError):
                 callBack(.failure(profileUrlError))
             }
+        }
+    }
+    
+    // MARk: - Delete my timeline
+    func deleteMyTimeline(callBack: @escaping (Result<Int, Error>) -> Void) {
+        FirebaseHelper.instance.deleteMyTimelines { error in
+            if let error = error {
+                callBack(.failure(error))
+            }
+            callBack(.success(0))
         }
     }
 }

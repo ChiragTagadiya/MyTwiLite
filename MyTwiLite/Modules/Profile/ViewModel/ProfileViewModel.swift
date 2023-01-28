@@ -8,7 +8,11 @@
 import Foundation
 import Firebase
 
-class ProfileViewModel {
+protocol Profile {
+    func fetchUserInformation(callBack: @escaping (Result<Int, Error>) -> Void)
+}
+
+class ProfileViewModel: Profile {
     // MARK: - Variables
     let navigationTitle = MyTwiLiteStrings.profile
     let noInternetTitle = MyTwiLiteStrings.noInternet

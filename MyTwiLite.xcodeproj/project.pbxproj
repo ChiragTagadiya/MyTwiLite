@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */; };
 		33018550298137F200C9C5E9 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301854F298137F200C9C5E9 /* LaunchViewModel.swift */; };
-		330185522981526600C9C5E9 /* MyTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330185512981526600C9C5E9 /* MyTimelineViewModel.swift */; };
 		330185542981540E00C9C5E9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330185532981540E00C9C5E9 /* ProfileViewModel.swift */; };
 		3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C785297EB2F900F09661 /* DashboardViewModel.swift */; };
 		3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C789297EB7FB00F09661 /* DashboardModel.swift */; };
@@ -40,6 +39,8 @@
 		33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */; };
 		334CA34029831E5D00E56BAB /* LogInViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */; };
 		334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */; };
+		334CEB192984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */; };
+		334CEB1B2985020800E3C993 /* MyTwiLiteUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */; };
 		3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */; };
 		3353AF0D298041380034360F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0C298041380034360F /* ProfileViewController.swift */; };
 		3353AF0F2980417E0034360F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353AF0E2980417E0034360F /* Profile.storyboard */; };
@@ -53,7 +54,6 @@
 		3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362520C297DB6780024CE9E /* DashboardRouter.swift */; };
 		33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625212297DC5150024CE9E /* AddTimelineViewModel.swift */; };
 		33625215297DC5C80024CE9E /* AddTimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625214297DC5C80024CE9E /* AddTimelineModel.swift */; };
-		3363B1632980242600657E06 /* MyTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363B1622980242600657E06 /* MyTimelineViewController.swift */; };
 		3363B1652980245D00657E06 /* MyTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3363B1642980245D00657E06 /* MyTimeline.storyboard */; };
 		337F6B9B2979557800E6DBCC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6B9A2979557800E6DBCC /* Router.swift */; };
 		337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */; };
@@ -84,7 +84,6 @@
 
 /* Begin PBXFileReference section */
 		3301854F298137F200C9C5E9 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		330185512981526600C9C5E9 /* MyTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimelineViewModel.swift; sourceTree = "<group>"; };
 		330185532981540E00C9C5E9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3306C785297EB2F900F09661 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		3306C789297EB7FB00F09661 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
@@ -115,6 +114,8 @@
 		33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteLogInTests.swift; sourceTree = "<group>"; };
 		334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogInViewController+DataSource.swift"; sourceTree = "<group>"; };
 		334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTimelineDashboardTests.swift; sourceTree = "<group>"; };
+		334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLitePostTimelineTests.swift; sourceTree = "<group>"; };
+		334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteUserTests.swift; sourceTree = "<group>"; };
 		3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTabBar.swift; sourceTree = "<group>"; };
 		3353AF0C298041380034360F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3353AF0E2980417E0034360F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		3362520C297DB6780024CE9E /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
 		33625212297DC5150024CE9E /* AddTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineViewModel.swift; sourceTree = "<group>"; };
 		33625214297DC5C80024CE9E /* AddTimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineModel.swift; sourceTree = "<group>"; };
-		3363B1622980242600657E06 /* MyTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimelineViewController.swift; sourceTree = "<group>"; };
 		3363B1642980245D00657E06 /* MyTimeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTimeline.storyboard; sourceTree = "<group>"; };
 		337F6B9A2979557800E6DBCC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -189,8 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				331755C1297C1202008BE9B7 /* Router */,
-				331755ED297C2655008BE9B7 /* View */,
-				331755C2297C1209008BE9B7 /* Model */,
 				331755C3297C120D008BE9B7 /* ViewModel */,
 				331755C4297C1214008BE9B7 /* ViewController */,
 			);
@@ -203,13 +201,6 @@
 				331755C7297C127A008BE9B7 /* LogInRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		331755C2297C1209008BE9B7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		331755C3297C120D008BE9B7 /* ViewModel */ = {
@@ -325,13 +316,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		331755ED297C2655008BE9B7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		331755EE297C265D008BE9B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,8 +327,6 @@
 		331755F1297C27E7008BE9B7 /* AddTimeline */ = {
 			isa = PBXGroup;
 			children = (
-				33625211297DB8C20024CE9E /* Router */,
-				3362520F297DB8B00024CE9E /* View */,
 				3362520E297DB8A90024CE9E /* Model */,
 				33625210297DB8B80024CE9E /* ViewModel */,
 				331755F2297C27F0008BE9B7 /* ViewController */,
@@ -409,13 +391,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3362520F297DB8B00024CE9E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		33625210297DB8B80024CE9E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,65 +399,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		33625211297DB8C20024CE9E /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		3363B155298022CD00657E06 /* MyTimeline */ = {
-			isa = PBXGroup;
-			children = (
-				3363B1602980231C00657E06 /* Router */,
-				3363B157298022DF00657E06 /* View */,
-				3363B158298022E400657E06 /* Model */,
-				3363B159298022E900657E06 /* ViewModel */,
-				3363B15A298022F000657E06 /* ViewController */,
-			);
-			path = MyTimeline;
-			sourceTree = "<group>";
-		};
 		3363B156298022D600657E06 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				333EDD232983BEAF001959E7 /* Router */,
-				3363B1612980235300657E06 /* View */,
 				3363B15C298022FE00657E06 /* Model */,
 				3363B15D2980230200657E06 /* ViewModel */,
 				3363B15E2980230900657E06 /* ViewController */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		3363B157298022DF00657E06 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3363B158298022E400657E06 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3363B159298022E900657E06 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				330185512981526600C9C5E9 /* MyTimelineViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		3363B15A298022F000657E06 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3363B1622980242600657E06 /* MyTimelineViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		3363B15C298022FE00657E06 /* Model */ = {
@@ -509,20 +434,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3363B1602980231C00657E06 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		3363B1612980235300657E06 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		337F6B8F2979512700E6DBCC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,7 +441,6 @@
 				331755C0297C11F8008BE9B7 /* LogIn */,
 				337F6B922979517D00E6DBCC /* SignUp */,
 				331755E4297C24B8008BE9B7 /* Dashboard */,
-				3363B155298022CD00657E06 /* MyTimeline */,
 				331755F1297C27E7008BE9B7 /* AddTimeline */,
 				3363B156298022D600657E06 /* Profile */,
 			);
@@ -550,19 +460,10 @@
 			isa = PBXGroup;
 			children = (
 				3358E57E297C36CB007ABCA6 /* Router */,
-				337F6B932979519900E6DBCC /* View */,
-				337F6B96297951BD00E6DBCC /* Model */,
 				337F6B942979519E00E6DBCC /* ViewModel */,
 				337F6B95297951A900E6DBCC /* ViewController */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		337F6B932979519900E6DBCC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		337F6B942979519E00E6DBCC /* ViewModel */ = {
@@ -580,13 +481,6 @@
 				333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		337F6B96297951BD00E6DBCC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		337F6B982979529B00E6DBCC /* Router */ = {
@@ -693,6 +587,8 @@
 				33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */,
 				33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */,
 				334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */,
+				334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */,
+				334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */,
 			);
 			path = MyTwiLiteTests;
 			sourceTree = "<group>";
@@ -962,7 +858,6 @@
 				333EDD222983ABCD001959E7 /* UserProfileModel.swift in Sources */,
 				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
 				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
-				330185522981526600C9C5E9 /* MyTimelineViewModel.swift in Sources */,
 				3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */,
 				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,
 				331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */,
@@ -974,7 +869,6 @@
 				333DB5B42982AEDC002A4C67 /* MyTwiLiteButton.swift in Sources */,
 				3353AF0D298041380034360F /* ProfileViewController.swift in Sources */,
 				333DB5AF2982AA73002A4C67 /* MyTwiLiteTextField.swift in Sources */,
-				3363B1632980242600657E06 /* MyTimelineViewController.swift in Sources */,
 				3358E580297C36E2007ABCA6 /* SignUpRouter.swift in Sources */,
 				33018550298137F200C9C5E9 /* LaunchViewModel.swift in Sources */,
 				333EDD252983BECE001959E7 /* ProfileRouter.swift in Sources */,
@@ -987,6 +881,8 @@
 			files = (
 				33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */,
 				33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */,
+				334CEB1B2985020800E3C993 /* MyTwiLiteUserTests.swift in Sources */,
+				334CEB192984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift in Sources */,
 				334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

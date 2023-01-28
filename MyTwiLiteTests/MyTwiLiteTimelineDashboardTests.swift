@@ -67,5 +67,4 @@ final class MyTwiLiteTimelineDashboardTests: XCTestCase, Timeline {
         XCTAssertEqual(fetchTimelineResponse, 0)
         XCTAssertNil(timelineError)
     }
-    
 }
