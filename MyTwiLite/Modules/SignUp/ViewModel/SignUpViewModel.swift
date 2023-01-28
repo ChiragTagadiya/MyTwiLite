@@ -7,7 +7,11 @@
 
 import Foundation
 
-class SignUpViewModel {
+protocol SignUpUser {
+    func createUser(_ userDetail: UserDetail, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType)
+}
+
+class SignUpViewModel: SignUpUser {
     // MARK: - Variables
     let navigationTitle = MyTwiLiteStrings.signUp
     let validFirstNameTitle = MyTwiLiteStrings.validFirstName
@@ -20,7 +24,7 @@ class SignUpViewModel {
     var isValid = true
 
     // MARK: - Validate user detail with a type
-    public func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
+    func isUserDetailValid(text: String?, validationType: Validation) -> Bool {
         let utils = Utils()
         switch validationType {
         case .normalText:
@@ -35,9 +39,7 @@ class SignUpViewModel {
     }
     
     // MARK: - Create a new user
-    public func createUser(_ userDetail: UserDetail,
-                           isReachable: @escaping ((Bool) -> Void),
-                           callBack: @escaping FirebaseCallBackType) {
+    func createUser(_ userDetail: UserDetail, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType) {
         FirebaseHelper.instance.createUser(user: userDetail, isReachable: isReachable, callBack: callBack)
     }
 }

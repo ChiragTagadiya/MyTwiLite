@@ -54,5 +54,4 @@ final class MyTwiLiteLogInTests: XCTestCase, LogInUser {
         XCTAssertNil(apiError)
         XCTAssertNotNil(apiResponse)
     }
-
 }

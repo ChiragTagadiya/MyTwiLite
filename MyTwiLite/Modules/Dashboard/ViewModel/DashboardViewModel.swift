@@ -8,11 +8,15 @@
 import Foundation
 import Firebase
 
+protocol Timeline {
+    func fetchTimelines(callBack: @escaping (Result<Int, Error>) -> Void)
+}
+
 protocol DeleteTimelineProtocol {
     func onDeleteTimeline()
 }
 
-class DashboardViewModel {
+class DashboardViewModel: Timeline {
     // MARK: - Variables
     var isMyTimline = false
     let removeTimelineTitle = MyTwiLiteStrings.removeTimeline

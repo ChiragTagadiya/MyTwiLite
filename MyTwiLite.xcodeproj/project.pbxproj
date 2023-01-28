@@ -39,6 +39,7 @@
 		333EDD252983BECE001959E7 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EDD242983BECE001959E7 /* ProfileRouter.swift */; };
 		33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */; };
 		334CA34029831E5D00E56BAB /* LogInViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */; };
+		334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */; };
 		3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */; };
 		3353AF0D298041380034360F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0C298041380034360F /* ProfileViewController.swift */; };
 		3353AF0F2980417E0034360F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353AF0E2980417E0034360F /* Profile.storyboard */; };
@@ -113,6 +114,7 @@
 		333EDD242983BECE001959E7 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteLogInTests.swift; sourceTree = "<group>"; };
 		334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogInViewController+DataSource.swift"; sourceTree = "<group>"; };
+		334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTimelineDashboardTests.swift; sourceTree = "<group>"; };
 		3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTabBar.swift; sourceTree = "<group>"; };
 		3353AF0C298041380034360F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3353AF0E2980417E0034360F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 			children = (
 				33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */,
 				33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */,
+				334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */,
 			);
 			path = MyTwiLiteTests;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 			files = (
 				33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */,
 				33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */,
+				334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

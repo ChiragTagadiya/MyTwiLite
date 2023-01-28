@@ -20,9 +20,11 @@ class FirebaseHelper {
     }
     
     // MARK: - SignUp user
-    func createUser(user: UserDetail, isReachable: @escaping ((Bool) -> Void), callBack: @escaping FirebaseCallBackType) {
+    func createUser(user: UserDetail, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType) {
         if !FirebaseHelper.instance.connectedToNetwork() {
-            isReachable(false)
+            if let isReachable = isReachable {
+                isReachable(false)
+            }
             return
         }
         Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] (result, error) in
@@ -52,9 +54,7 @@ class FirebaseHelper {
     }
     
     // MARK: - Log in user
-    func logInUser(email: String, password: String,
-                   isReachable: ((Bool) -> Void)?,
-                   callBack: @escaping FirebaseCallBackType) {
+    func logInUser(email: String, password: String, isReachable: ((Bool) -> Void)?, callBack: @escaping FirebaseCallBackType) {
         if !FirebaseHelper.instance.connectedToNetwork() {
             if let isReachable = isReachable {
                 isReachable(false)
