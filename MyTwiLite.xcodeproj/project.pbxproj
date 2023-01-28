@@ -231,17 +231,17 @@
 		331755CE297C15BA008BE9B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3358E589297C498F007ABCA6 /* AppConstant.swift */,
+				333DB5B02982AD0A002A4C67 /* Colors.swift */,
+				333BDFDF297C69F000F70872 /* Utils.swift */,
 				3353AF0929803CDA0034360F /* MyTwiLiteTabBar */,
 				331755E1297C22B5008BE9B7 /* Model */,
 				331755E0297C2278008BE9B7 /* ViewController */,
 				331755DD297C2218008BE9B7 /* Helper */,
 				337F6BA42979590C00E6DBCC /* Enum */,
 				337F6BA02979586C00E6DBCC /* Extension */,
-				3358E589297C498F007ABCA6 /* AppConstant.swift */,
 				333DB5AD2982AA3A002A4C67 /* TextField */,
 				333DB5B22982AEAB002A4C67 /* Button */,
-				333BDFDF297C69F000F70872 /* Utils.swift */,
-				333DB5B02982AD0A002A4C67 /* Colors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

@@ -31,6 +31,7 @@ class LoginViewController: MyTwiLiteViewController {
     
     // MARK: - Configure initial view layout
     private func configureLayout() {
+        self.navigationController?.navigationBar.isHidden = false
         self.shouldHideBackButton = true
         self.labelLogin.text = self.viewModel.navigationTitle
         self.labelLogin.textColor = Colors.green
