@@ -1,0 +1,1171 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */; };
+		33018550298137F200C9C5E9 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301854F298137F200C9C5E9 /* LaunchViewModel.swift */; };
+		330185542981540E00C9C5E9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330185532981540E00C9C5E9 /* ProfileViewModel.swift */; };
+		3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C785297EB2F900F09661 /* DashboardViewModel.swift */; };
+		3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306C789297EB7FB00F09661 /* DashboardModel.swift */; };
+		331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C5297C122D008BE9B7 /* LogInViewController.swift */; };
+		331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755C7297C127A008BE9B7 /* LogInRouter.swift */; };
+		331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CA297C135A008BE9B7 /* LaunchRouter.swift */; };
+		331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755CC297C1405008BE9B7 /* LogIn.storyboard */; };
+		331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */; };
+		331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */; };
+		331755DA297C1DC8008BE9B7 /* AddTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */; };
+		331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */; };
+		331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755DE297C2229008BE9B7 /* FirebaseHelper.swift */; };
+		331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E2297C22C4008BE9B7 /* UserDetail.swift */; };
+		331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755E9297C2522008BE9B7 /* DashboardViewController.swift */; };
+		331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */; };
+		331755F0297C2777008BE9B7 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */; };
+		331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */; };
+		331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */; };
+		333BDFDE297C664B00F70872 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333BDFDD297C664B00F70872 /* Validation.swift */; };
+		333BDFE0297C69F000F70872 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333BDFDF297C69F000F70872 /* Utils.swift */; };
+		333DB5AF2982AA73002A4C67 /* MyTwiLiteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5AE2982AA73002A4C67 /* MyTwiLiteTextField.swift */; };
+		333DB5B12982AD0A002A4C67 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B02982AD0A002A4C67 /* Colors.swift */; };
+		333DB5B42982AEDC002A4C67 /* MyTwiLiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B32982AEDC002A4C67 /* MyTwiLiteButton.swift */; };
+		333DB5B62982B2BD002A4C67 /* SignUpViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */; };
+		333EDD202983A0A9001959E7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */; };
+		333EDD222983ABCD001959E7 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EDD212983ABCD001959E7 /* UserProfileModel.swift */; };
+		333EDD252983BECE001959E7 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EDD242983BECE001959E7 /* ProfileRouter.swift */; };
+		33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */; };
+		334CA34029831E5D00E56BAB /* LogInViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */; };
+		334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */; };
+		334CEB192984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */; };
+		334CEB1B2985020800E3C993 /* MyTwiLiteUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */; };
+		3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */; };
+		3353AF0D298041380034360F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353AF0C298041380034360F /* ProfileViewController.swift */; };
+		3353AF0F2980417E0034360F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353AF0E2980417E0034360F /* Profile.storyboard */; };
+		3358E580297C36E2007ABCA6 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */; };
+		3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E581297C3E64007ABCA6 /* UIString+Extension.swift */; };
+		3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */; };
+		3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */; };
+		3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E587297C484E007ABCA6 /* SignUpViewModel.swift */; };
+		3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E589297C498F007ABCA6 /* AppConstant.swift */; };
+		3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */; };
+		3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362520C297DB6780024CE9E /* DashboardRouter.swift */; };
+		33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625212297DC5150024CE9E /* AddTimelineViewModel.swift */; };
+		33625215297DC5C80024CE9E /* AddTimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33625214297DC5C80024CE9E /* AddTimelineModel.swift */; };
+		3363B1652980245D00657E06 /* MyTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3363B1642980245D00657E06 /* MyTimeline.storyboard */; };
+		337F6B9B2979557800E6DBCC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6B9A2979557800E6DBCC /* Router.swift */; };
+		337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */; };
+		337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BA52979592600E6DBCC /* AppStoryboard.swift */; };
+		337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BA92979611200E6DBCC /* Launch.storyboard */; };
+		337F6BB1297973AF00E6DBCC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F6BB0297973AF00E6DBCC /* SignUp.storyboard */; };
+		337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F6BB2297973C400E6DBCC /* SignUpViewController.swift */; };
+		338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861B2977EE84005A9DA0 /* AppDelegate.swift */; };
+		338B861E2977EE84005A9DA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861D2977EE84005A9DA0 /* SceneDelegate.swift */; };
+		338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B861F2977EE84005A9DA0 /* LaunchViewController.swift */; };
+		338B86232977EE84005A9DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86212977EE84005A9DA0 /* Main.storyboard */; };
+		338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338B86242977EE86005A9DA0 /* Assets.xcassets */; };
+		338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */; };
+		3394599329828D98005C8614 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3394599229828D98005C8614 /* UIButton+Extension.swift */; };
+		33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */; };
+		AE449FDDF9B06CA32A817F9F /* Pods_MyTwiLiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33BD6CE3298187F9001443AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338B86102977EE84005A9DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338B86172977EE84005A9DA0;
+			remoteInfo = MyTwiLite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3301854F298137F200C9C5E9 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		330185532981540E00C9C5E9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3306C785297EB2F900F09661 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		3306C789297EB7FB00F09661 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
+		331755C5297C122D008BE9B7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		331755C7297C127A008BE9B7 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
+		331755CA297C135A008BE9B7 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
+		331755CC297C1405008BE9B7 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteViewController.swift; sourceTree = "<group>"; };
+		331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTimeline.storyboard; sourceTree = "<group>"; };
+		331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		331755DE297C2229008BE9B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		331755E2297C22C4008BE9B7 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		331755E9297C2522008BE9B7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+DataSource.swift"; sourceTree = "<group>"; };
+		331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeLineViewController.swift; sourceTree = "<group>"; };
+		331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTimeLineViewController+DataSource.swift"; sourceTree = "<group>"; };
+		333BDFDD297C664B00F70872 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		333BDFDF297C69F000F70872 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		333DB5AE2982AA73002A4C67 /* MyTwiLiteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTextField.swift; sourceTree = "<group>"; };
+		333DB5B02982AD0A002A4C67 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		333DB5B32982AEDC002A4C67 /* MyTwiLiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteButton.swift; sourceTree = "<group>"; };
+		333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+DataSource.swift"; sourceTree = "<group>"; };
+		333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		333EDD212983ABCD001959E7 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		333EDD242983BECE001959E7 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteLogInTests.swift; sourceTree = "<group>"; };
+		334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogInViewController+DataSource.swift"; sourceTree = "<group>"; };
+		334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTimelineDashboardTests.swift; sourceTree = "<group>"; };
+		334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLitePostTimelineTests.swift; sourceTree = "<group>"; };
+		334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteUserTests.swift; sourceTree = "<group>"; };
+		3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteTabBar.swift; sourceTree = "<group>"; };
+		3353AF0C298041380034360F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3353AF0E2980417E0034360F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		3358E581297C3E64007ABCA6 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
+		3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteStrings.swift; sourceTree = "<group>"; };
+		3358E587297C484E007ABCA6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		3358E589297C498F007ABCA6 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		3362520C297DB6780024CE9E /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		33625212297DC5150024CE9E /* AddTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineViewModel.swift; sourceTree = "<group>"; };
+		33625214297DC5C80024CE9E /* AddTimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimelineModel.swift; sourceTree = "<group>"; };
+		3363B1642980245D00657E06 /* MyTimeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTimeline.storyboard; sourceTree = "<group>"; };
+		337F6B9A2979557800E6DBCC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		337F6BA52979592600E6DBCC /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		337F6BA92979611200E6DBCC /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		337F6BB0297973AF00E6DBCC /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		337F6BB2297973C400E6DBCC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		338B86182977EE84005A9DA0 /* MyTwiLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwiLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338B861B2977EE84005A9DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		338B861D2977EE84005A9DA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		338B861F2977EE84005A9DA0 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		338B86222977EE84005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		338B86242977EE86005A9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338B86272977EE86005A9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		338B86292977EE86005A9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3394599229828D98005C8614 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTwiLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwiLiteSignUpTests.swift; sourceTree = "<group>"; };
+		39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.release.xcconfig"; sourceTree = "<group>"; };
+		550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLiteTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70BD8CF7951B9A269DB5AF0 /* Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLite-MyTwiLiteTests/Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLiteTests.release.xcconfig"; path = "Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF8268C74ABC931744B1D242 /* Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite-MyTwiLiteTests/Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwiLite.debug.xcconfig"; path = "Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite.debug.xcconfig"; sourceTree = "<group>"; };
+		EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwiLiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338B86152977EE84005A9DA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278126E36DC8981198B498F4 /* Pods_MyTwiLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33BD6CDC298187F9001443AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE449FDDF9B06CA32A817F9F /* Pods_MyTwiLiteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3301854E298137E000C9C5E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3301854F298137F200C9C5E9 /* LaunchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331755C0297C11F8008BE9B7 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				331755C1297C1202008BE9B7 /* Router */,
+				331755C3297C120D008BE9B7 /* ViewModel */,
+				331755C4297C1214008BE9B7 /* ViewController */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		331755C1297C1202008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				331755C7297C127A008BE9B7 /* LogInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755C3297C120D008BE9B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3358E58B297C4C6B007ABCA6 /* LogInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331755C4297C1214008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755C5297C122D008BE9B7 /* LogInViewController.swift */,
+				334CA33F29831E5D00E56BAB /* LogInViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755C9297C134C008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				331755CA297C135A008BE9B7 /* LaunchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755CE297C15BA008BE9B7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3358E589297C498F007ABCA6 /* AppConstant.swift */,
+				333DB5B02982AD0A002A4C67 /* Colors.swift */,
+				333BDFDF297C69F000F70872 /* Utils.swift */,
+				3353AF0929803CDA0034360F /* MyTwiLiteTabBar */,
+				331755E1297C22B5008BE9B7 /* Model */,
+				331755E0297C2278008BE9B7 /* ViewController */,
+				331755DD297C2218008BE9B7 /* Helper */,
+				337F6BA42979590C00E6DBCC /* Enum */,
+				337F6BA02979586C00E6DBCC /* Extension */,
+				333DB5AD2982AA3A002A4C67 /* TextField */,
+				333DB5B22982AEAB002A4C67 /* Button */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		331755DD297C2218008BE9B7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				331755DE297C2229008BE9B7 /* FirebaseHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		331755E0297C2278008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755CF297C15D7008BE9B7 /* MyTwiLiteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755E1297C22B5008BE9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				331755E2297C22C4008BE9B7 /* UserDetail.swift */,
+				3358E585297C4754007ABCA6 /* MyTwiLiteStrings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331755E4297C24B8008BE9B7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				331755E8297C2509008BE9B7 /* Router */,
+				331755EE297C265D008BE9B7 /* View */,
+				331755E7297C2502008BE9B7 /* Model */,
+				331755E6297C24FC008BE9B7 /* ViewModel */,
+				331755E5297C24F2008BE9B7 /* ViewController */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		331755E5297C24F2008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755E9297C2522008BE9B7 /* DashboardViewController.swift */,
+				331755EB297C25A2008BE9B7 /* DashboardViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		331755E6297C24FC008BE9B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3306C785297EB2F900F09661 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331755E7297C2502008BE9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3306C789297EB7FB00F09661 /* DashboardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331755E8297C2509008BE9B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3362520C297DB6780024CE9E /* DashboardRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		331755EE297C265D008BE9B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				331755EF297C2777008BE9B7 /* TimelineTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		331755F1297C27E7008BE9B7 /* AddTimeline */ = {
+			isa = PBXGroup;
+			children = (
+				3362520E297DB8A90024CE9E /* Model */,
+				33625210297DB8B80024CE9E /* ViewModel */,
+				331755F2297C27F0008BE9B7 /* ViewController */,
+			);
+			path = AddTimeline;
+			sourceTree = "<group>";
+		};
+		331755F2297C27F0008BE9B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				331755F3297C280C008BE9B7 /* AddTimeLineViewController.swift */,
+				331755F5297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		333DB5AD2982AA3A002A4C67 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				333DB5AE2982AA73002A4C67 /* MyTwiLiteTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		333DB5B22982AEAB002A4C67 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				333DB5B32982AEDC002A4C67 /* MyTwiLiteButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		333EDD232983BEAF001959E7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				333EDD242983BECE001959E7 /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3353AF0929803CDA0034360F /* MyTwiLiteTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3353AF0A29803D1B0034360F /* MyTwiLiteTabBar.swift */,
+			);
+			path = MyTwiLiteTabBar;
+			sourceTree = "<group>";
+		};
+		3358E57E297C36CB007ABCA6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3358E57F297C36E2007ABCA6 /* SignUpRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3362520E297DB8A90024CE9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33625214297DC5C80024CE9E /* AddTimelineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33625210297DB8B80024CE9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				33625212297DC5150024CE9E /* AddTimelineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3363B156298022D600657E06 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				333EDD232983BEAF001959E7 /* Router */,
+				3363B15C298022FE00657E06 /* Model */,
+				3363B15D2980230200657E06 /* ViewModel */,
+				3363B15E2980230900657E06 /* ViewController */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3363B15C298022FE00657E06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				333EDD212983ABCD001959E7 /* UserProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3363B15D2980230200657E06 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				330185532981540E00C9C5E9 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3363B15E2980230900657E06 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3353AF0C298041380034360F /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		337F6B8F2979512700E6DBCC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BAD2979719900E6DBCC /* Launch */,
+				331755C0297C11F8008BE9B7 /* LogIn */,
+				337F6B922979517D00E6DBCC /* SignUp */,
+				331755E4297C24B8008BE9B7 /* Dashboard */,
+				331755F1297C27E7008BE9B7 /* AddTimeline */,
+				3363B156298022D600657E06 /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		337F6B912979515B00E6DBCC /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				338B861B2977EE84005A9DA0 /* AppDelegate.swift */,
+				338B861D2977EE84005A9DA0 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		337F6B922979517D00E6DBCC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3358E57E297C36CB007ABCA6 /* Router */,
+				337F6B942979519E00E6DBCC /* ViewModel */,
+				337F6B95297951A900E6DBCC /* ViewController */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		337F6B942979519E00E6DBCC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3358E587297C484E007ABCA6 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		337F6B95297951A900E6DBCC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BB2297973C400E6DBCC /* SignUpViewController.swift */,
+				333DB5B52982B2BD002A4C67 /* SignUpViewController+DataSource.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		337F6B982979529B00E6DBCC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				337F6B9A2979557800E6DBCC /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		337F6B9E297957C000E6DBCC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				338B86212977EE84005A9DA0 /* Main.storyboard */,
+				337F6BB0297973AF00E6DBCC /* SignUp.storyboard */,
+				331755CC297C1405008BE9B7 /* LogIn.storyboard */,
+				337F6BA92979611200E6DBCC /* Launch.storyboard */,
+				338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */,
+				331755D7297C1D7E008BE9B7 /* Dashboard.storyboard */,
+				331755D9297C1DC8008BE9B7 /* AddTimeline.storyboard */,
+				3363B1642980245D00657E06 /* MyTimeline.storyboard */,
+				3353AF0E2980417E0034360F /* Profile.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		337F6BA02979586C00E6DBCC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BA2297958B200E6DBCC /* UIViewController+Extension.swift */,
+				3358E581297C3E64007ABCA6 /* UIString+Extension.swift */,
+				3358E583297C464D007ABCA6 /* UIImageView+Extension.swift */,
+				3394599229828D98005C8614 /* UIButton+Extension.swift */,
+				333EDD1F2983A0A9001959E7 /* UITextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		337F6BA42979590C00E6DBCC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				337F6BA52979592600E6DBCC /* AppStoryboard.swift */,
+				333BDFDD297C664B00F70872 /* Validation.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		337F6BAD2979719900E6DBCC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				331755C9297C134C008BE9B7 /* Router */,
+				3301854E298137E000C9C5E9 /* ViewModel */,
+				337F6BAE297971C200E6DBCC /* ViewController */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		337F6BAE297971C200E6DBCC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				338B861F2977EE84005A9DA0 /* LaunchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		338B860F2977EE84005A9DA0 = {
+			isa = PBXGroup;
+			children = (
+				338B861A2977EE84005A9DA0 /* MyTwiLite */,
+				33BD6CE0298187F9001443AF /* MyTwiLiteTests */,
+				338B86192977EE84005A9DA0 /* Products */,
+				6ACC4360C32C51A922658520 /* Pods */,
+				6E2DCB89DDC0E4E2DF428FD6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		338B86192977EE84005A9DA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338B86182977EE84005A9DA0 /* MyTwiLite.app */,
+				33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338B861A2977EE84005A9DA0 /* MyTwiLite */ = {
+			isa = PBXGroup;
+			children = (
+				331755CE297C15BA008BE9B7 /* Common */,
+				337F6B9E297957C000E6DBCC /* Storyboard */,
+				337F6B982979529B00E6DBCC /* Router */,
+				337F6B8F2979512700E6DBCC /* Modules */,
+				337F6B912979515B00E6DBCC /* AppDelegates */,
+				338B86242977EE86005A9DA0 /* Assets.xcassets */,
+				331755DB297C21CC008BE9B7 /* GoogleService-Info.plist */,
+				338B86292977EE86005A9DA0 /* Info.plist */,
+			);
+			path = MyTwiLite;
+			sourceTree = "<group>";
+		};
+		33BD6CE0298187F9001443AF /* MyTwiLiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				33BD6CE1298187F9001443AF /* MyTwiLiteSignUpTests.swift */,
+				33490DE329823D9F0029593C /* MyTwiLiteLogInTests.swift */,
+				334CEB162984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift */,
+				334CEB182984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift */,
+				334CEB1A2985020800E3C993 /* MyTwiLiteUserTests.swift */,
+			);
+			path = MyTwiLiteTests;
+			sourceTree = "<group>";
+		};
+		6ACC4360C32C51A922658520 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */,
+				39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */,
+				CF8268C74ABC931744B1D242 /* Pods-MyTwiLite-MyTwiLiteTests.debug.xcconfig */,
+				B70BD8CF7951B9A269DB5AF0 /* Pods-MyTwiLite-MyTwiLiteTests.release.xcconfig */,
+				550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */,
+				CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E2DCB89DDC0E4E2DF428FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				894400EE329E884A15898FBA /* Pods_MyTwiLite.framework */,
+				EDDD5BCF3DEF8CB4A0DD2C07 /* Pods_MyTwiLiteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		338B86172977EE84005A9DA0 /* MyTwiLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338B862C2977EE86005A9DA0 /* Build configuration list for PBXNativeTarget "MyTwiLite" */;
+			buildPhases = (
+				FF67FC3D93D790D0663FAA66 /* [CP] Check Pods Manifest.lock */,
+				338B86142977EE84005A9DA0 /* Sources */,
+				338B86152977EE84005A9DA0 /* Frameworks */,
+				338B86162977EE84005A9DA0 /* Resources */,
+				A2A7F0F4E44C5895B60D501C /* [CP] Embed Pods Frameworks */,
+				333BDFE1297C838900F70872 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTwiLite;
+			productName = MyTwiLite;
+			productReference = 338B86182977EE84005A9DA0 /* MyTwiLite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33BD6CDE298187F9001443AF /* MyTwiLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33BD6CE7298187F9001443AF /* Build configuration list for PBXNativeTarget "MyTwiLiteTests" */;
+			buildPhases = (
+				3C63330F1A982E6200F54E34 /* [CP] Check Pods Manifest.lock */,
+				33BD6CDB298187F9001443AF /* Sources */,
+				33BD6CDC298187F9001443AF /* Frameworks */,
+				33BD6CDD298187F9001443AF /* Resources */,
+				8A588D3B926657D8639CF11A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33BD6CE4298187F9001443AF /* PBXTargetDependency */,
+			);
+			name = MyTwiLiteTests;
+			productName = MyTwiLiteTests;
+			productReference = 33BD6CDF298187F9001443AF /* MyTwiLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338B86102977EE84005A9DA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					338B86172977EE84005A9DA0 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					33BD6CDE298187F9001443AF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 338B86172977EE84005A9DA0;
+					};
+				};
+			};
+			buildConfigurationList = 338B86132977EE84005A9DA0 /* Build configuration list for PBXProject "MyTwiLite" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 338B860F2977EE84005A9DA0;
+			productRefGroup = 338B86192977EE84005A9DA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				338B86172977EE84005A9DA0 /* MyTwiLite */,
+				33BD6CDE298187F9001443AF /* MyTwiLiteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		338B86162977EE84005A9DA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338B86282977EE86005A9DA0 /* LaunchScreen.storyboard in Resources */,
+				3353AF0F2980417E0034360F /* Profile.storyboard in Resources */,
+				331755DC297C21CD008BE9B7 /* GoogleService-Info.plist in Resources */,
+				331755DA297C1DC8008BE9B7 /* AddTimeline.storyboard in Resources */,
+				338B86252977EE86005A9DA0 /* Assets.xcassets in Resources */,
+				331755D8297C1D7E008BE9B7 /* Dashboard.storyboard in Resources */,
+				3363B1652980245D00657E06 /* MyTimeline.storyboard in Resources */,
+				331755CD297C1405008BE9B7 /* LogIn.storyboard in Resources */,
+				338B86232977EE84005A9DA0 /* Main.storyboard in Resources */,
+				337F6BAA2979611200E6DBCC /* Launch.storyboard in Resources */,
+				337F6BB1297973AF00E6DBCC /* SignUp.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33BD6CDD298187F9001443AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		333BDFE1297C838900F70872 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		3C63330F1A982E6200F54E34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTwiLiteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A588D3B926657D8639CF11A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTwiLiteTests/Pods-MyTwiLiteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A7F0F4E44C5895B60D501C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTwiLite/Pods-MyTwiLite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF67FC3D93D790D0663FAA66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTwiLite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338B86142977EE84005A9DA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33625215297DC5C80024CE9E /* AddTimelineModel.swift in Sources */,
+				331755F0297C2777008BE9B7 /* TimelineTableViewCell.swift in Sources */,
+				3394599329828D98005C8614 /* UIButton+Extension.swift in Sources */,
+				331755E3297C22C4008BE9B7 /* UserDetail.swift in Sources */,
+				333BDFE0297C69F000F70872 /* Utils.swift in Sources */,
+				331755EA297C2522008BE9B7 /* DashboardViewController.swift in Sources */,
+				337F6B9B2979557800E6DBCC /* Router.swift in Sources */,
+				337F6BA62979592600E6DBCC /* AppStoryboard.swift in Sources */,
+				331755F4297C280C008BE9B7 /* AddTimeLineViewController.swift in Sources */,
+				3306C78A297EB7FB00F09661 /* DashboardModel.swift in Sources */,
+				3358E58C297C4C6B007ABCA6 /* LogInViewModel.swift in Sources */,
+				3358E582297C3E64007ABCA6 /* UIString+Extension.swift in Sources */,
+				338B86202977EE84005A9DA0 /* LaunchViewController.swift in Sources */,
+				334CA34029831E5D00E56BAB /* LogInViewController+DataSource.swift in Sources */,
+				33625213297DC5150024CE9E /* AddTimelineViewModel.swift in Sources */,
+				338B861C2977EE84005A9DA0 /* AppDelegate.swift in Sources */,
+				3306C786297EB2F900F09661 /* DashboardViewModel.swift in Sources */,
+				3358E584297C464E007ABCA6 /* UIImageView+Extension.swift in Sources */,
+				331755DF297C2229008BE9B7 /* FirebaseHelper.swift in Sources */,
+				3358E586297C4754007ABCA6 /* MyTwiLiteStrings.swift in Sources */,
+				331755C6297C122D008BE9B7 /* LogInViewController.swift in Sources */,
+				333DB5B62982B2BD002A4C67 /* SignUpViewController+DataSource.swift in Sources */,
+				3358E588297C484E007ABCA6 /* SignUpViewModel.swift in Sources */,
+				330185542981540E00C9C5E9 /* ProfileViewModel.swift in Sources */,
+				331755F6297C2866008BE9B7 /* AddTimeLineViewController+DataSource.swift in Sources */,
+				3362520D297DB6780024CE9E /* DashboardRouter.swift in Sources */,
+				333DB5B12982AD0A002A4C67 /* Colors.swift in Sources */,
+				333EDD202983A0A9001959E7 /* UITextField+Extension.swift in Sources */,
+				333EDD222983ABCD001959E7 /* UserProfileModel.swift in Sources */,
+				3358E58A297C498F007ABCA6 /* AppConstant.swift in Sources */,
+				337F6BB3297973C400E6DBCC /* SignUpViewController.swift in Sources */,
+				3353AF0B29803D1B0034360F /* MyTwiLiteTabBar.swift in Sources */,
+				331755C8297C127A008BE9B7 /* LogInRouter.swift in Sources */,
+				331755EC297C25A2008BE9B7 /* DashboardViewController+DataSource.swift in Sources */,
+				331755CB297C135A008BE9B7 /* LaunchRouter.swift in Sources */,
+				337F6BA3297958B200E6DBCC /* UIViewController+Extension.swift in Sources */,
+				331755D0297C15D7008BE9B7 /* MyTwiLiteViewController.swift in Sources */,
+				333BDFDE297C664B00F70872 /* Validation.swift in Sources */,
+				338B861E2977EE84005A9DA0 /* SceneDelegate.swift in Sources */,
+				333DB5B42982AEDC002A4C67 /* MyTwiLiteButton.swift in Sources */,
+				3353AF0D298041380034360F /* ProfileViewController.swift in Sources */,
+				333DB5AF2982AA73002A4C67 /* MyTwiLiteTextField.swift in Sources */,
+				3358E580297C36E2007ABCA6 /* SignUpRouter.swift in Sources */,
+				33018550298137F200C9C5E9 /* LaunchViewModel.swift in Sources */,
+				333EDD252983BECE001959E7 /* ProfileRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33BD6CDB298187F9001443AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33490DE429823D9F0029593C /* MyTwiLiteLogInTests.swift in Sources */,
+				33BD6CE2298187F9001443AF /* MyTwiLiteSignUpTests.swift in Sources */,
+				334CEB1B2985020800E3C993 /* MyTwiLiteUserTests.swift in Sources */,
+				334CEB192984F1DE00E3C993 /* MyTwiLitePostTimelineTests.swift in Sources */,
+				334CEB172984E8D800E3C993 /* MyTwiLiteTimelineDashboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33BD6CE4298187F9001443AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338B86172977EE84005A9DA0 /* MyTwiLite */;
+			targetProxy = 33BD6CE3298187F9001443AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		338B86212977EE84005A9DA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338B86222977EE84005A9DA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		338B86262977EE86005A9DA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338B86272977EE86005A9DA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		338B862A2977EE86005A9DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		338B862B2977EE86005A9DA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338B862D2977EE86005A9DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AB2126C204C7390E3690BD /* Pods-MyTwiLite.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTwiLite/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		338B862E2977EE86005A9DA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BFAA9E758F44169F608E64 /* Pods-MyTwiLite.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTwiLite/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		33BD6CE5298187F9001443AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550EEEC68D17BC04C494D5C5 /* Pods-MyTwiLiteTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTwiLite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTwiLite";
+			};
+			name = Debug;
+		};
+		33BD6CE6298187F9001443AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD64143CA9D2FB1F1032CA36 /* Pods-MyTwiLiteTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y96TU2543F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = chirag.MyTwiLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTwiLite.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTwiLite";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338B86132977EE84005A9DA0 /* Build configuration list for PBXProject "MyTwiLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338B862A2977EE86005A9DA0 /* Debug */,
+				338B862B2977EE86005A9DA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338B862C2977EE86005A9DA0 /* Build configuration list for PBXNativeTarget "MyTwiLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338B862D2977EE86005A9DA0 /* Debug */,
+				338B862E2977EE86005A9DA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33BD6CE7298187F9001443AF /* Build configuration list for PBXNativeTarget "MyTwiLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33BD6CE5298187F9001443AF /* Debug */,
+				33BD6CE6298187F9001443AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338B86102977EE84005A9DA0 /* Project object */;
+}

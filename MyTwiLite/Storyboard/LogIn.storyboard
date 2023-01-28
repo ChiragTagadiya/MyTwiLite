@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="aMN-fc-ENI">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="JeN-yG-BfN" customClass="LoginViewController" customModule="MyTwiLite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="klr-3q-MgA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-GN-qlg">
+                                <rect key="frame" x="118" y="59" width="157" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="I18-hc-A0k"/>
+                                    <constraint firstAttribute="height" constant="34" id="t2k-EW-wCr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AnU-a4-gLV" customClass="MyTwiLiteTextField" customModule="MyTwiLite" customModuleProvider="target">
+                                <rect key="frame" x="16" y="117" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JeN-yG-BfN" id="jE9-DJ-GD6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B79-rW-q5f" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
+                                <rect key="frame" x="16" y="233" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                <connections>
+                                    <action selector="logInPressed:" destination="JeN-yG-BfN" eventType="touchUpInside" id="G01-XQ-E5V"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9c-Vu-yuV" customClass="MyTwiLiteTextField" customModule="MyTwiLite" customModuleProvider="target">
+                                <rect key="frame" x="16" y="167" width="318" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JeN-yG-BfN" id="7jq-uk-Qkn"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-t1-SK4">
+                                <rect key="frame" x="101" y="284" width="191" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOh-0a-5WY">
+                                        <rect key="frame" x="8" y="8" width="103.66666666666667" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl9-7k-s6q" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
+                                        <rect key="frame" x="111" y="0.33333333333331439" width="71.666666666666686" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" subtitle="Sign Up"/>
+                                        <connections>
+                                            <action selector="onSignUpButtonPressed:" destination="JeN-yG-BfN" eventType="touchUpInside" id="Z4G-RI-bOF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DOh-0a-5WY" firstAttribute="leading" secondItem="nbe-t1-SK4" secondAttribute="leading" constant="8" id="7CK-ys-MI6"/>
+                                    <constraint firstItem="DOh-0a-5WY" firstAttribute="top" secondItem="nbe-t1-SK4" secondAttribute="top" constant="8" id="da0-z2-eaQ"/>
+                                    <constraint firstItem="xl9-7k-s6q" firstAttribute="leading" secondItem="DOh-0a-5WY" secondAttribute="trailing" constant="-0.66666666666668561" id="dmR-j2-W0g"/>
+                                    <constraint firstItem="DOh-0a-5WY" firstAttribute="leading" secondItem="nbe-t1-SK4" secondAttribute="leading" constant="8" id="oYD-tv-rfj"/>
+                                    <constraint firstItem="xl9-7k-s6q" firstAttribute="centerY" secondItem="DOh-0a-5WY" secondAttribute="centerY" id="p4w-11-ry9"/>
+                                    <constraint firstAttribute="height" constant="31" id="rwS-y7-WmJ"/>
+                                    <constraint firstAttribute="width" constant="191" id="zjf-sQ-biG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwn-E0-OJC" customClass="MyTwiLiteButton" customModule="MyTwiLite" customModuleProvider="target">
+                                <rect key="frame" x="342" y="167" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EAU-7V-UEM"/>
+                                    <constraint firstAttribute="width" constant="35" id="apa-3d-W9s"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="eye.fill" catalog="system" symbolScale="small"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onVisiblePasswordPressed:" destination="JeN-yG-BfN" eventType="touchUpInside" id="22U-YQ-sqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zdR-sA-VCb"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zdR-sA-VCb" firstAttribute="trailing" secondItem="pwn-E0-OJC" secondAttribute="trailing" constant="16" id="2SK-uR-4DR"/>
+                            <constraint firstItem="w9c-Vu-yuV" firstAttribute="top" secondItem="AnU-a4-gLV" secondAttribute="bottom" constant="16" id="4rv-3j-Nfi"/>
+                            <constraint firstItem="pwn-E0-OJC" firstAttribute="top" secondItem="w9c-Vu-yuV" secondAttribute="bottom" constant="-34" id="D4Y-wf-868"/>
+                            <constraint firstItem="w9c-Vu-yuV" firstAttribute="leading" secondItem="AnU-a4-gLV" secondAttribute="leading" id="IRZ-jO-KTt"/>
+                            <constraint firstItem="ruh-GN-qlg" firstAttribute="top" secondItem="zdR-sA-VCb" secondAttribute="top" id="N2e-ZM-r0C"/>
+                            <constraint firstItem="AnU-a4-gLV" firstAttribute="top" secondItem="ruh-GN-qlg" secondAttribute="bottom" constant="24" id="TGo-34-RSw"/>
+                            <constraint firstItem="nbe-t1-SK4" firstAttribute="centerX" secondItem="B79-rW-q5f" secondAttribute="centerX" id="Ucs-jy-mFO"/>
+                            <constraint firstItem="ruh-GN-qlg" firstAttribute="centerX" secondItem="zdR-sA-VCb" secondAttribute="centerX" id="Ud2-6E-SUm"/>
+                            <constraint firstItem="nbe-t1-SK4" firstAttribute="top" secondItem="B79-rW-q5f" secondAttribute="bottom" constant="16" id="VIs-tN-cJR"/>
+                            <constraint firstItem="pwn-E0-OJC" firstAttribute="leading" secondItem="w9c-Vu-yuV" secondAttribute="trailing" constant="8" id="iE4-hf-Xtp"/>
+                            <constraint firstItem="B79-rW-q5f" firstAttribute="centerX" secondItem="zdR-sA-VCb" secondAttribute="centerX" id="iKl-i0-TnT"/>
+                            <constraint firstItem="zdR-sA-VCb" firstAttribute="trailing" secondItem="AnU-a4-gLV" secondAttribute="trailing" constant="16" id="kdz-MR-K1U"/>
+                            <constraint firstItem="B79-rW-q5f" firstAttribute="top" secondItem="w9c-Vu-yuV" secondAttribute="bottom" constant="32" id="n8W-qi-tWf"/>
+                            <constraint firstItem="AnU-a4-gLV" firstAttribute="leading" secondItem="zdR-sA-VCb" secondAttribute="leading" constant="16" id="p07-AM-dDf"/>
+                            <constraint firstItem="B79-rW-q5f" firstAttribute="leading" secondItem="zdR-sA-VCb" secondAttribute="leading" constant="16" id="xV2-v8-jgi"/>
+                            <constraint firstItem="zdR-sA-VCb" firstAttribute="trailing" secondItem="B79-rW-q5f" secondAttribute="trailing" constant="16" id="zWP-IJ-dry"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLogin" destination="B79-rW-q5f" id="6dF-SI-BK5"/>
+                        <outlet property="labelLogin" destination="ruh-GN-qlg" id="scV-oy-in8"/>
+                        <outlet property="textFieldEmail" destination="AnU-a4-gLV" id="eQz-GX-w8B"/>
+                        <outlet property="textFieldPassword" destination="w9c-Vu-yuV" id="bDu-WQ-Bxu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rat-Ja-5bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748.85496183206101" y="-35.211267605633807"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="AnU-a4-gLV">
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+        </designable>
+        <designable name="w9c-Vu-yuV">
+            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="eye.fill" catalog="system" width="128" height="80"/>
+    </resources>
+</document>
